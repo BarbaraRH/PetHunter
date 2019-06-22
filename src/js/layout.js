@@ -2,14 +2,15 @@ import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
 
-import { Home } from "./views/home";
-import { Demo } from "./views/demo";
-import { Single } from "./views/single";
-import injectContext from "./store/appContext";
+import { InputForm } from "./views/InputForm";
+import { ConfigurationPanel } from "./component/ConfigurationPanel";
 
+import { LostPets } from "./views/LostPets";
+import { FindedPets } from "./views/FindedPets";
+import injectContext from "./store/appContext";
+ConfigurationPanel;
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
-import { Login } from "./component/login";
 
 //create your first component
 export class Layout extends React.Component {
@@ -18,7 +19,23 @@ export class Layout extends React.Component {
 		// you can set the basename on the .env file located at the root of this project, E.g: BASENAME=/react-hello-webapp/
 		const basename = process.env.BASENAME || "";
 
-		return <Login />;
+		return (
+			<div className="d-flex flex-column h-100">
+				<BrowserRouter basename={basename}>
+					<ScrollToTop>
+						<Navbar />
+						<Switch>
+							<Route exact path="/InputForm" component={InputForm} />
+							<Route path="/" component={LostPets} />
+							<Route path="/FindedPets" component={FindedPets} />
+							<Route path="/ConfigurationPanel" component={ConfigurationPanel} />
+							<Route render={() => <h1>Not found!</h1>} />
+						</Switch>
+						<Footer />
+					</ScrollToTop>
+				</BrowserRouter>
+			</div>
+		);
 	}
 }
 
