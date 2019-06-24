@@ -5,7 +5,7 @@ import logo from "../../img/logo.png";
 
 export const Login = () => (
 	<div className="container">
-		<div className="d-flex justify-content-center h-100">
+		<div className="d-flex justify-content-center">
 			<div className="card">
 				<div className="card-body">
 					<img src={logo} alt="Pet Hunter" className="logo" />
@@ -20,7 +20,7 @@ export const Login = () => (
 						</div>
 
 						<div className="form-group container">
-							<input type="submit" value="start Searching" className="btn btn-danger" />
+							<input type="submit" value="Start Searching" className="btn btn-danger" />
 						</div>
 					</form>
 				</div>
