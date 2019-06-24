@@ -6,6 +6,7 @@ import { InputForm } from "./views/InputForm";
 import { ConfigurationPanel } from "./component/ConfigurationPanel";
 
 import { Post } from "./component/post";
+import { Login } from "./component/login";
 
 import { LostPets } from "./views/LostPets";
 import { FindedPets } from "./views/FindedPets";
@@ -33,7 +34,8 @@ export class Layout extends React.Component {
 						<Navbar />
 						<Switch>
 							<Route exact path="/InputForm" component={InputForm} />
-							<Route path="/" component={LostPets} />
+							<Route path="/" component={Login} />
+							<Route path="/LostPets" component={LostPets} />
 							<Route path="/FindedPets" component={FindedPets} />
 							<Route path="/ConfigurationPanel" component={ConfigurationPanel} />
 							<Route path="/post" component={Post} />
