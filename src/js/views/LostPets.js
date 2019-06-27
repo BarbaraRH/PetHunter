@@ -94,5 +94,4 @@ export class LostPets extends React.Component {
 	}
 }
 
-/* prueba rama barbara */
 
