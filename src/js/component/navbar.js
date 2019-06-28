@@ -12,9 +12,9 @@ export class Navbar extends React.Component {
 					width: "100%",
 					zIndex: 1
 				}}>
-				<a className="navbar-brand" href="#">
+				<Link to="/myAccount">
 					<i className="fas fa-circle fa-2x" style={{ color: "grey" }} />
-				</a>
+				</Link>
 			</nav>
 		);
 	}

@@ -19,9 +19,11 @@ export class LostPets extends React.Component {
 								<input type="text" className="form-control" placeholder="Search" />
 							</div>
 							<div className="col ml-3">
-								<button type="button" className="btn btn-primary">
-									Añadir
-								</button>
+								<Link to="/AddForm">
+									<button type="button" className="btn btn-primary">
+										Añadir
+									</button>
+								</Link>
 							</div>
 						</div>
 					</form>
@@ -99,5 +101,3 @@ export class LostPets extends React.Component {
 		);
 	}
 }
-
-

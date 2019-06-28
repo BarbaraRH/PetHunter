@@ -12,17 +12,17 @@ export const Footer = () => (
 		}}>
 		<nav className="navbar navbar-light bg-light pl-0">
 			<div className="btn-group" role="group" aria-label="Basic example">
-				<Link to="/">
+				<Link to="/LostPets">
 					<button type="button" className="btn btn-secondary ml-1">
 						Buscados
 					</button>
 				</Link>
-				<Link to="/">
+				<Link to="/petHunterHistory">
 					<button type="button" className="btn btn-secondary ml-1">
 						Historias
 					</button>
 				</Link>
-				<Link to="/">
+				<Link to="/FindedPets">
 					<button type="button" className="btn btn-secondary ml-1">
 						Encontrados
 					</button>

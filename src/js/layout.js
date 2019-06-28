@@ -20,6 +20,9 @@ ConfigurationPanel;
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 
+import { AddForm } from "./views/addForm";
+import { Coincidences } from "./views/coincidences";
+
 //create your first component
 export class Layout extends React.Component {
 	render() {
@@ -33,14 +36,19 @@ export class Layout extends React.Component {
 					<ScrollToTop>
 						<Switch>
 							<Route exact path="/Login" component={Login} />
+
 							<Route path="/LostPets" component={LostPets} />
+							<Route path="/myAccount" component={MyAccount} />
+							<Route path="/petHunterHistory" component={PetHunterHistory} />
 							<Route path="/FindedPets" component={FindedPets} />
+							<Route path="/AddForm" component={AddForm} />
+							<Route path="/Coincidences" component={Coincidences} />
+
 							<Route path="/" component={Login} />
 							<Route path="/ConfigurationPanel" component={ConfigurationPanel} />
 							<Route path="/post" component={Post} />
 							<Route path="/MatchAlert" component={MatchAlert} />
-							<Route path="/myAccount" component={MyAccount} />
-							<Route path="/petHunterHistory" component={PetHunterHistory} />
+
 							<Route path="/petHunterEvaluation" component={PetHunterEvaluation} />
 							<Route render={() => <h1>Not found!</h1>} />
 						</Switch>
