@@ -31,12 +31,11 @@ export class Layout extends React.Component {
 			<div className="d-flex flex-column h-100">
 				<BrowserRouter basename={basename}>
 					<ScrollToTop>
-						<Navbar />
 						<Switch>
 							<Route exact path="/Login" component={Login} />
 							<Route path="/LostPets" component={LostPets} />
-							<Route path="/" component={Login} />
 							<Route path="/FindedPets" component={FindedPets} />
+							<Route path="/" component={Login} />
 							<Route path="/ConfigurationPanel" component={ConfigurationPanel} />
 							<Route path="/post" component={Post} />
 							<Route path="/MatchAlert" component={MatchAlert} />
