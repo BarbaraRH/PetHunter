@@ -1,4 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css?family=Numans');
+/*  @import url('https://fonts.googleapis.com/css?family=Numans');
 
 html,body, .body-div{
 background-image: linear-gradient(#2EFE64, #A9F5BC);
@@ -73,7 +73,7 @@ animation-fill-mode: forwards;
 
 @-webkit-keyframes next {
     0%{position: absolute; left: 0cm; right: 0;}
-  50%{left: -1cm; right: 1cm} 
+  50%{left: -1cm; right: 1cm}
 
    100%{left: 1cm; right: 1cm}
 }
@@ -81,7 +81,7 @@ animation-fill-mode: forwards;
 
 @keyframes next {
     0%{position: absolute; left: 0cm; right: 0;}
-  50%{left: -1cm; right: 1cm} 
+  50%{left: -1cm; right: 1cm}
 
    100%{left: 1cm; right: 1cm}
 }
