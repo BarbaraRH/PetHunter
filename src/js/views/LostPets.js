@@ -93,5 +93,3 @@ export class LostPets extends React.Component {
 		);
 	}
 }
-
-
