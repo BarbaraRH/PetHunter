@@ -21,6 +21,9 @@ ConfigurationPanel;
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 
+import { AddForm } from "./views/addForm";
+import { Coincidences } from "./views/coincidences";
+
 //create your first component
 export class Layout extends React.Component {
 	render() {
@@ -32,20 +35,21 @@ export class Layout extends React.Component {
 			<div className="d-flex flex-column h-100">
 				<BrowserRouter basename={basename}>
 					<ScrollToTop>
-						<Navbar />
 						<Switch>
 							<Route exact path="/Login" component={Login} />
-							<Route path="/LostPets" component={LostPets} />
-							<Route path="/" component={Login} />
-							<Route path="/FindedPets" component={FindedPets} />
 
-							<Route path="/InputForm" component={InputForm} />
-							<Route path="/" component={RegisterForm} />
+							<Route path="/LostPets" component={LostPets} />
+							<Route path="/myAccount" component={MyAccount} />
+							<Route path="/petHunterHistory" component={PetHunterHistory} />
+							<Route path="/FindedPets" component={FindedPets} />
+							<Route path="/AddForm" component={AddForm} />
+							<Route path="/Coincidences" component={Coincidences} />
+
+							<Route path="/" component={Login} />
 							<Route path="/ConfigurationPanel" component={ConfigurationPanel} />
 							<Route path="/post" component={Post} />
 							<Route path="/MatchAlert" component={MatchAlert} />
-							<Route path="/myAccount" component={MyAccount} />
-							<Route path="/petHunterHistory" component={PetHunterHistory} />
+
 							<Route path="/petHunterEvaluation" component={PetHunterEvaluation} />
 							<Route render={() => <h1>Not found!</h1>} />
 						</Switch>
