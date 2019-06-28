@@ -36,7 +36,10 @@ export class Layout extends React.Component {
 						<Switch>
 							<Route exact path="/InputForm" component={InputForm} />
 							<Route path="/" component={RegisterForm} />
+
+							<Route path="/Login" component={Login} />
 							<Route path="/LostPets" component={LostPets} />
+							<Route path="/" component={Login} />
 							<Route path="/FindedPets" component={FindedPets} />
 							<Route path="/ConfigurationPanel" component={ConfigurationPanel} />
 							<Route path="/post" component={Post} />
