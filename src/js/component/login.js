@@ -31,10 +31,11 @@ export const Login = () => (
 							</Link>
 							<br />
 							<br />
-
-							<button type="submit" className="btn">
-								<Link to={"/registerForm"}>Register</Link>
-							</button>
+							<Link to={"/RegisterForm"}>
+								<button type="submit" className="btn">
+									Register
+								</button>
+							</Link>
 						</form>
 					</div>
 				</div>
