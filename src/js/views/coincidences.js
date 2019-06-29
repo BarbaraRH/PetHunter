@@ -13,7 +13,7 @@ export class Coincidences extends React.Component {
 				<Navbar />
 				<div className="mt-5 pt-3">
 					<h3 className="text-center">COINCIDENCIAS</h3>
-					<div className="card" style={{ maxWidth: "100%" }}>
+					<Link to="/MatchAlert" className="card" style={{ maxWidth: "100%" }}>
 						<div className="row no-gutters">
 							<div className="col-4 p-2">
 								<img src="https://via.placeholder.com/60" className="card-img" alt="..." />
@@ -29,7 +29,7 @@ export class Coincidences extends React.Component {
 								</div>
 							</div>
 						</div>
-					</div>
+					</Link>
 					<div className="card" style={{ maxWidth: "100%" }}>
 						<div className="row no-gutters">
 							<div className="col-4 p-2">

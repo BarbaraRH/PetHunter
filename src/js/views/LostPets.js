@@ -32,7 +32,7 @@ export class LostPets extends React.Component {
 					{({ store, actions }) => {
 						return store.lostPets.map((item, index) => {
 							return (
-								<div key={index} className="card" style={{ maxWidth: "100%" }}>
+								<Link to="/MatchAlert" key={index} className="card" style={{ maxWidth: "100%" }}>
 									<div className="row no-gutters">
 										<div className="col-4 p-2">
 											<img src="https://via.placeholder.com/60" className="card-img" alt="..." />
@@ -48,7 +48,7 @@ export class LostPets extends React.Component {
 											</div>
 										</div>
 									</div>
-								</div>
+								</Link>
 							);
 						});
 					}}
