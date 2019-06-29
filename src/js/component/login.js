@@ -23,7 +23,7 @@ export const Login = () => (
 								</label>
 								<input id="password" type="password" className="form-control" placeholder="password" />
 							</div>
-							<button type="submit" className="btn btn-danger">
+							<button type="submit" className="btn">
 								Start Searching
 							</button>
 						</form>

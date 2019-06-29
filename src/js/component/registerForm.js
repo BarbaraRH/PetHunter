@@ -75,7 +75,7 @@ export const RegisterForm = () => (
 									}, 1000);
 								}}
 								value="Next"
-								className="btn btn-danger"
+								className="btn"
 								id="nextBtn"
 							/>
 						</form>
