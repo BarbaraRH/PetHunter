@@ -27,77 +27,64 @@ export class LostPets extends React.Component {
 							</div>
 						</div>
 					</form>
-					<div className="card" style={{ maxWidth: "100%" }}>
-						<div className="row no-gutters">
-							<div className="col-4 p-2">
-								<img src="https://via.placeholder.com/60" className="card-img" alt="..." />
-							</div>
-							<div className="col-8">
-								<div className="card-body">
-									<h5 className="card-title">Fido</h5>
-									<p className="card-text">
-										Raza: Mestizo <br />
-										Tamaño: Grande <br />
-										Color: Café
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div className="card" style={{ maxWidth: "100%" }}>
-						<div className="row no-gutters">
-							<div className="col-4 p-2">
-								<img src="https://via.placeholder.com/60" className="card-img" alt="..." />
-							</div>
-							<div className="col-8">
-								<div className="card-body">
-									<h5 className="card-title">Fido</h5>
-									<p className="card-text">
-										Raza: Mestizo <br />
-										Tamaño: Grande <br />
-										Color: Café
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div className="card" style={{ maxWidth: "100%" }}>
-						<div className="row no-gutters">
-							<div className="col-4 p-2">
-								<img src="https://via.placeholder.com/60" className="card-img" alt="..." />
-							</div>
-							<div className="col-8">
-								<div className="card-body">
-									<h5 className="card-title">Fido</h5>
-									<p className="card-text">
-										Raza: Mestizo <br />
-										Tamaño: Grande <br />
-										Color: Café
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div className="card" style={{ maxWidth: "100%" }}>
-						<div className="row no-gutters">
-							<div className="col-4 p-2">
-								<img src="https://via.placeholder.com/60" className="card-img" alt="..." />
-							</div>
-							<div className="col-8">
-								<div className="card-body">
-									<h5 className="card-title">Fido</h5>
-									<p className="card-text">
-										Raza: Mestizo <br />
-										Tamaño: Grande <br />
-										Color: Café
-									</p>
-								</div>
-							</div>
-						</div>
-					</div>
 				</div>
+				<Context.Consumer>
+					{({ store, actions }) => {
+						return store.lostPets.map((item, index) => {
+							return (
+								<div key={index} className="card" style={{ maxWidth: "100%" }}>
+									<div className="row no-gutters">
+										<div className="col-4 p-2">
+											<img src="https://via.placeholder.com/60" className="card-img" alt="..." />
+										</div>
+										<div className="col-8">
+											<div className="card-body">
+												<h5 className="card-title">{item.name}</h5>
+												<p className="card-text">
+													Raza: {item.breed} <br />
+													Tamaño: {item.size} <br />
+													Color: {item.color}
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							);
+						});
+					}}
+				</Context.Consumer>
 				<Footer />
 			</div>
 		);
 	}
 }
+
+/*
+
+return store[lostPets].map((item, index) => {
+								return (
+									<div key={index} className="card" style={{ maxWidth: "100%" }}>
+										<div className="row no-gutters">
+											<div className="col-4 p-2">
+												<img
+													src="https://via.placeholder.com/60"
+													className="card-img"
+													alt="..."
+												/>
+											</div>
+											<div className="col-8">
+												<div className="card-body">
+													<h5 className="card-title">Fido</h5>
+													<p className="card-text">
+														Raza: Mestizo <br />
+														Tamaño: Grande <br />
+														Color: Café
+													</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								);
+							});
+
+ */
