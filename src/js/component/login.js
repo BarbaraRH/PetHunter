@@ -19,9 +19,9 @@ export const Login = () => (
 							<input type="Your Password" className="form-control" placeholder="password" />
 						</div>
 
-						<div className="form-group container">
+						<Link className="form-group container" to={"/LostPets"}>
 							<input type="submit" value="Start Searching" className="btn btn-danger" />
-						</div>
+						</Link>
 					</form>
 				</div>
 			</div>
