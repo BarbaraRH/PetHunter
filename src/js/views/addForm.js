@@ -1,16 +1,14 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-
 import { Context } from "../store/appContext";
 
-import "../../styles/demo.scss";
-
-export class MyAccount extends React.Component {
+export class AddForm extends React.Component {
 	render() {
 		return (
 			<div>
-				<h1>Mi Cuenta</h1>
-				<Link to="/LostPets">
+				<h3 className="mt-5 pt-3 text-center">FORMULARIO</h3>
+				<Link to="/Coincidences">
 					<button className="btn btn-primary">Guardar</button>
 				</Link>
 			</div>

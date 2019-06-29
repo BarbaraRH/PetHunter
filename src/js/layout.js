@@ -22,6 +22,9 @@ ConfigurationPanel;
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 
+import { AddForm } from "./views/addForm";
+import { Coincidences } from "./views/coincidences";
+
 //create your first component
 export class Layout extends React.Component {
 	render() {
@@ -30,23 +33,31 @@ export class Layout extends React.Component {
 		const basename = process.env.BASENAME || "";
 
 		return (
-			<BrowserRouter basename={basename}>
-				<ScrollToTop>
-					<Switch>
-						<Route exact path="/InputForm" component={InputForm} />
-						<Route path="/" component={Login} />
-						<Route path="/LostPets" component={LostPets} />
-						<Route path="/FindedPets" component={FindedPets} />
-						<Route path="/ConfigurationPanel" component={ConfigurationPanel} />
-						<Route path="/post" component={Post} />
-						<Route path="/MatchAlert" component={MatchAlert} />
-						<Route path="/myAccount" component={MyAccount} />
-						<Route path="/petHunterHistory" component={PetHunterHistory} />
-						<Route path="/petHunterEvaluation" component={PetHunterEvaluation} />
-						<Route render={() => <h1>Not found!</h1>} />
-					</Switch>
-				</ScrollToTop>
-			</BrowserRouter>
+			<div className="d-flex flex-column h-100">
+				<BrowserRouter basename={basename}>
+					<ScrollToTop>
+						<Switch>
+							<Route exact path="/" component={RegisterForm} />
+							<Route path="/InputForm" component={InputForm} />
+							<Route path="/Loading" component={Loading} />
+
+							<Route path="/LostPets" component={LostPets} />
+							<Route path="/myAccount" component={MyAccount} />
+							<Route path="/petHunterHistory" component={PetHunterHistory} />
+							<Route path="/FindedPets" component={FindedPets} />
+							<Route path="/AddForm" component={AddForm} />
+							<Route path="/Coincidences" component={Coincidences} />
+
+							<Route path="/ConfigurationPanel" component={ConfigurationPanel} />
+							<Route path="/post" component={Post} />
+							<Route path="/MatchAlert" component={MatchAlert} />
+
+							<Route path="/petHunterEvaluation" component={PetHunterEvaluation} />
+							<Route render={() => <h1>Not found!</h1>} />
+						</Switch>
+					</ScrollToTop>
+				</BrowserRouter>
+			</div>
 		);
 	}
 }

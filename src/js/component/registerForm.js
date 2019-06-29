@@ -3,60 +3,64 @@ import { Link } from "react-router-dom";
 import "./petStyle.css";
 
 export const RegisterForm = () => (
-	<div className="container">
-		<div className="d-flex justify-content-center">
-			<div className="card">
-				<div id="sideBarLeft" />
-				<div className="card-body">
-					<h3>Por favor cuéntanos sobre ti!</h3>
-					<form>
-						<div className="container movileContainer">
-							<div className="input-group form-group">
-								<div className="input-group-prepend" />
-								<input
-									id="input1"
-									type="text"
-									className="form-control"
-									placeholder="Usuario Pet Lover"
-									name="user"
-								/>
+	<div className="bodySuperseder">
+		<link href="https://fonts.googleapis.com/css?family=Hammersmith+One&display=swap" rel="stylesheet" />
+		<div className="container">
+			<div className="d-flex justify-content-center">
+				<div className="card">
+					<div id="sideBarLeft" />
+					<div className="card-body">
+						<h3 className="titleFromForms">
+							Por favor, <br /> cuéntanos sobre ti!
+						</h3>
+						<form>
+							<div className="container movileContainer">
+								<div className="input-group form-group">
+									<div className="input-group-prepend" />
+									<input
+										id="input1"
+										type="text"
+										className="form-control"
+										placeholder="Usuario Pet Lover"
+										name="user"
+									/>
+								</div>
+
+								<div className="input-group form-group">
+									<input
+										id="input2"
+										type="password"
+										className="form-control"
+										placeholder="contraseña"
+										name="password1"
+									/>
+								</div>
+
+								<div className="input-group form-group">
+									<input
+										id="input3"
+										type="password"
+										className="form-control"
+										placeholder="repite contraseña"
+										name="password2"
+									/>
+								</div>
+
+								<div className="input-group form-group">
+									<input
+										id="input4"
+										type="text"
+										className="form-control"
+										placeholder="correo electronico"
+										name="mail"
+									/>
+								</div>
 							</div>
 
-							<div className="input-group form-group">
-								<input
-									id="input2"
-									type="password"
-									className="form-control"
-									placeholder="contraseña"
-									name="password1"
-								/>
-							</div>
-
-							<div className="input-group form-group">
-								<input
-									id="input3"
-									type="password"
-									className="form-control"
-									placeholder="repite contraseña"
-									name="password2"
-								/>
-							</div>
-
-							<div className="input-group form-group">
-								<input
-									id="input4"
-									type="text"
-									className="form-control"
-									placeholder="correo electronico"
-									name="mail"
-								/>
-							</div>
-						</div>
-						<div className="form-group container">
 							<input
 								type="button"
 								onClick={function() {
-									document.querySelector(".movileContainer").style.animation = "next 2s forwards";
+									document.querySelector(".movileContainer").style.animation = "next 3s forwards";
 									document.querySelector("#nextBtn").value = "Become a Pet Hunter";
 									setTimeout(function() {
 										document.querySelector("#input1").placeholder = "número de Cuenta Bancaria";
@@ -74,10 +78,10 @@ export const RegisterForm = () => (
 								className="btn btn-danger"
 								id="nextBtn"
 							/>
-						</div>
-					</form>
+						</form>
+					</div>
+					<div id="sideBarRight"> </div>
 				</div>
-				<div id="sideBarRight"> </div>
 			</div>
 		</div>
 	</div>
