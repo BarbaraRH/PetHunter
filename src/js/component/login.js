@@ -36,7 +36,6 @@ export const Login = () => (
 									Register
 								</button>
 							</Link>
-
 						</form>
 					</div>
 				</div>
