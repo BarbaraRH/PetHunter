@@ -24,19 +24,17 @@ export const Login = () => (
 								<input id="password" type="password" className="form-control" placeholder="password" />
 							</div>
 
-							<Link to={"/LostPets"}>
-								<button type="submit" className="btn btn-danger">
+							<Link to={"/lostPets"}>
+								<button type="submit" className="btn">
 									Start Searching
 								</button>
 							</Link>
 							<br />
 							<br />
-							<Link to={"/RegisterForm"}>
-								<button type="submit" className="btn btn-danger">
-									Register
-								</button>
-							</Link>
 
+							<button type="submit" className="btn">
+								<Link to={"/registerForm"}>Register</Link>
+							</button>
 						</form>
 					</div>
 				</div>
