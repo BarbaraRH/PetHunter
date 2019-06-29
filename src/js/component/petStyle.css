@@ -14,10 +14,10 @@ font-family: 'Numans', sans-serif;
 .logo
 {
     width:50%;
-    height:50%;
+    height:40%;
     margin-left:25%;
     background-image: url("../../img/logo.png");
-    background-size: 170%;
+    background-size: 122%;
     background-position: 50% 30%;
     background-repeat: no-repeat;
 
@@ -134,7 +134,7 @@ text-align: center;
 
 @media only screen and (max-width: 600px)
 {
-  
+    .logo{background-size: 170%;}
     .card
     {
         width: 85%;
