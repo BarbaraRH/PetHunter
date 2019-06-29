@@ -23,6 +23,7 @@ export const Login = () => (
 								</label>
 								<input id="password" type="password" className="form-control" placeholder="password" />
 							</div>
+
 							<Link to={"/LostPets"}>
 								<button type="submit" className="btn btn-danger">
 									Start Searching
@@ -35,6 +36,7 @@ export const Login = () => (
 									Register
 								</button>
 							</Link>
+
 						</form>
 					</div>
 				</div>
