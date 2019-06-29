@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import cat from "../../img/cat_1.png";
 import cat2 from "../../img/cat_2.png";
-import "./petStyle.css";
+/* import "./petStyle.css"; */
 
 export const Loading = () => (
 	<div id="spinerContainer" className="container">

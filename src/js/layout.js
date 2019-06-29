@@ -37,9 +37,9 @@ export class Layout extends React.Component {
 				<BrowserRouter basename={basename}>
 					<ScrollToTop>
 						<Switch>
-
-							<Route exact path="/InputForm" component={InputForm} />
-							<Route path="/" component={Loading} />
+							<Route exact path="/" component={Login} />
+							<Route path="/InputForm" component={InputForm} />
+							<Route path="/Loading" component={Loading} />
 
 							<Route path="/LostPets" component={LostPets} />
 							<Route path="/myAccount" component={MyAccount} />
@@ -48,7 +48,6 @@ export class Layout extends React.Component {
 							<Route path="/AddForm" component={AddForm} />
 							<Route path="/Coincidences" component={Coincidences} />
 
-							<Route path="/" component={Login} />
 							<Route path="/ConfigurationPanel" component={ConfigurationPanel} />
 							<Route path="/post" component={Post} />
 							<Route path="/MatchAlert" component={MatchAlert} />
