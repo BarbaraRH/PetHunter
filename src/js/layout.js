@@ -24,6 +24,7 @@ import { Footer } from "./component/footer";
 
 import { AddForm } from "./views/addForm";
 import { Coincidences } from "./views/coincidences";
+import { UserContact } from "./views/UserContact";
 
 //create your first component
 export class Layout extends React.Component {
@@ -51,6 +52,7 @@ export class Layout extends React.Component {
 							<Route path="/ConfigurationPanel" component={ConfigurationPanel} />
 							<Route path="/post" component={Post} />
 							<Route path="/MatchAlert" component={MatchAlert} />
+							<Route path="/UserContact" component={UserContact} />
 
 							<Route path="/petHunterEvaluation" component={PetHunterEvaluation} />
 							<Route render={() => <h1>Not found!</h1>} />

@@ -10,24 +10,16 @@ export const Footer = () => (
 			width: "100%",
 			zIndex: 1
 		}}>
-		<nav className="navbar navbar-light bg-light pl-0">
-			<div className="btn-group" role="group" aria-label="Basic example">
-				<Link to="/LostPets">
-					<button type="button" className="btn btn-secondary ml-1">
-						Buscados
-					</button>
-				</Link>
-				<Link to="/petHunterHistory">
-					<button type="button" className="btn btn-secondary ml-1">
-						Historias
-					</button>
-				</Link>
-				<Link to="/FindedPets">
-					<button type="button" className="btn btn-secondary ml-1">
-						Encontrados
-					</button>
-				</Link>
-			</div>
-		</nav>
+		<div className="row p-3 text-center footer bg-light">
+			<Link to="/LostPets" className="col-sm-4 col-4">
+				<i className="fas fa-search fa-2x blanco" />
+			</Link>
+			<Link to="/FindedPets" className="col-sm-4 col-4 blanco">
+				<i className="fas fa-bullseye fa-2x" />
+			</Link>
+			<Link to="/petHunterHistory" className="col-sm-4 col-4 blanco">
+				<i className="fas fa-award fa-2x" />
+			</Link>
+		</div>
 	</footer>
 );
