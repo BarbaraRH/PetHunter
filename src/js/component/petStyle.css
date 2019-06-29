@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Numans');
 
-html,body{
-background-image: linear-gradient(#2EFE64, #A9F5BC);
+.bodySuperseder{
+background-image: linear-gradient(#a1ffce, #d5ffff);
 background-size: cover;
 background-repeat: no-repeat;
-height: 100%;
+height: 100vh;
 font-family: 'Numans', sans-serif;
 }
 
@@ -15,7 +15,7 @@ align-content: center;
 
 #sideBarRight, #sideBarLeft
 {
-     background-image: linear-gradient(#2EFE64, #A9F5BC);
+     background-image: linear-gradient(#a1ffce, #d5ffff);
     height: 100vh!important;
     position: fixed;
     width: 30%;
@@ -138,4 +138,8 @@ box-shadow: 0 0 0 0 !important;
 .spinner-border
 {
      margin: 0px 0px 0px 60px!important;
+}
+.color
+{
+    color: #ce93d8;
 }

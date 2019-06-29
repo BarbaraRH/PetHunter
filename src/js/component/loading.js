@@ -12,7 +12,7 @@ export const Loading = () => (
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" />
 		<div className="cat" style={{ height: "70%" }} />
 		<div
-			className="spinner-border text-danger"
+			className="spinner-border color"
 			role="status"
 			style={{ margin: "20% 20% 20% 20%", width: "5rem", height: "5rem" }}>
 			<span className="sr-only">Loading...</span>
