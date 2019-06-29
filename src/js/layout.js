@@ -38,11 +38,13 @@ export class Layout extends React.Component {
 				<BrowserRouter basename={basename}>
 					<ScrollToTop>
 						<Switch>
-							<Route exact path="/" component={RegisterForm} />
+							<Route exact path="/" component={Login} />
+							<Route path="/LostPets" component={LostPets} />
+
+							<Route path="/RegisterForm" component={RegisterForm} />
 							<Route path="/InputForm" component={InputForm} />
 							<Route path="/Loading" component={Loading} />
 
-							<Route path="/LostPets" component={LostPets} />
 							<Route path="/myAccount" component={MyAccount} />
 							<Route path="/petHunterHistory" component={PetHunterHistory} />
 							<Route path="/FindedPets" component={FindedPets} />
