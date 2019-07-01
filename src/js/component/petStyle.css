@@ -46,7 +46,7 @@ button, .btn
     background-color: #ce93d8;
     color: black;
 }
-    #nextBtn
+#nextBtn
 {
     position: absolute!important;
     top:80%!important;
@@ -63,6 +63,30 @@ margin-bottom: auto;
 width: 400px;
 background-color: rgba(0,0,0,0.06) !important;
  border-style: none!important;
+}
+
+.finded_lostPetsList a{
+height: 50%!important;
+margin-bottom: auto;
+width: 400px;
+background-color: rgba(0,0,0,0.06) !important;
+ border-style: none!important;
+}
+.stiky
+{
+
+  margin: 0;
+  padding: 5% 0 0 12px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: -1px;
+  z-index: 2;
+  background-color: rgb(255, 255, 255);
+
+}
+.navbar
+{
+    margin:0!important;
 }
 .card-body
 {

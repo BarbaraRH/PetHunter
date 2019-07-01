@@ -9,19 +9,19 @@ import { Navbar } from "../component/navbar";
 export class LostPets extends React.Component {
 	render() {
 		return (
-			<div>
+			<div className="finded_lostPetsList">
 				<Navbar />
-				<div className="mt-5 pt-3">
-					<h3 className="text-center">BUSCADOS</h3>
+				<div className="mt-5 pt-3 stiky">
+					<h3 className="text-center stiky">BUSCADOS</h3>
 					<form>
-						<div className="form-row mb-3 px-2">
+						<div className="form-row mb-3 px-2 stiky">
 							<div className="col-8">
-								<input type="text" className="form-control" placeholder="Search" />
+								<input type="text" className="form-control" placeholder="Buscar" />
 							</div>
-							<div className="col ml-3">
+							<div className="col ml-3 stiky">
 								<Link to="/AddForm">
-									<button type="button" className="btn btn-primary">
-										Añadir
+									<button type="button" className="btn">
+										Solicitar Búsqueda
 									</button>
 								</Link>
 							</div>
