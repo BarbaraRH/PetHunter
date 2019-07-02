@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import "./LostPets.css";
 import { Context } from "../store/appContext";
 import PropTypes from "prop-types";
 import { Footer } from "../component/footer";
@@ -32,13 +32,13 @@ export class LostPets extends React.Component {
 					{({ store, actions }) => {
 						return store.lostPets.map((item, index) => {
 							return (
-								<Link to="/MatchAlert" key={index} className="card" style={{ maxWidth: "100%" }}>
-									<div className="row no-gutters">
+								<Link to="/MatchAlert" key={index} className="" style={{ maxWidth: "100%" }}>
+									<div className="row no-gutters fondoPost">
 										<div className="col-4 p-2">
 											<img src="https://via.placeholder.com/60" className="card-img" alt="..." />
 										</div>
 										<div className="col-8">
-											<div className="card-body">
+											<div className="card-body blancoContenido">
 												<h5 className="card-title">{item.name}</h5>
 												<p className="card-text">
 													Raza: {item.breed} <br />
