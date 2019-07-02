@@ -6,6 +6,18 @@
 {
     width: 40%;
 }
+
+.logo
+{
+    width:50%;
+    height:25vh;
+    margin-left:25%;
+    background-image: url("../../img/logo.png");
+    background-size: 122%;
+    background-position: 50% 30%;
+    background-repeat: no-repeat;
+
+}
 /*LostPets and FindedPets CSS*/
 
 .finded_lostPetsList{ background-image: linear-gradient(#d5ffff,#a1ffce);}
@@ -60,17 +72,6 @@ width: 100vw;
 font-family: 'Numans', sans-serif;
 }
 
-.logo
-{
-    width:50%;
-    height:40%;
-    margin-left:25%;
-    background-image: url("../../img/logo.png");
-    background-size: 122%;
-    background-position: 50% 30%;
-    background-repeat: no-repeat;
-
-}
 #sideBarRight, #sideBarLeft
 {
      background-image: linear-gradient(#d5ffff,#a1ffce);
@@ -106,7 +107,7 @@ button, .btn
 }
 
 .card{
-height: 370px;
+height: 40%;
 margin-top: 15vh;
 margin-bottom: auto;
 background-color: rgba(0,0,0,0.06) !important;
