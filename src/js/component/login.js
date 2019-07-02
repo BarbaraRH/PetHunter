@@ -4,7 +4,7 @@ import "./petStyle.css";
 import logo from "../../img/logo.png";
 
 export const Login = () => (
-	<div className="bodySuperseder">
+	<div className="bodySuperseder login">
 		<div className="container" id="containerLogin">
 			<div className="d-flex justify-content-center">
 				<div className="card">
