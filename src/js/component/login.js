@@ -10,7 +10,6 @@ export const Login = () => (
 				<div className="card">
 					<div className="card-body">
 						<div alt="Pet Hunter" className="logo" />
-
 						<form>
 							<div className="form-group">
 								<label className="sr-only" htmlFor="user">
