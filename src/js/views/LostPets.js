@@ -9,50 +9,60 @@ import { Navbar } from "../component/navbar";
 export class LostPets extends React.Component {
 	render() {
 		return (
-			<div>
+			<div className="finded_lostPetsList">
 				<Navbar />
-				<div className="mt-5 pt-3">
-					<h3 className="text-center">BUSCADOS</h3>
+				<div className="mt-5 pt-3 stikyHeader">
+					<h3 className="text-center stikyHeader">BUSCADOS</h3>
 					<form>
-						<div className="form-row mb-3 px-2">
+						<div className="form-row mb-3 px-2 stikyHeader">
 							<div className="col-8">
-								<input type="text" className="form-control" placeholder="Search" />
+								<input type="text" className="form-control" placeholder="Buscar" />
 							</div>
-							<div className="col ml-3">
+							<div className="col ml-3 stiky">
 								<Link to="/AddForm">
-									<button type="button" className="btn btn-primary">
-										Añadir
+									<button type="button" className="btn">
+										Solicitar Búsqueda
 									</button>
 								</Link>
 							</div>
 						</div>
 					</form>
 				</div>
-				<Context.Consumer>
-					{({ store, actions }) => {
-						return store.lostPets.map((item, index) => {
-							return (
-								<Link to="/MatchAlert" key={index} className="" style={{ maxWidth: "100%" }}>
-									<div className="row no-gutters fondoPost">
-										<div className="col-4 p-2">
-											<img src="https://via.placeholder.com/60" className="card-img" alt="..." />
-										</div>
-										<div className="col-8">
-											<div className="card-body blancoContenido">
-												<h5 className="card-title">{item.name}</h5>
-												<p className="card-text">
-													Raza: {item.breed} <br />
-													Tamaño: {item.size} <br />
-													Color: {item.color}
-												</p>
+				<div className="ListBody">
+					<Context.Consumer>
+						{({ store, actions }) => {
+							return store.lostPets.map((item, index) => {
+								return (
+									<Link
+										to="/MatchAlert"
+										key={index}
+										className="card itemList"
+										style={{ maxWidth: "100%" }}>
+										<div className="row no-gutters">
+											<div className="col-4 p-2">
+												<img
+													src="https://via.placeholder.com/60"
+													className="card-img"
+													alt="..."
+												/>
+											</div>
+											<div className="col-8">
+												<div className="card-body">
+													<h5 className="card-title">{item.name}</h5>
+													<p className="card-text">
+														Raza: {item.breed} <br />
+														Tamaño: {item.size} <br />
+														Color: {item.color}
+													</p>
+												</div>
 											</div>
 										</div>
-									</div>
-								</Link>
-							);
-						});
-					}}
-				</Context.Consumer>
+									</Link>
+								);
+							});
+						}}
+					</Context.Consumer>
+				</div>
 				<Footer />
 			</div>
 		);
