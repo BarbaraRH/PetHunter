@@ -9,7 +9,7 @@ export class Navbar extends React.Component {
 				style={{
 					position: "fixed",
 					top: 0,
-					width: "100%",
+					width: "103vw",
 					zIndex: 3
 				}}>
 				<Link to="/myAccount">

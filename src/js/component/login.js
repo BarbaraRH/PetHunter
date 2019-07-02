@@ -8,16 +8,14 @@ export const Login = () => (
 		<div className="row">
 			<div className="col-2" />
 			<div className="col-8">
-				<div className="card">
-					<div className="card-body">
-						<div className="container">
-							<div className="row">
-								<div className="col-2" />
-								<div className="col-8">
-									<div alt="Pet Hunter" className="logo" />
-								</div>
-								<div className="col-2" />
+				<div className="card card-body mt-5">
+					<div className="container">
+						<div className="row">
+							<div className="col-2" />
+							<div className="col-8">
+								<div alt="Pet Hunter" className="logo" />
 							</div>
+							<div className="col-2" />
 						</div>
 
 						<form>
