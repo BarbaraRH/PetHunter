@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./LostPets.css";
+import "./finderylostPets.css";
 import { Context } from "../store/appContext";
 import PropTypes from "prop-types";
 import { Footer } from "../component/footer";
