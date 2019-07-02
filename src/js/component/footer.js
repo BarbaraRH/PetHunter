@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import "./footerStyle.css";
 
 export const Footer = () => (
 	<footer
@@ -10,7 +11,7 @@ export const Footer = () => (
 			width: "100%",
 			zIndex: 1
 		}}>
-		<div className="row p-3 text-center footer bg-light">
+		<div className="row p-3 text-center footer colorfondo">
 			<Link to="/LostPets" className="col-sm-4 col-4">
 				<i className="fas fa-search fa-2x blanco" />
 			</Link>
