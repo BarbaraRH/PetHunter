@@ -10,7 +10,7 @@ export class Navbar extends React.Component {
 					position: "fixed",
 					top: 0,
 					width: "100%",
-					zIndex: 1
+					zIndex: 3
 				}}>
 				<Link to="/myAccount">
 					<i className="fas fa-circle fa-2x" style={{ color: "grey" }} />
