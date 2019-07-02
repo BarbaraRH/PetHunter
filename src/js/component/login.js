@@ -4,12 +4,22 @@ import "./petStyle.css";
 import logo from "../../img/logo.png";
 
 export const Login = () => (
-	<div className="bodySuperseder login">
-		<div className="container" id="containerLogin">
-			<div className="d-flex justify-content-center">
+	<div className="container greenBackground">
+		<div className="row">
+			<div className="col-2" />
+			<div className="col-8">
 				<div className="card">
 					<div className="card-body">
-						<div alt="Pet Hunter" className="logo" />
+						<div className="container">
+							<div className="row">
+								<div className="col-2" />
+								<div className="col-8">
+									<div alt="Pet Hunter" className="logo" />
+								</div>
+								<div className="col-2" />
+							</div>
+						</div>
+
 						<form>
 							<div className="form-group">
 								<label className="sr-only" htmlFor="user">
@@ -40,6 +50,7 @@ export const Login = () => (
 					</div>
 				</div>
 			</div>
+			<div className="col-2" />
 		</div>
 	</div>
 );
