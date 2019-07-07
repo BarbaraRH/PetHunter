@@ -10,28 +10,24 @@ import cat1 from "../../img/cat_1.png";
 export class LostPets extends React.Component {
 	render() {
 		return (
-			<div>
-				<div className="row">
-					<Navbar />
-				</div>
-				<div className="row">
-					<div className="col-12 stikyHeader">
-						<h3 className="text-center stikyHeader">BUSCADOS</h3>
-						<form>
-							<div className="row stikyHeader">
-								<div className="col-8">
-									<input type="text" className="form-control" placeholder="Buscar" />
-								</div>
-								<div className="col-3 stiky">
-									<Link to="/AddForm">
-										<button type="button" className="btn">
-											Buscar
-										</button>
-									</Link>
-								</div>
+			<div className="finded_lostPetsList">
+				<Navbar />
+				<div className="mt-5 pt-3 stikyHeader">
+					<h3 className="text-center stikyHeader">BUSCADOS</h3>
+					<form>
+						<div className="form-row mb-3 px-2 stikyHeader">
+							<div className="col-8">
+								<input type="text" className="form-control" placeholder="Buscar" />
 							</div>
-						</form>
-					</div>
+							<div className="col ml-3 stiky">
+								<Link to="/AddForm">
+									<button type="button" className="btn">
+										Solicitar Búsqueda
+									</button>
+								</Link>
+							</div>
+						</div>
+					</form>
 				</div>
 				<div className="row">
 					<div className=" col-12 ListBody">
