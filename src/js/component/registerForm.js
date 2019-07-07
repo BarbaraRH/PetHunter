@@ -8,7 +8,7 @@ export const RegisterForm = () => (
 		<div className="row">
 			<div className="col-2" />
 			<div className="col-8 mt-5">
-				<div className="card-body">
+				<div className="card-body movileContainerBackground">
 					<h3 className="titleFromForms">
 						Por favor, <br /> cuéntanos sobre ti!
 					</h3>
@@ -57,7 +57,7 @@ export const RegisterForm = () => (
 							<input
 								type="button"
 								onClick={function() {
-									document.querySelector(".movileContainer").style.animation = "next 3s forwards";
+									document.querySelector(".movileContainer").style.animation = "next 8s forwards";
 									document.querySelector("#nextBtn").value = "Become a Pet Hunter";
 									setTimeout(function() {
 										document.querySelector("#input1").placeholder = "número de Cuenta Bancaria";
