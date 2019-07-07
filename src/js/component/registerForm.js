@@ -7,8 +7,8 @@ export const RegisterForm = () => (
 		<div id="sideBarLeft" />
 		<div className="row">
 			<div className="col-2" />
-			<div className="col-8">
-				<div className="card-body card">
+			<div className="col-8 mt-5">
+				<div className="card-body">
 					<h3 className="titleFromForms">
 						Por favor, <br /> cuéntanos sobre ti!
 					</h3>
