@@ -49,16 +49,39 @@ export class LostPets extends React.Component {
 													</div>
 													<div className="col-8">
 														<div className="card-body">
-															<h2 className="card-title">{item.name}</h2>
-															<h4 className="card-text">
-																{item.breed}
-																<br />
-																{item.size}
-																<br />
-																{item.color}
-																<br />
-																{item.user}
+															<h2 className="card-title" style={{ color: "black" }}>
+																{item.name}
+															</h2>
+
+															<h4>
+																<span
+																	className="badge badge-primary"
+																	style={{ borderRadius: "50px" }}>
+																	{item.breed}
+																</span>
 															</h4>
+															<h4>
+																<span
+																	className="badge badge-primary"
+																	style={{ borderRadius: "50px" }}>
+																	{item.size}
+																</span>
+															</h4>
+															<h4>
+																<span
+																	className="badge badge-primary"
+																	style={{ borderRadius: "50px" }}>
+																	{item.color}
+																</span>
+															</h4>
+															<h4>
+																<span
+																	className="badge badge-primary"
+																	style={{ borderRadius: "50px" }}>
+																	Dueño: {item.user}
+																</span>
+															</h4>
+
 															<p className="card-text">
 																<small className="text-muted">
 																	Se perdió con fecha -1-1-2019

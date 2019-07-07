@@ -4,7 +4,7 @@ import "./petStyle.css";
 import logo from "../../img/logo.png";
 
 export const Login = () => (
-	<div className="container greenBackground">
+	<div className="bg">
 		<div className="row">
 			<div className="col-2" />
 			<div className="col-8">
