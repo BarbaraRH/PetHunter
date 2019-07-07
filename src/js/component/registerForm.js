@@ -57,10 +57,10 @@ export const RegisterForm = () => (
 							<input
 								type="button"
 								onClick={function() {
-									document.querySelector(".movileContainer").style.animation = "next 1.5s forwards";
+									document.querySelector(".movileContainer").style.animation = "next 38s forwards";
 									document.querySelector("#nextBtn").value = "Become a Pet Hunter";
 									setTimeout(function() {
-										document.querySelector("#input1").placeholder = "número de Cuenta Bancaria";
+										document.querySelector("#input1").placeholder = "Cuenta Bancaria";
 										document.querySelector("#input2").placeholder = "Banco Comercial";
 										document.querySelector("#input3").placeholder = "tipo de cuenta";
 										document.querySelector("#input4").placeholder = "Cédula de identidad";

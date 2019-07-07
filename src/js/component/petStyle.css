@@ -35,7 +35,7 @@ margin-top: 15vh;
 
 .movileContainerBackground
 {
-    background-color: red;
+    background-color: linear-gradient(#d5ffff, #a1ffce 5%);
     z-index:1;
 }
 #sideBarRight{ left: 76.67%;top: 0;}
@@ -178,8 +178,6 @@ text-align: center;
 0%{position: relative; left: 0; top:0;}
 25%{left: -30%;width:0cm;}
 28%{left: 120%; width: 0cm;}
-39%{z-index:-1;}
-40%{z-index:1;}
 100%{position: relative; left: 0; top:0;}
 
 }
