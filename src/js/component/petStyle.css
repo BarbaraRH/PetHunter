@@ -177,10 +177,9 @@ text-align: center;
 
 0%{position: relative; left: 0; top:0;}
 25%{left: -30%;width:0cm;}
-28%{left: 110%; width: 0cm;}
-36%{z-index: -1;}
-39.8%{z-index: 1;}
-55%{position: relative; left: 0; top:0;width: 100%;}
+28%{left: 120%; width: 0cm;}
+39%{z-index:-1;}
+40%{z-index:1;}
 100%{position: relative; left: 0; top:0;}
 
 }

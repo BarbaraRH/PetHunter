@@ -57,7 +57,7 @@ export const RegisterForm = () => (
 							<input
 								type="button"
 								onClick={function() {
-									document.querySelector(".movileContainer").style.animation = "next 8s forwards";
+									document.querySelector(".movileContainer").style.animation = "next 1.5s forwards";
 									document.querySelector("#nextBtn").value = "Become a Pet Hunter";
 									setTimeout(function() {
 										document.querySelector("#input1").placeholder = "número de Cuenta Bancaria";
