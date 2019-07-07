@@ -17,9 +17,13 @@ export class LostPets extends React.Component {
 					<form>
 						<div className="form-row mb-3 px-2 stikyHeader">
 							<div className="col-8">
-								<input type="text" className="form-control" placeholder="Buscar" />
+								<input
+									type="text"
+									className="form-control buscarFind_lost_Pets_responsive"
+									placeholder="Buscar"
+								/>
 							</div>
-							<div className="col ml-3 stiky">
+							<div className="col stiky">
 								<Link to="/AddForm">
 									<button type="button" className="btn">
 										Solicitar Búsqueda

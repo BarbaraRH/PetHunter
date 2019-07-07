@@ -2,9 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./petStyle.css";
 import logo from "../../img/logo.png";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { Loading } from "./loading";
+
+function petSpiner() {}
 
 export const Login = () => (
-	<div className="bg">
+	<div className="bg" onLoad={petSpiner()}>
 		<div className="row">
 			<div className="col-2" />
 			<div className="col-8">

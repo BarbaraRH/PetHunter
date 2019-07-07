@@ -17,7 +17,7 @@ background-Image: linear-gradient(#d5ffff, #a1ffce);
 {
     height:25vh;
     background-image: url("../../img/logo.png");
-    background-size: 50%;
+    background-size: 45%;
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -204,6 +204,16 @@ text-align: center;
         position: fixed;
         width: 30%!important;
         z-index: 3;
+    }
+
+    .buscarFind_lost_Pets_responsive
+    {
+        width: 150%;
+        margin-bottom: 5%;
+    }
+    .ml-5
+    {
+        margin-left: 4%!important;
     }
 
     containerLogin{
