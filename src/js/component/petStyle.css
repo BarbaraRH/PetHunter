@@ -20,11 +20,7 @@ body input, body button{border-radius: 25px!important;}
 height: 40%;
 margin-top: 15vh;
 }
-body
-{
-   background-image: linear-gradient(#d5ffff,#a1ffce);
-   background-repeat: no-repeat;
-}
+
 
 /*RegisterForm CSS*/
 #containerLogin .card
@@ -50,7 +46,6 @@ margin-top: 15vh;
 }
 /*LostPets and FindedPets CSS*/
 
-.finded_lostPetsList{ background-image: linear-gradient(#d5ffff,#a1ffce);}
 
 .stikyHeader
 {
@@ -59,10 +54,11 @@ margin-top: 15vh;
   padding: 3% 0 0.5% 7px;
   position: -webkit-sticky;
   position: sticky;
-  top: -1px;
+  top: 1px;
   z-index: 2;
-  background-color: white;
+
 }
+.stikyBackground{background-image: linear-gradient(#d5ffff,#a1ffce);}
 .itemList
 {
     margin-top: 5%!important;
@@ -70,8 +66,7 @@ margin-top: 15vh;
 }
 .ListBody .card
 {
-    width: 100%;
-
+    width: 90%;
 }
 .ListBody a
 {

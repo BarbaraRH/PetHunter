@@ -12,7 +12,7 @@ export class LostPets extends React.Component {
 		return (
 			<div className="finded_lostPetsList">
 				<Navbar />
-				<div className="mt-5 pt-3 stikyHeader">
+				<div className="mt-5 pt-3 stikyHeader stikyBackground">
 					<h3 className="text-center stikyHeader">BUSCADOS</h3>
 					<form>
 						<div className="form-row mb-3 px-2 stikyHeader">
@@ -35,16 +35,22 @@ export class LostPets extends React.Component {
 							{({ store, actions }) => {
 								return store.lostPets.map((item, index) => {
 									return (
-										<Link to="/MatchAlert" key={index} className="" style={{ maxWidth: "100%" }}>
-											<div className="card mb-3" style={{ maxWidth: "100px;" }}>
+										<Link
+											to="/MatchAlert"
+											key={index}
+											className=""
+											style={{ maxWidth: "100%", textDecoration: "none" }}>
+											<div
+												className="card mb-3 ml-5 mt-0"
+												style={{ maxWidth: "100px;", borderRadius: "50px" }}>
 												<div className="row no-gutters">
 													<div className="col-4">
 														<img src={cat1} className="card-img" alt="Pet" />
 													</div>
 													<div className="col-8">
 														<div className="card-body">
-															<h5 className="card-title">{item.name}</h5>
-															<p className="card-text">
+															<h2 className="card-title">{item.name}</h2>
+															<h4 className="card-text">
 																{item.breed}
 																<br />
 																{item.size}
@@ -52,10 +58,10 @@ export class LostPets extends React.Component {
 																{item.color}
 																<br />
 																{item.user}
-															</p>
+															</h4>
 															<p className="card-text">
 																<small className="text-muted">
-																	Last updated 3 mins ago
+																	Se perdió con fecha -1-1-2019
 																</small>
 															</p>
 														</div>
