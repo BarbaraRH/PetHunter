@@ -2,10 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./petStyle.css";
 import logo from "../../img/logo.png";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
-import { Loading } from "./loading";
 
-function petSpiner() {}
+function petSpiner() {
+	console.log("funciona");
+}
 
 export const Login = () => (
 	<div className="bg" onLoad={petSpiner()}>
