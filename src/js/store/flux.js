@@ -29,6 +29,34 @@ const getState = ({ getStore, setStore }) => {
 					size: "Grande",
 					color: "Gris",
 					user: "MariaInes"
+				},
+				{
+					name: "Fido",
+					breed: "Mestizo",
+					size: "Grande",
+					color: "Café",
+					user: "David"
+				},
+				{
+					name: "Bobby",
+					breed: "Golden Retriever",
+					size: "Mediano",
+					color: "Amarillo",
+					user: "Amelia"
+				},
+				{
+					name: "Jon",
+					breed: "Pastor Alemán",
+					size: "Chico",
+					color: "Negro",
+					user: "Nicolas"
+				},
+				{
+					name: "Canela",
+					breed: "Mestizo",
+					size: "Grande",
+					color: "Gris",
+					user: "MariaInes"
 				}
 			],
 			demo: [

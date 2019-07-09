@@ -3,18 +3,18 @@ import { Link } from "react-router-dom";
 import "./petStyle.css";
 
 export const RegisterForm = () => (
-	<div className="bodySuperseder">
-		<link href="https://fonts.googleapis.com/css?family=Hammersmith+One&display=swap" rel="stylesheet" />
+	<div className="bg">
 		<div className="container">
-			<div className="d-flex justify-content-center">
-				<div className="card">
-					<div id="sideBarLeft" />
-					<div className="card-body">
+			<div id="sideBarLeft" />
+			<div className="row">
+				<div className="col-2" />
+				<div className="col-8 mt-5">
+					<div className="card-body movileContainerBackground">
 						<h3 className="titleFromForms">
 							Por favor, <br /> cuéntanos sobre ti!
 						</h3>
 						<form>
-							<div className="container movileContainer">
+							<div className="col-12 movileContainer">
 								<div className="input-group form-group">
 									<div className="input-group-prepend" />
 									<input
@@ -55,34 +55,34 @@ export const RegisterForm = () => (
 										name="mail"
 									/>
 								</div>
+								<input
+									type="button"
+									onClick={function() {
+										document.querySelector(".movileContainer").style.animation = "next 2s forwards";
+										document.querySelector("#nextBtn").value = "Become a Pet Hunter";
+										setTimeout(function() {
+											document.querySelector("#input1").placeholder = "Cuenta Bancaria";
+											document.querySelector("#input2").placeholder = "Banco Comercial";
+											document.querySelector("#input3").placeholder = "tipo de cuenta";
+											document.querySelector("#input4").placeholder = "Cédula de identidad";
+
+											document.querySelector("#input1").name = "acount";
+											document.querySelector("#input2").name = "Bank";
+											document.querySelector("#input3").name = "acountType";
+											document.querySelector("#input4").name = "socialNumber";
+										}, 1000);
+									}}
+									value="Next"
+									className="btn"
+									id="nextBtn"
+								/>
 							</div>
-
-							<input
-								type="button"
-								onClick={function() {
-									document.querySelector(".movileContainer").style.animation = "next 3s forwards";
-									document.querySelector("#nextBtn").value = "Become a Pet Hunter";
-									setTimeout(function() {
-										document.querySelector("#input1").placeholder = "número de Cuenta Bancaria";
-										document.querySelector("#input2").placeholder = "Banco Comercial";
-										document.querySelector("#input3").placeholder = "tipo de cuenta";
-										document.querySelector("#input4").placeholder = "Cédula de identidad";
-
-										document.querySelector("#input1").name = "acount";
-										document.querySelector("#input2").name = "Bank";
-										document.querySelector("#input3").name = "acountType";
-										document.querySelector("#input4").name = "socialNumber";
-									}, 1000);
-								}}
-								value="Next"
-								className="btn"
-								id="nextBtn"
-							/>
 						</form>
 					</div>
-					<div id="sideBarRight"> </div>
 				</div>
+				<div className="col-2" />
 			</div>
+			<div id="sideBarRight"> </div>
 		</div>
 	</div>
 );

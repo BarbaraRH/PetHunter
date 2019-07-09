@@ -8,10 +8,10 @@ import "../../styles/demo.scss";
 export class MyAccount extends React.Component {
 	render() {
 		return (
-			<div>
+			<div className="bg">
 				<h1>Mi Cuenta</h1>
 				<Link to="/LostPets">
-					<button className="btn btn-primary">Guardar</button>
+					<button className="btn">Guardar</button>
 				</Link>
 			</div>
 		);
