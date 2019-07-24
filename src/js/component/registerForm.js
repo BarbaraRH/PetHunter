@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Footer } from "../component/footer";
 import "./petStyle.css";
 
 export const RegisterForm = () => (
@@ -85,14 +84,11 @@ export const RegisterForm = () => (
 			</div>
 
 			<div id="sideBarRight"> </div>
+			<Link to={"/"}>
+				<button type="submit" className="btn abajo">
+					Back Login
+				</button>
+			</Link>
 		</div>
-		<Link to={"/"}>
-			<button type="submit" className="btn abajo">
-				Back Login
-			</button>
-		</Link>
 	</div>
-    <div className="row">
-			<Footer />
-		</div>
 );

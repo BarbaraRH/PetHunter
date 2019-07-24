@@ -1,8 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Numans');
-
-body input, body button{border-radius: 25px!important;}
-.bg
-{
+.bg{
 width: 100%;
 height: 100%;
 background-Image: linear-gradient(#d5ffff, #a1ffce);
@@ -22,74 +18,59 @@ background-Image: linear-gradient(#d5ffff, #a1ffce);
 }
 
 /*Login CSS*/
-.login .card
-{
+.login .card{
     width: 40%;
 }
 
-.logo
-{
+.logo{
     height:25vh;
     background-image: url("../../img/logo.png");
     background-size: 45%;
     background-position: center;
     background-repeat: no-repeat;
 }
-#containerLogin .card
-{
+#containerLogin .card{
 height: 40%;
 margin-top: 15vh;
 }
 
-
-/*RegisterForm CSS*/
-#containerLogin .card
-{
-height: 40%;
-margin-top: 15vh;
-}
-
-.movileContainerBackground
-{
+.movileContainerBackground{
     background-color: linear-gradient(#d5ffff, #a1ffce 5%);
     z-index:1;
 }
-#sideBarRight{ left: 76.67%;top: 0;}
-#sideBarLeft{right: 76.67%;top: 0;}
-#sideBarRight, #sideBarLeft
-{
-     background-image: linear-gradient(#d5ffff,#a1ffce);
+#sideBarRight{
+    left: 76.67%;
+    top: 0;
+    }
+#sideBarLeft{
+    right: 76.67%;
+    top: 0;}
+#sideBarRight, #sideBarLeft{
+    background-image: linear-gradient(#d5ffff,#a1ffce);
     height: 100vh!important;
     position: fixed;
     width: 30%;
     z-index: 3;
 }
+
 /*LostPets and FindedPets CSS*/
-
-
-.stikyHeader
-{
-
+.stikyHeader{
   margin: 0;
   padding: 3% 0 0.5% 7px;
   position: -webkit-sticky;
   position: sticky;
   top: 1px;
   z-index: 2;
-
 }
 .stikyBackground{background-image: linear-gradient(#d5ffff,#a1ffce);}
-.itemList
-{
+.itemList{
     margin-top: 5%!important;
     background-color:  rgba(0,0,0,0.06);
 }
-.ListBody .card
-{
+.ListBody .card{
     width: 90%;
 }
-.ListBody a
-{
+.ListBody a{
     margin: 1%;
     margin-left: 5%;
     height: 25%!important;
@@ -99,56 +80,37 @@ margin-top: 15vh;
     border-style: none!important;
     border-radius: 25px;
 }
-.ListBody img
-{
+.ListBody img{
     border-radius: 100%;
     width: 90%;
 }
 
-.itemList .no-gutters
-{
+.itemList .no-gutters{
     background-color: white;
 }
 
-/**/
-
-
-
-
-
-.movileContainer
-{
+.movileContainer{
     position: relative;
     top: 0;
-
 }
-button, .btn
-{
+button, .btn{
     align-content: center!important;
     width: 100%!important;
     border-radius: 5px!important;
     background-color: #ce93d8;
     color: black;
 }
-
-
 .card{
-
 margin-bottom: auto;
 background-color: rgba(0,0,0,0.06) !important;
 border-style: none!important;
 margin-top: 10%;
 }
-
-
-.card-body
-{
+.card-body{
  padding: 0.5rem!important;
-
 }
 
-.cat
-{
+.cat{
     background-image:url("/src/img/cat_1.png");
     animation: walkingCat 5s linear 2s infinite;
 }
@@ -160,8 +122,7 @@ color: black;
 border:0 !important;
 }
 
-input
-{
+input{
     border-radius: 25px!important;
 }
 
@@ -170,31 +131,25 @@ outline: 0 0 0 0  !important;
 box-shadow: 0 0 0 0 !important;
 
 }
-.titleFromForms
-{
+.titleFromForms{
 font-family: 'Hammersmith One', sans-serif;
 text-align: center;
 }
 
 
 @-webkit-keyframes next {
-
-
 0%{position: relative; left: 0; top:0;}
 25%{left: -30%;width:0;height:0}
 28%{left: 110%; width: 0;height:0}
 55%{position: relative; left: 0; top:0;width: 100%;}
 100%{position: relative; left: 0; top:0;}
-
 }
 
 @keyframes next {
-
 0%{position: relative; left: 0; top:0;}
 25%{left: -30%;width:0cm;}
 28%{left: 120%; width: 0cm;}
 100%{position: relative; left: 0; top:0;}
-
 }
 
 @-webkit-keyframes walkingAnimal {
@@ -216,7 +171,9 @@ text-align: center;
 
 @media only screen and (max-width: 600px)
 {
-    .logo{background-size: 170%;}
+    .logo
+    {background-size: 170%;
+    }
     .card
     {
         width: 85%;
@@ -230,13 +187,11 @@ text-align: center;
         z-index: 3;
     }
 
-    .buscarFind_lost_Pets_responsive
-    {
+    .buscarFind_lost_Pets_responsive{
         width: 150%;
         margin-bottom: 5%;
     }
-    .ml-5
-    {
+    .ml-5{
         margin-left: 4%!important;
     }
 
@@ -246,15 +201,12 @@ text-align: center;
     padding-left: 3%!important;
     }
     .movileContainer input{font-size: 72%; z-index: 1;}
-    .titleFromForms
-    {
+    .titleFromForms{
         font-size: 4vh;
     }
 }
 
-#spinerContainer
-{
-
+#spinerContainer{
   position:fixed;
   z-index: 100;
   top:50%;
@@ -262,12 +214,9 @@ text-align: center;
   margin:-70px 0 0 -100px;
   width:200px;
   height:200px;
-
-
 }
 
-.spinner-border
-{
+.spinner-border{
      margin: 0px 0px 0px 60px!important;
 }
 .color
