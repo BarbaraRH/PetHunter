@@ -126,7 +126,7 @@ button, .btn
 {
     align-content: center!important;
     width: 100%!important;
-    border-radius: 25px!important;
+    border-radius: 5px!important;
     background-color: #ce93d8;
     color: black;
 }
@@ -273,4 +273,8 @@ text-align: center;
 .color
 {
     color: #ce93d8;
+}
+.abajo{
+    position: absolute;
+    bottom: 10px
 }
