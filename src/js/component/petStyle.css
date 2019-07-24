@@ -48,11 +48,26 @@ margin-top: 15vh;
 height: 40%;
 margin-top: 15vh;
 }
-
+.central
+{
+    background-image: linear-gradient(#d5ffff,#a1ffce);
+    z-index:2!important;
+    width: 100%!important;
+    height:100%!important;
+    position: absolute;
+}
 .movileContainerBackground
 {
     background-color: linear-gradient(#d5ffff, #a1ffce 5%);
     z-index:1;
+}
+
+.movileContainer
+{
+    position: relative;
+    top: 0;
+    z-index:3;
+
 }
 #sideBarRight{ left: 76.67%;top: 0;}
 #sideBarLeft{right: 76.67%;top: 0;}
@@ -116,12 +131,6 @@ margin-top: 15vh;
 
 
 
-.movileContainer
-{
-    position: relative;
-    top: 0;
-
-}
 button, .btn
 {
     align-content: center!important;
@@ -181,19 +190,20 @@ text-align: center;
 
 
 0%{position: relative; left: 0; top:0;}
-25%{left: -30%;width:0;height:0}
+25%{left: -30%;width:0;height:0; z-index:-1!important}
 28%{left: 110%; width: 0;height:0}
 55%{position: relative; left: 0; top:0;width: 100%;}
-100%{position: relative; left: 0; top:0;}
+100%{position: relative; left: 0; top:0;z-index:-1!important;}
 
 }
 
 @keyframes next {
 
-0%{position: relative; left: 0; top:0;}
-25%{left: -30%;width:0cm;}
-28%{left: 120%; width: 0cm;}
-100%{position: relative; left: 0; top:0;}
+0%{position: relative; left: 0; top:0;z-index:-1;}
+25%{left: -30%;width:0;height:0;}
+28%{left: 110%; width: 0;height:0}
+55%{position: relative; left: 0; top:0;width: 100%;}
+100%{position: relative; left: 0; top:0;z-index:-1;}
 
 }
 
