@@ -5,7 +5,7 @@ import { Context } from "../store/appContext";
 import PropTypes from "prop-types";
 import { Footer } from "../component/footer";
 import { Navbar } from "../component/navbar";
-import cat1 from "../../img/cat1.png";
+import cat1 from "../../img/cat_1.png";
 
 export class FindedPets extends React.Component {
 	render() {

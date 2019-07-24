@@ -10,15 +10,17 @@ background-Image: linear-gradient(#d5ffff, #a1ffce);
 /*Loading CSS*/
 .loadingAnimal
 {
-    background-image: url("../../img/cat1.png");
+    background-image: url("../../img/cat_1.png");
     width: 100%;
     height: 100%;
-    background-size: 80%;
+    background-size: 100px 100px;
     background-repeat: no-repeat;
-
+    background-position: center;
     animation-name: walkingAnimal;
     animation-duration: 0.7s;
     animation-iteration-count: infinite;
+    position: absolute;
+    
 }
 
 /*Login CSS*/
@@ -211,21 +213,26 @@ text-align: center;
 }
 
 @-webkit-keyframes walkingAnimal {
-  0%{background-image: url("../../img/cat1.png")}
-  25%{background-image: url("../../img/cat2.png")}
-  50%{background-image: url("../../img/cat3.png")}
-  75%{background-image: url("../../img/cat4.png")}
-  100%{background-image: url("../../img/cat5.png")}
+  0%{background-image: url("../../img/cat_1.png")}
+  14.2%{background-image: url("../../img/cat_2.png")}
+  28.4%{background-image: url("../../img/cat_3.png")}
+  42.6%{background-image: url("../../img/cat_4.png")}
+  56.8%{background-image: url("../../img/cat_1.png")}
+  71%{background-image: url("../../img/cat_2.png")}
+  85%{background-image: url("../../img/cat_3.png")}
+  100%{background-image: url("../../img/cat_4.png")}
 }
 
 /* Standard syntax */
 @keyframes walkingAnimal {
-  0%{background-image: url("../../img/cat1.png")}
-  25%{background-image: url("../../img/cat2.png")}
-  50%{background-image: url("../../img/cat3.png")}
-  75%{background-image: url("../../img/cat4.png")}
-  100%{background-image: url("../../img/cat5.png")}
-
+  0%{background-image: url("../../img/cat_1.png")}
+  14.2%{background-image: url("../../img/cat_2.png")}
+  28.4%{background-image: url("../../img/cat_3.png")}
+  42.6%{background-image: url("../../img/cat_4.png")}
+  56.8%{background-image: url("../../img/cat_1.png")}
+  71%{background-image: url("../../img/cat_2.png")}
+  85%{background-image: url("../../img/cat_3.png")}
+  100%{background-image: url("../../img/cat_4.png")}
 }
 
 @media only screen and (max-width: 600px)

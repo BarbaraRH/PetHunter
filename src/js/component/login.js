@@ -3,12 +3,8 @@ import { Link } from "react-router-dom";
 import "./petStyle.css";
 import logo from "../../img/logo.png";
 
-function petSpiner() {
-	console.log("funciona");
-}
-
 export const Login = () => (
-	<div className="bg" onLoad={petSpiner()}>
+	<div className="bg">
 		<div className="row">
 			<div className="col-2" />
 			<div className="col-8">
