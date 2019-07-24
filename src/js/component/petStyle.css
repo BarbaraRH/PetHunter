@@ -18,7 +18,7 @@ background-Image: linear-gradient(#d5ffff, #a1ffce);
 }
 
 /*Login CSS*/
-.login .card{
+.login{
     width: 40%;
 }
 
@@ -29,7 +29,7 @@ background-Image: linear-gradient(#d5ffff, #a1ffce);
     background-position: center;
     background-repeat: no-repeat;
 }
-#containerLogin .card{
+#containerLogin{
 height: 40%;
 margin-top: 15vh;
 }
@@ -45,6 +45,7 @@ margin-top: 15vh;
 #sideBarLeft{
     right: 76.67%;
     top: 0;}
+
 #sideBarRight, #sideBarLeft{
     background-image: linear-gradient(#d5ffff,#a1ffce);
     height: 100vh!important;
@@ -62,27 +63,12 @@ margin-top: 15vh;
   top: 1px;
   z-index: 2;
 }
-.stikyBackground{background-image: linear-gradient(#d5ffff,#a1ffce);}
+.stikyBackground{
+    background-color:#a1ffce;
+    }
 .itemList{
     margin-top: 5%!important;
     background-color:  rgba(0,0,0,0.06);
-}
-.ListBody .card{
-    width: 90%;
-}
-.ListBody a{
-    margin: 1%;
-    margin-left: 5%;
-    height: 25%!important;
-    margin-bottom: auto;
-    width: 90%;
-    background-color: white;
-    border-style: none!important;
-    border-radius: 25px;
-}
-.ListBody img{
-    border-radius: 100%;
-    width: 90%;
 }
 
 .itemList .no-gutters{
@@ -94,8 +80,7 @@ margin-top: 15vh;
     top: 0;
 }
 button, .btn{
-    align-content: center!important;
-    width: 100%!important;
+
     border-radius: 5px!important;
     background-color: #ce93d8;
     color: black;
@@ -226,4 +211,8 @@ text-align: center;
 .abajo{
     position: absolute;
     bottom: 10px
+}
+.img-ch{
+    width: 50px;
+    height: 100px;
 }

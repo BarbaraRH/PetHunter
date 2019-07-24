@@ -4,7 +4,7 @@ import "./footerStyle.css";
 
 export const Footer = () => (
 	<footer
-		className="footer"
+		className="footer container-fluid"
 		style={{
 			position: "fixed",
 			bottom: 0,
