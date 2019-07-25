@@ -9,12 +9,14 @@ background-Image: linear-gradient(#d5ffff, #a1ffce);
     background-image: url("../../img/cat_1.png");
     width: 100%;
     height: 100%;
-    background-size: 80%;
+    background-size: 100px 100px;
     background-repeat: no-repeat;
-
+    background-position: center;
     animation-name: walkingAnimal;
-    animation-duration: 1s;
+    animation-duration: 0.7s;
     animation-iteration-count: infinite;
+    position: absolute;
+    
 }
 
 /*Login CSS*/
@@ -80,7 +82,6 @@ margin-top: 15vh;
     top: 0;
 }
 button, .btn{
-
     border-radius: 5px!important;
     background-color: #ce93d8;
     color: black;
@@ -124,7 +125,7 @@ text-align: center;
 
 @-webkit-keyframes next {
 0%{position: relative; left: 0; top:0;}
-25%{left: -30%;width:0;height:0}
+25%{left: -30%;width:0;height:0; z-index:-1!important}
 28%{left: 110%; width: 0;height:0}
 55%{position: relative; left: 0; top:0;width: 100%;}
 100%{position: relative; left: 0; top:0;}
@@ -132,14 +133,24 @@ text-align: center;
 
 @keyframes next {
 0%{position: relative; left: 0; top:0;}
-25%{left: -30%;width:0cm;}
-28%{left: 120%; width: 0cm;}
+25%{left: -30%;width:0;height:0;}
+28%{left: 110%; width: 0;height:0;}
+34.1%{z-index:-1;}
+34.2%{z-index:3;}
+55%{position: relative; left: 0; top:0;width: 100%;}
+
 100%{position: relative; left: 0; top:0;}
 }
 
 @-webkit-keyframes walkingAnimal {
-  from {background-color: red;}
-  to {background-color: yellow;}
+  0%{background-image: url("../../img/cat_1.png")}
+  14.2%{background-image: url("../../img/cat_2.png")}
+  28.4%{background-image: url("../../img/cat_3.png")}
+  42.6%{background-image: url("../../img/cat_4.png")}
+  56.8%{background-image: url("../../img/cat_1.png")}
+  71%{background-image: url("../../img/cat_2.png")}
+  85%{background-image: url("../../img/cat_3.png")}
+  100%{background-image: url("../../img/cat_4.png")}
 }
 
 /* Standard syntax */
@@ -204,6 +215,7 @@ text-align: center;
 .spinner-border{
      margin: 0px 0px 0px 60px!important;
 }
+
 .color
 {
     color: #ce93d8;

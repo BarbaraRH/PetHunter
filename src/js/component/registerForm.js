@@ -7,12 +7,14 @@ export const RegisterForm = () => (
 		<div className="container">
 			<div id="sideBarLeft" />
 			<div className="row">
+				<div className="central"> dsfdffgfdgfd</div>
 				<div className="col-2" />
 				<div className="col-8 mt-5">
 					<div className="card-body movileContainerBackground">
 						<h3 className="titleFromForms">
 							Por favor, <br /> cuéntanos sobre ti!
 						</h3>
+
 						<form>
 							<div className="col-12 movileContainer">
 								<div className="input-group form-group">
