@@ -12,7 +12,6 @@ export const Login = () => (
 			<div className="col-8">
 				<div className="card-body mt-5">
 					<div className="container loadingRemover">
-						<Loading />
 						<Login2 />
 					</div>
 				</div>
