@@ -17,7 +17,7 @@ export const RegisterForm = () => (
 						</h3>
 
 						<form className="text-center">
-							<div className="col-12">
+							<div className="col-12 movileContainer">
 								<div className="input-group form-group">
 									<div className="input-group-prepend" />
 									<input
@@ -59,22 +59,32 @@ export const RegisterForm = () => (
 								<input
 									type="button"
 									onClick={function() {
-										document.querySelector(".movileContainer").style.animation = "next 2s forwards";
-										document.querySelector("#nextBtn").value = "Become a Pet Hunter";
-										setTimeout(function() {
-											document.querySelector("#input1").placeholder = "Cuenta Bancaria";
-											document.querySelector("#input2").placeholder = "Banco Comercial";
-											document.querySelector("#input3").placeholder = "tipo de cuenta";
-											document.querySelector("#input4").placeholder = "Cédula de identidad";
-
-											document.querySelector("#input1").name = "acount";
-											document.querySelector("#input2").name = "Bank";
-											document.querySelector("#input3").name = "acountType";
-											document.querySelector("#input4").name = "socialNumber";
-										}, 1000);
+										let user = document.querySelector("#input1").value;
+										let pass1 = document.querySelector("#input2").value;
+										let pass2 = document.querySelector("#input3").value;
+										let mail = document.querySelector("#input4").value;
+										if (pass1 == pass2 && user != "" && mail != "") {
+											document.querySelector(".movileContainer").style.animation =
+												"next 2s forwards";
+											document.querySelector("#nextBtn").value = "Become a Pet Hunter";
+											setTimeout(function() {
+												document.querySelector("#input1").placeholder = "Cuenta Bancaria";
+												document.querySelector("#input2").placeholder = "Banco Comercial";
+												document.querySelector("#input3").placeholder = "tipo de cuenta";
+												document.querySelector("#input4").placeholder = "Cédula de identidad";
+												document.querySelector("#input1").name = "acount";
+												document.querySelector("#input2").name = "Bank";
+												document.querySelector("#input3").name = "acountType";
+												document.querySelector("#input4").name = "socialNumber";
+												document.querySelector("#input1").value = "";
+												document.querySelector("#input2").value = "";
+												document.querySelector("#input3").value = "";
+												document.querySelector("#input4").value = "";
+											}, 500);
+										}
 									}}
 									value="Next"
-									className="btn btn-block btn-success"
+									className="btn "
 									id="nextBtn"
 								/>
 								<Link to={"/"}>

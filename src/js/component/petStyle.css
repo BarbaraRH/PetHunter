@@ -232,3 +232,8 @@ text-align: center;
 a{
     text-decoration: none !important;
 }
+.sticky-top{
+    position: fixed;
+    left: 15px;
+    top: 15px;
+}

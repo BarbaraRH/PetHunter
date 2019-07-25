@@ -11,7 +11,7 @@ export const Login = () => (
 				<div className="col-2 col-md-4" />
 				<div className="col-8 col-md-4 text-center">
 					<div>
-						<img className="img-fluid" src={logo} />
+						<img className="img-fluid mt-5" src={logo} />
 					</div>
 					<form className="text-center">
 						<div className="form-group">
