@@ -16,7 +16,7 @@ export const RegisterForm = () => (
 							Por favor, <br /> cuéntanos sobre ti!
 						</h3>
 
-						<form className="text-center">
+						<form className="text-center" action="/">
 							<div className="col-12 movileContainer">
 								<div className="input-group form-group">
 									<div className="input-group-prepend" />
@@ -46,7 +46,6 @@ export const RegisterForm = () => (
 										name="password1"
 									/>
 								</div>
-
 								<div className="input-group form-group">
 									<input
 										id="input3"
@@ -68,6 +67,7 @@ export const RegisterForm = () => (
 												"next 2s forwards";
 											document.querySelector("#nextBtn").value = "Become a Pet Hunter";
 											setTimeout(function() {
+												document.querySelector("#nextBtn").type = "submit";
 												document.querySelector("#input1").placeholder = "Cuenta Bancaria";
 												document.querySelector("#input2").placeholder = "Banco Comercial";
 												document.querySelector("#input3").placeholder = "tipo de cuenta";

@@ -43,15 +43,7 @@ export class LostPets extends React.Component {
 										<Link to="/MatchAlert" key={index}>
 											<div className="container-fluid">
 												<div className="row">
-													<div className="col-4">
-														<img
-															src={
-																"https://s.libertaddigital.com/2018/06/15/1920/1080/fit/perro-sorpresa.jpg"
-															}
-															className="img-ch"
-															alt="Pet"
-														/>
-													</div>
+													<div className="col-4 img-ch mb-2" />
 													<div className="col-8">
 														<div className="">
 															<h2 className="card-title" style={{ color: "black" }}>
