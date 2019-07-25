@@ -27,6 +27,24 @@ const injectContext = PassedComponent => {
 			 * This function is the equivalent to "window.onLoad", it only run once on the entire application lifetime
 			 * you should do your ajax requests or fetch api requests here
 			 **/
+			/* fetch("https://3000-e0a081c1-00a4-48aa-a3cf-e23ef8d6bf16.ws-us0.gitpod.io/user")
+				.then(resp => resp.json())
+				.then(data => {
+					console.log(data);
+				})
+				.catch(error => console.log(error)); */
+			fetch("https://3000-e0a081c1-00a4-48aa-a3cf-e23ef8d6bf16.ws-us0.gitpod.io/user", {
+				method: "PUT",
+				body: JSON.stringify({ username: "n2", email: "email@enail.com" }),
+				headers: {
+					"Content-type": "application/json; charset=UTF-8"
+				}
+			})
+				.then(resp => resp.json())
+				.then(data => {
+					console.log(data);
+				})
+				.catch(error => console.log(error));
 		}
 
 		render() {
