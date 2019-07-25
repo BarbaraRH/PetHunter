@@ -6,33 +6,42 @@ export const RegisterForm = () => (
 	<div className="bg">
 		<div className="container">
 			<div id="sideBarLeft" />
+
 			<div className="row">
-				<div className="central"> dsfdffgfdgfd</div>
-				<div className="col-2" />
-				<div className="col-8 mt-5">
-					<div className="card-body movileContainerBackground">
+				{/*<!--<div className="central"> dsfdffgfdgfd</div>-->*/}
+				<div className="col-2 col-md-3" />
+				<div className="col-8 col-md-6 mt-5">
+					<div className="">
 						<h3 className="titleFromForms">
 							Por favor, <br /> cuéntanos sobre ti!
 						</h3>
 
-						<form>
-							<div className="col-12 movileContainer">
+						<form className="text-center">
+							<div className="col-12">
 								<div className="input-group form-group">
 									<div className="input-group-prepend" />
 									<input
 										id="input1"
 										type="text"
-										className="form-control"
-										placeholder="Usuario Pet Lover"
+										className="form-control text-center"
+										placeholder="Usuario"
 										name="user"
 									/>
 								</div>
-
+								<div className="input-group form-group">
+									<input
+										id="input4"
+										type="text"
+										className="form-control text-center"
+										placeholder="correo electronico"
+										name="mail"
+									/>
+								</div>
 								<div className="input-group form-group">
 									<input
 										id="input2"
 										type="password"
-										className="form-control"
+										className="form-control text-center"
 										placeholder="contraseña"
 										name="password1"
 									/>
@@ -42,19 +51,9 @@ export const RegisterForm = () => (
 									<input
 										id="input3"
 										type="password"
-										className="form-control"
+										className="form-control text-center"
 										placeholder="repite contraseña"
 										name="password2"
-									/>
-								</div>
-
-								<div className="input-group form-group">
-									<input
-										id="input4"
-										type="text"
-										className="form-control"
-										placeholder="correo electronico"
-										name="mail"
 									/>
 								</div>
 								<input
@@ -75,22 +74,25 @@ export const RegisterForm = () => (
 										}, 1000);
 									}}
 									value="Next"
-									className="btn"
+									className="btn btn-block btn-success"
 									id="nextBtn"
 								/>
+								<Link to={"/"}>
+									<input
+										type="button"
+										value="Back"
+										className="btn btn-block btn-info mt-4 mb-4"
+										id="nextBtn"
+									/>
+								</Link>
 							</div>
 						</form>
 					</div>
 				</div>
-				<div className="col-2" />
+				<div className="col-2 col-md-3" />
 			</div>
 
 			<div id="sideBarRight"> </div>
-			<Link to={"/"}>
-				<button type="submit" className="btn abajo">
-					Back Login
-				</button>
-			</Link>
 		</div>
 	</div>
 );
