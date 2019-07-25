@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
+import { Footer } from "../component/footer";
 import { Context } from "../store/appContext";
 
 export class MatchAlert extends React.Component {
@@ -33,6 +34,9 @@ export class MatchAlert extends React.Component {
 					<p>Tamaño: Grande.</p>
 					<p>Color: Blanca.</p>
 					<p>Sexo: Hembra</p>
+				</div>
+				<div className="row">
+					<Footer />
 				</div>
 			</div>
 		);
