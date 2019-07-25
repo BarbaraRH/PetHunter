@@ -84,7 +84,13 @@ export const RegisterForm = () => (
 				</div>
 				<div className="col-2" />
 			</div>
+
 			<div id="sideBarRight"> </div>
+			<Link to={"/"}>
+				<button type="submit" className="btn abajo">
+					Back Login
+				</button>
+			</Link>
 		</div>
 	</div>
 );

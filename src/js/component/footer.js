@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export const Footer = () => (
 	<footer
-		className="footer"
+		className="footer container-fluid"
 		style={{
 			position: "fixed",
 			bottom: 0,
