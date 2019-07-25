@@ -35,34 +35,35 @@ export class LostPets extends React.Component {
 						</div>
 					</div>
 					{/* parte media donde se muestran los gatitos*/}
-					<div className="row">
+					<div className="container-fluid">
 						<Context.Consumer>
 							{({ store, actions }) => {
 								return store.lostPets.map((item, index) => {
 									return (
 										<Link to="/MatchAlert" key={index}>
-											<div className="container-fluid">
-												<div className="row">
-													<div className="col-4 img-ch mb-2" />
-													<div className="col-8">
-														<div className="">
-															<h2 className="card-title" style={{ color: "black" }}>
-																{item.name}
-															</h2>
-															<h4>
-																<span
-																	className="badge badge-primary"
-																	style={{ borderRadius: "50px" }}>
-																	{item.breed}
-																</span>
-															</h4>
-															<p className="card-text">
-																<small className="text-muted">
-																	Se perdió con fecha -1-1-2019
-																</small>
-															</p>
-														</div>
-													</div>
+											<div className="row">
+												<div
+													className="col-4 col-md-4 img-ch mb-2"
+													style={{
+														backgroundImage: item.image
+													}}
+												/>
+												<div className="col-8 col-md-8 p-2 mb-2 grist">
+													<h2 className="card-title" style={{ color: "black" }}>
+														{item.name}
+													</h2>
+													<h4>
+														<span
+															className="badge badge-primary"
+															style={{ borderRadius: "50px" }}>
+															{item.breed}
+														</span>
+													</h4>
+													<p className="card-text">
+														<small className="text-muted">
+															Se perdió con fecha -1-1-2019
+														</small>
+													</p>
 												</div>
 											</div>
 										</Link>

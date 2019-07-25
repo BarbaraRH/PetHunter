@@ -2,7 +2,7 @@
 width: 100%;
 height: 100%;
 margin:0;
-background-Image: linear-gradient(#d5ffff, #a1ffce);
+background-color: #58D68D
    }
 
 
@@ -69,7 +69,7 @@ margin-top: 15vh;
   z-index: 2;
 }
 .stikyBackground{
-    background-color:#a1ffce;
+    background-color:#58D68D;
     }
 .itemList{
     margin-top: 5%!important;
@@ -226,10 +226,13 @@ text-align: center;
     bottom: 10px
 }
 .img-ch{
-    background-image: url("https://s.libertaddigital.com/2018/06/15/1920/1080/fit/perro-sorpresa.jpg");
-    background-size: 100px;
+    background-size: auto 100%;
     background-repeat: no-repeat;
     background-position: center center;
+    background-color: red;
+}
+.grist{
+    background-color: #FAFAFA;
 }
 a{
     text-decoration: none !important;
