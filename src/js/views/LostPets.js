@@ -68,21 +68,19 @@ export class LostPets extends React.Component {
 									});
 								}}
 							</Context.Consumer>
-							<Link to="/addForm">
-								<div className="row">
-									<div className="col-md-12 col-10 fixed-bottom">
-										<div className="row">
-											<div className="col-md-10 col-10 " />
-											<div className="col-md-2 col-2 mb-5 pb-4">
-												<i
-													className="fas fa-plus-circle ml-4 pl-2"
-													style={{ color: "#ce93d8", fontSize: "3em" }}
-												/>
-											</div>
-										</div>
+							<div className="row" style={{ zIndex: 0 }}>
+								<div className="col-md-12 col-10 fixed-bottom">
+									<div className="row">
+										<div className="col-md-10 col-10 " />
+										<Link to="/addForm" className="col-md-2 col-2 mb-5 pb-4">
+											<i
+												className="fas fa-plus-circle ml-4 pl-2"
+												style={{ color: "#ce93d8", fontSize: "3em" }}
+											/>
+										</Link>
 									</div>
 								</div>
-							</Link>
+							</div>
 						</div>
 						<div className="row mt-5">
 							<Footer />
