@@ -71,7 +71,7 @@ export class LostPets extends React.Component {
 								});
 							}}
 						</Context.Consumer>
-						<Link to="/myAccount">
+						<Link to="/addForm">
 							<div className="row">
 								<div className="col-md-12 col-10 fixed-bottom">
 									<div className="row">
