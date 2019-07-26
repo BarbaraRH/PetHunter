@@ -27,13 +27,6 @@ export class LostPets extends React.Component {
 											<div className="col-6">
 												<input type="text" className="form-control" placeholder="Buscar" />
 											</div>
-											<div className="col-6">
-												<Link to="/AddForm">
-													<button type="button" className="btn">
-														Solicitar Búsqueda
-													</button>
-												</Link>
-											</div>
 										</div>
 									</div>
 								</div>
