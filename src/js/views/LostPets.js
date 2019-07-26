@@ -69,6 +69,21 @@ export class LostPets extends React.Component {
 								});
 							}}
 						</Context.Consumer>
+						<Link to="/addForm">
+							<div className="row">
+								<div className="col-md-12 col-10 fixed-bottom">
+									<div className="row">
+										<div className="col-md-10 col-10 " />
+										<div className="col-md-2 col-2 mb-5 pb-4">
+											<i
+												className="fas fa-plus-circle ml-4 pl-2"
+												style={{ color: "#ce93d8", fontSize: "3em" }}
+											/>
+										</div>
+									</div>
+								</div>
+							</div>
+						</Link>
 					</div>
 					{/* parte Footer*/}
 					<div className="row mt-5">
@@ -79,33 +94,3 @@ export class LostPets extends React.Component {
 		);
 	}
 }
-
-/*
-
-return store[lostPets].map((item, index) => {
-								return (
-									<div key={index} className="card" style={{ maxWidth: "100%" }}>
-										<div className="row no-gutters">
-											<div className="col-4 p-2">
-												<img
-													src="https://via.placeholder.com/60"
-													className="card-img"
-													alt="..."
-												/>
-											</div>
-											<div className="col-8">
-												<div className="card-body">
-													<h5 className="card-title">Fido</h5>
-													<p className="card-text">
-														Raza: Mestizo <br />
-														Tamaño: Grande <br />
-														Color: Café
-													</p>
-												</div>
-											</div>
-										</div>
-									</div>
-								);
-							});
-
- */
