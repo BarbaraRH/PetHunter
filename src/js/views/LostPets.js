@@ -71,6 +71,21 @@ export class LostPets extends React.Component {
 								});
 							}}
 						</Context.Consumer>
+						<Link to="/addForm">
+							<div className="row">
+								<div className="col-md-12 col-10 fixed-bottom">
+									<div className="row">
+										<div className="col-md-10 col-10 " />
+										<div className="col-md-2 col-2 mb-5 pb-4">
+											<i
+												className="fas fa-plus-circle ml-4 pl-2"
+												style={{ color: "#ce93d8", fontSize: "3em" }}
+											/>
+										</div>
+									</div>
+								</div>
+							</div>
+						</Link>
 					</div>
 					{/* parte Footer*/}
 					<div className="row mt-5">
