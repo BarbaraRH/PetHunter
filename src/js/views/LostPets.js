@@ -11,14 +11,12 @@ export class LostPets extends React.Component {
 	render() {
 		return (
 			<div>
-				<Navbar />
+				<Navbar title="BUSCADOS" />
 				<div className="container-fluid mt-4">
 					{/* parte superior menu*/}
 
 					<div className="row p-3 stikyBackground text-center">
-						<div className="col-12">
-							<h3 className="text-center">BUSCADOS</h3>
-						</div>
+						<div className="col-12" />
 						<div className="col-12 text-center">
 							<form>
 								<div className="form-row mb-3 px-2 stikyHeader">
