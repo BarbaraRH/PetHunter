@@ -15,7 +15,6 @@ export const RegisterForm = () => (
 						<h3 className="titleFromForms">
 							Por favor, <br /> cuéntanos sobre ti!
 						</h3>
-
 						<form className="text-center" action="/">
 							<div className="col-12 movileContainer">
 								<div className="input-group form-group">
