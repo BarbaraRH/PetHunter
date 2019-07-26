@@ -6,7 +6,9 @@ import { Loading } from "./loading";
 
 export const Login = () => (
 	<div className="bg">
-		<div className="container-fluid">
+		<Loading />
+		<div className="container-fluid position-relative indexless">
+			{/*intento poner el preloader aqui*/}
 			<div className="row">
 				<div className="col-2 col-md-4" />
 				<div className="col-8 col-md-4 text-center">
