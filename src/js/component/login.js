@@ -2,42 +2,43 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./petStyle.css";
 import logo from "../../img/logo.png";
+import { Loading } from "./loading";
 
 export const Login = () => (
-	<div className="bodySuperseder">
-		<div className="container" id="containerLogin">
-			<div className="d-flex justify-content-center">
-				<div className="card">
-					<div className="card-body">
-						<div alt="Pet Hunter" className="logo" />
-						<form>
-							<div className="form-group">
-								<label className="sr-only" htmlFor="user">
-									User
-								</label>
-								<input id="user" type="text" className="form-control" placeholder="Pet Lover User" />
-							</div>
-							<div className="form-group">
-								<label className="sr-only" htmlFor="password">
-									Password
-								</label>
-								<input id="password" type="password" className="form-control" placeholder="password" />
-							</div>
-							<Link to={"/LostPets"}>
-								<button type="submit" className="btn btn-danger">
+	<div className="bg">
+		<div className="container-fluid">
+			<div className="row">
+				<div className="col-2 col-md-4" />
+				<div className="col-8 col-md-4 text-center">
+					<div>
+						<img className="img-fluid mt-5" src={logo} />
+					</div>
+					<form className="text-center">
+						<div className="form-group">
+							<input id="user" type="text" className="form-control text-center" placeholder="Username" />
+						</div>
+						<div className="form-group">
+							<input
+								id="password"
+								type="password"
+								className="form-control text-center"
+								placeholder="password"
+							/>
+							<Link to={"/lostPets"}>
+								<button type="button" className="btn btn-block btn-success mt-3">
 									Start Searching
 								</button>
 							</Link>
 							<br />
-							<br />
 							<Link to={"/RegisterForm"}>
-								<button type="submit" className="btn btn-danger">
+								<button type="button" className="btn btn-block btn-info">
 									Register
 								</button>
 							</Link>
-						</form>
-					</div>
+						</div>
+					</form>
 				</div>
+				<div className="col-2 col-md-4" />
 			</div>
 		</div>
 	</div>

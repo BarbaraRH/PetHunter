@@ -34,7 +34,7 @@ export class AddForm extends React.Component {
 						<input type="text" className="form-control mb-2" placeholder="Color" />
 						<input type="text" className="form-control mb-2" placeholder="Sexo" />
 						<Link to="/Coincidences" className="text-center">
-							<button className="btn btn-outline-primary my-4 btn-block">Buscar</button>
+							<button className="btn my-4 btn-block">Buscar</button>
 						</Link>
 					</div>
 				</div>

@@ -27,6 +27,16 @@ const injectContext = PassedComponent => {
 			 * This function is the equivalent to "window.onLoad", it only run once on the entire application lifetime
 			 * you should do your ajax requests or fetch api requests here
 			 **/
+			fetch("https://3000-defd025d-45f1-486a-95ab-1ecf516fc2cb.ws-us0.gitpod.io/user")
+				.then(resp => {
+					return resp.json(); // (returns promise) will try to parse the result as json as return a promise that you can .then for results
+				})
+				.then(data => {
+					console.log(data); //this will print on the console the exact object received from the server
+				})
+				.catch(error => {
+					console.log(error);
+				});
 		}
 
 		render() {

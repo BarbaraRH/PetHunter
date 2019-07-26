@@ -1,74 +1,103 @@
-@import url('https://fonts.googleapis.com/css?family=Numans');
+.bg{
+width: 100%;
+height: 100%;
+margin:0;
+background-color: #58D68D
+   }
 
 
-
-.bodySuperseder{
-background-image: linear-gradient(#a1ffce, #d5ffff);
-background-size: cover;
-background-repeat: no-repeat;
-height: 100vh;
-width: 100vw;
-font-family: 'Numans', sans-serif;
-}
-
-.logo
+/*Loading CSS*/
+.loadingAnimal
 {
-    width:50%;
-    height:50%;
-    margin-left:25%;
-    background-image: url("../../img/logo.png");
-    background-size: 170%;
-    background-position: 50% 30%;
+    background-image: url("../../img/cat_1.png");
+    width: 100%;
+    height: 100%;
+    background-size: 100px 100px;
     background-repeat: no-repeat;
+    background-position: center;
+    animation-name: walkingAnimal;
+    animation-duration: 0.7s;
+    animation-iteration-count: infinite;
+    position: absolute;
 
 }
-#sideBarRight, #sideBarLeft
-{
-     background-image: linear-gradient(#a1ffce, #d5ffff);
+
+/*Login CSS*/
+.login{
+    width: 40%;
+}
+
+.logo{
+    height:25vh;
+    background-image: url("../../img/logo.png");
+    background-size: 45%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#containerLogin{
+height: 40%;
+margin-top: 15vh;
+}
+
+.movileContainerBackground{
+    background-color: linear-gradient(#d5ffff, #a1ffce 5%);
+    z-index:1;
+}
+#sideBarRight{
+    left: 76.67%;
+    top: 0;
+    }
+#sideBarLeft{
+    right: 76.67%;
+    top: 0;}
+
+#sideBarRight, #sideBarLeft{
+    background-image: linear-gradient(#d5ffff,#a1ffce);
     height: 100vh!important;
     position: fixed;
     width: 30%;
     z-index: 3;
 }
-#sideBarRight{ left: 64.67%;top: 0;}
-#sideBarLeft{right: 64.67%;top: 0;}
 
-.movileContainer
-{
+/*LostPets and FindedPets CSS*/
+.stikyHeader{
+  margin: 0;
+  padding: 3% 0 0.5% 7px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 1px;
+  z-index: 2;
+}
+.stikyBackground{
+    background-color:#58D68D;
+    }
+.itemList{
+    margin-top: 5%!important;
+    background-color:  rgba(0,0,0,0.06);
+}
+
+.itemList .no-gutters{
+    background-color: white;
+}
+
+.movileContainer{
     position: relative;
     top: 0;
 }
-button
-{
-    align-content: center!important;
-    width: 100%!important;
-    border-radius: 25px!important;
+button, .btn{
+    border-radius: 5px!important;
 }
-    #nextBtn
-{
-    position: absolute!important;
-    top:80%!important;
-    width: 95%!important;
-    padding-top: 2.5%;
-    padding-bottom: 2.5%;
-    margin-top: 3%;
-}
-
 .card{
-height: 370px;
-margin-top: 15vh!important;
 margin-bottom: auto;
-width: 400px;
-background-color: rgba(0,0,0,0.1) !important;
+background-color: rgba(0,0,0,0.06) !important;
+border-style: none!important;
+margin-top: 10%;
 }
-.card-body
-{
+.card-body{
  padding: 0.5rem!important;
-
 }
 
-.cat
-{
+.cat{
     background-image:url("/src/img/cat_1.png");
     animation: walkingCat 5s linear 2s infinite;
 }
@@ -80,9 +109,8 @@ color: black;
 border:0 !important;
 }
 
-input
-{
-    border-radius: 25px!important;
+input{
+    border-radius: 5px!important;
 }
 
 input:focus{
@@ -90,99 +118,92 @@ outline: 0 0 0 0  !important;
 box-shadow: 0 0 0 0 !important;
 
 }
-.titleFromForms
-{
+.titleFromForms{
 font-family: 'Hammersmith One', sans-serif;
 text-align: center;
 }
 
 
 @-webkit-keyframes next {
-
-  0% {position: absolute; left: 0;}
-  25%{position: absolute; left: -2cm;}
-  27%{width:0.5;}
-  50%{position: absolute; left: 2cm;}
-  65%{}
-  75% {position: absolute; left: 0;}
-  100% {position: absolute; left: 0;}
-
+0%{position: relative; left: 0; top:0;}
+25%{left: -30%;width:0;height:0; z-index:-1!important}
+28%{left: 110%; width: 0;height:0}
+55%{position: relative; left: 0; top:0;width: 100%;}
+100%{position: relative; left: 0; top:0;}
 }
 
 @keyframes next {
+0%{position: relative; left: 0; top:0;}
+25%{left: -30%;width:0;height:0;}
+28%{left: 110%; width: 0;height:0;}
+34.1%{z-index:-1;}
+34.2%{z-index:3;}
+55%{position: relative; left: 0; top:0;width: 100%;}
 
-  0% {position: relative; left: 0; top:0;}
-  10%{position: relative; left: -10cm;}
-  27%{width:0cm;}
-  36%{z-index: -10;}
-  43%{width:0cm;}
-  45%{z-index: 1;}
-  50%{position: relative; left: 12cm;}
-  75% {position: relative; left: 0;}
-  91%{width:100%;}
-  100% {position: relative; left: 0; top:0;}
+100%{position: relative; left: 0; top:0;}
 }
 
-@keyframes walkingCat
+@-webkit-keyframes walkingAnimal {
+  0%{background-image: url("../../img/cat_1.png")}
+  14.2%{background-image: url("../../img/cat_2.png")}
+  28.4%{background-image: url("../../img/cat_3.png")}
+  42.6%{background-image: url("../../img/cat_4.png")}
+  56.8%{background-image: url("../../img/cat_1.png")}
+  71%{background-image: url("../../img/cat_2.png")}
+  85%{background-image: url("../../img/cat_3.png")}
+  100%{background-image: url("../../img/cat_4.png")}
+}
 
-{
-    0%{background-image:url("/src/img/cat_1.png"); }
-    100%{background-image: url("/src/img/cat_2.png");}
+/* Standard syntax */
+@keyframes walkingAnimal {
+  0%{background-image: url("../../img/cat_1.png")}
+  14.2%{background-image: url("../../img/cat_2.png")}
+  28.4%{background-image: url("../../img/cat_3.png")}
+  42.6%{background-image: url("../../img/cat_4.png")}
+  56.8%{background-image: url("../../img/cat_1.png")}
+  71%{background-image: url("../../img/cat_2.png")}
+  85%{background-image: url("../../img/cat_3.png")}
+  100%{background-image: url("../../img/cat_4.png")}
 }
 
 @media only screen and (max-width: 600px)
 {
-
+    .logo
+    {background-size: 170%;
+    }
+    .card
+    {
+        width: 85%;
+    }
     #sideBarRight, #sideBarLeft
     {
-        background-image: linear-gradient(#a1ffce, #d5ffff);
+        background-image: linear-gradient(#d5ffff,#a1ffce);
         height: 100vh!important;
         position: fixed;
-        width: 30%;
+        width: 30%!important;
         z-index: 3;
     }
-    #sideBarRight{ left: 96%;top: 0;}
-    #sideBarLeft{right: 96%;top: 0;}
+
+    .buscarFind_lost_Pets_responsive{
+        width: 150%;
+        margin-bottom: 5%;
+    }
+    .ml-5{
+        margin-left: 4%!important;
+    }
+
     containerLogin{
     width: 80%!important;
     padding-right: 3%!important;
     padding-left: 3%!important;
     }
-    .titleFromForms
-    {
+    .movileContainer input{font-size: 72%; z-index: 1;}
+    .titleFromForms{
         font-size: 4vh;
     }
-        @-webkit-keyframes next {
-
-    0% {position: absolute; left: 0;}
-    25%{position: absolute; left: -2cm;}
-    27%{width:0.5;}
-    50%{position: absolute; left: 2cm;}
-    65%{}
-    75% {position: absolute; left: 0;}
-    100% {position: absolute; left: 0;}
-
-    }
-
-    @keyframes next {
-
-    0% {position: relative; left: 0; top:0;}
-    10%{position: relative; left: -10cm;}
-    27%{width:0cm;}
-    36%{z-index: -10;}
-    43%{width:0cm;}
-    45%{z-index: 1;}
-    50%{position: relative; left: 12cm;}
-    75% {position: relative; left: 0;}
-    91%{width:100%;}
-    100% {position: relative; left: 0; top:0;}
-    }
-
 }
 
-#spinerContainer
-{
-
+#spinerContainer{
   position:fixed;
   z-index: 100;
   top:50%;
@@ -190,15 +211,37 @@ text-align: center;
   margin:-70px 0 0 -100px;
   width:200px;
   height:200px;
-
-
 }
 
-.spinner-border
-{
+.spinner-border{
      margin: 0px 0px 0px 60px!important;
 }
+
 .color
 {
     color: #ce93d8;
+}
+.abajo{
+    position: absolute;
+    bottom: 10px
+}
+.img-ch{
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: red;
+}
+.grist{
+    background-color: #FAFAFA;
+}
+a{
+    text-decoration: none !important;
+}
+.sticky-top{
+    position: fixed;
+    left: 15px;
+    top: 15px;
+}
+.rojoa{
+    background-color: red;
 }
