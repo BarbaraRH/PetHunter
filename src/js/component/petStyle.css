@@ -6,6 +6,10 @@
     background-image: linear-gradient(#b2ebf2, #e5ffff);
     z-index: -1;
    }
+   .active
+   {
+        background-color: red;
+   }
  a:hover, a:active {
 
   background-color: red;

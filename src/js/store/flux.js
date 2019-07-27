@@ -97,7 +97,8 @@ const getState = ({ getStore, setStore }) => {
 				setStore({ demo: demo });
 			},
 			active: () => {
-				console.log("funciona hombre");
+				console.log(event.target);
+				event.target.parentNode.style = "backgroundColor: green";
 			}
 		}
 	};
