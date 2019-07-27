@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./petStyle.css";
 
+let invalidField = 0;
+
 export const RegisterForm = () => (
 	<div className="bg">
 		<div className="container">
@@ -61,9 +63,10 @@ export const RegisterForm = () => (
 										let pass1 = document.querySelector("#input2").value;
 										let pass2 = document.querySelector("#input3").value;
 										let mail = document.querySelector("#input4").value;
+
 										if (pass1 == pass2 && user != "" && mail != "") {
 											document.querySelector(".movileContainer").style.animation =
-												"next 2s forwards";
+												"next 1s forwards";
 											document.querySelector("#nextBtn").value = "Become a Pet Hunter";
 											setTimeout(function() {
 												document.querySelector("#nextBtn").type = "submit";
@@ -80,6 +83,26 @@ export const RegisterForm = () => (
 												document.querySelector("#input3").value = "";
 												document.querySelector("#input4").value = "";
 											}, 500);
+										} else {
+											document.querySelector(".titleFromForms").parentNode.style.animation =
+												"invalidForm 0.13s 2 forwards";
+											setTimeout(function() {
+												document.querySelector(".titleFromForms").parentNode.style.animation =
+													"";
+											}, 260);
+											if (invalidField == 0) {
+												var node = document.createElement("SPAN");
+												var textnode = document.createTextNode(
+													`Ops...olvidaste
+                                                llenar campos`
+												);
+												node.appendChild(textnode);
+												node.style =
+													"background-color: #fff176; border-radius: 25px; padding: 5px;";
+												document.querySelector(".movileContainer").appendChild(node);
+												invalidField = 1;
+												return invalidField;
+											}
 										}
 									}}
 									value="Next"
@@ -87,12 +110,7 @@ export const RegisterForm = () => (
 									id="nextBtn"
 								/>
 								<Link to={"/"}>
-									<input
-										type="button"
-										value="Back"
-										className="btn btn-block commonBtn mt-4 mb-4"
-										id="nextBtn"
-									/>
+									<input type="button" value="Back" className="btn btn-block commonBtn mt-4 mb-4" />
 								</Link>
 							</div>
 						</form>
