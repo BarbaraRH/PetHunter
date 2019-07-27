@@ -15,7 +15,6 @@ export const RegisterForm = () => (
 						<h3 className="titleFromForms">
 							Por favor, <br /> cuéntanos sobre ti!
 						</h3>
-
 						<form className="text-center" action="/">
 							<div className="col-12 movileContainer">
 								<div className="input-group form-group">
@@ -84,14 +83,14 @@ export const RegisterForm = () => (
 										}
 									}}
 									value="Next"
-									className="btn "
+									className="btn importantBtn w-100"
 									id="nextBtn"
 								/>
 								<Link to={"/"}>
 									<input
 										type="button"
 										value="Back"
-										className="btn btn-block btn-info mt-4 mb-4"
+										className="btn btn-block commonBtn mt-4 mb-4"
 										id="nextBtn"
 									/>
 								</Link>

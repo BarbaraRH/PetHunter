@@ -41,13 +41,13 @@ export class Login extends React.Component {
 										placeholder="password"
 									/>
 									<Link to={"/lostPets"}>
-										<button type="button" className="btn btn-block btn-success mt-3">
+										<button type="button" className="btn btn-block  mt-3 importantBtn">
 											Start Searching
 										</button>
 									</Link>
 									<br />
 									<Link to={"/RegisterForm"}>
-										<button type="button" className="btn btn-block btn-info">
+										<button type="button" className="btn btn-block commonBtn">
 											Register
 										</button>
 									</Link>

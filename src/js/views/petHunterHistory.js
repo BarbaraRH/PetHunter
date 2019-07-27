@@ -11,8 +11,7 @@ export class PetHunterHistory extends React.Component {
 	render() {
 		return (
 			<div>
-				<Navbar />
-				<h3 className="mt-5 pt-3 text-center">Historias de Exito</h3>
+				<Navbar title="Historias de Exito" />
 				<Footer />
 			</div>
 		);
