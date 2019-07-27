@@ -48,13 +48,7 @@ export class LostPets extends React.Component {
 															<h2 className="card-title" style={{ color: "black" }}>
 																{item.name}
 															</h2>
-															<h4>
-																<span
-																	className="badge badge-primary"
-																	style={{ borderRadius: "50px" }}>
-																	{item.breed}
-																</span>
-															</h4>
+
 															<p className="card-text">
 																<small className="text-muted">
 																	Se perdió con fecha -1-1-2019
@@ -75,18 +69,17 @@ export class LostPets extends React.Component {
 										<Link to="/addForm" className="col-md-2 col-2 mb-5 pb-4">
 											<i
 												className="fas fa-plus-circle ml-4 pl-2"
-												style={{ color: "#ce93d8", fontSize: "3em" }}
+												style={{ color: "#d50000", fontSize: "4em" }}
 											/>
 										</Link>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div className="row mt-5">
-							<Footer />
-						</div>
+						<div className="row mt-5" />
 					</div>
 				</div>
+				<Footer />
 			</div>
 		);
 	}
