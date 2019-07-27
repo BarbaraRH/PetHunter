@@ -36,12 +36,12 @@ export class LostPets extends React.Component {
 									return store.lostPets.map((item, index) => {
 										return (
 											<div className="col-12 col-lg-3 m-1" key={index}>
-												<Link to="/MatchAlert">
+												<Link to={"/LostPets/" + index}>
 													<div className="row">
 														<div
 															className="col-4 img-ch mb-4 shadow-sm"
 															style={{
-																backgroundImage: item.image
+																backgroundImage: "url(" + item.image + ")"
 															}}
 														/>
 														<div className="col-8  p-2 mb-4 grist shadow-sm">

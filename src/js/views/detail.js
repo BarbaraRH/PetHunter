@@ -4,41 +4,54 @@ import { Link } from "react-router-dom";
 import { Footer } from "../component/footer";
 import { Context } from "../store/appContext";
 
-export class MatchAlert extends React.Component {
+export class Detail extends React.Component {
 	render() {
 		return (
-			<div className="container color">
-				<div className="row p-3">
-					<div className="col-md-12 text-center p-2">
-						<h2>Datos de mascota perdida</h2>
-					</div>
-				</div>
-				<Link to="/UserContact" className="row">
-					<div className="col-12">
-						<button className="btn btn-block my-4 btn-success">La encontré</button>
-					</div>
-				</Link>
-				<div className="row m-2 fondoForm">
-					<div className="col-12 text-center">
-						<i className="fas fa-paw fa-3x" />
-					</div>
-					<div className="col-12 text-center">
-						<p>Foto de mascota</p>
-					</div>
-				</div>
-				<div className="col 12">
-					<p>Buscado por: </p>
-					<p>Nombre de mascota: nombre.</p>
-					<p>Identificación: ID.</p>
-					<p>Raza: nombre de raza.</p>
-					<p>Tamaño: Grande.</p>
-					<p>Color: Blanca.</p>
-					<p>Sexo: Hembra</p>
-				</div>
-				<div className="row">
-					<Footer />
+			<div className="container-fluid">
+				<div className="row justify-content-around">
+					<Context.Consumer>
+						{({ store, actions }) => {
+							let index = this.props.match.params.theid;
+							return (
+								<div className="card" style={{ width: "18rem" }}>
+									<img
+										className="card-img-top"
+										src={store.lostPets[index].image}
+										alt="Card image cap"
+									/>
+									<div className="card-body">
+										<h5 className="card-title">{store.lostPets[index].name}</h5>
+										<p className="card-text">
+											raza: {store.lostPets[index].breed} <br />
+											tamaño: {store.lostPets[index].size} <br />
+											color: {store.lostPets[index].color} <br />
+											usuario: {store.lostPets[index].user}
+										</p>
+										<a href="#" className="btn btn-primary">
+											Go somewhere
+										</a>
+									</div>
+								</div>
+							);
+						}}
+					</Context.Consumer>
 				</div>
 			</div>
 		);
 	}
 }
+
+Detail.propTypes = {
+	match: PropTypes.object
+};
+
+/* 
+
+	image: "https://s.libertaddigital.com/2018/06/15/1920/1080/fit/perro-sorpresa.jpg",
+					name: "Fido",
+					breed: "Mestizo",
+					size: "Grande",
+					color: "Café",
+					user: "David"
+
+ */
