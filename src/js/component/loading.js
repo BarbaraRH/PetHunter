@@ -11,12 +11,12 @@ export const Loading = () => (
 			<div className="row w-100 indexpluss">
 				<div className="col-2 indexpluss" />
 				<div className="col-8 indexpluss mt-5 pt-5">
-					<div className="row float-left">
+					<div className="row float-rigth">
 						<div className="col-12" style={{ width: "300px" }}>
 							<div className="loadingAnimal indexpluss" style={{ height: "200px", width: "100%" }} />
 						</div>
 					</div>
-					<div className="row float-left">
+					<div className="row float-rigth">
 						<div className="col-12" style={{ top: "400px" }}>
 							<img className="img-fluid d-block mx-auto pl-5" src={logo2} />
 						</div>
