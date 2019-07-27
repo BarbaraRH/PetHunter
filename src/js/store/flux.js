@@ -95,6 +95,9 @@ const getState = ({ getStore, setStore }) => {
 
 				//reset the global store
 				setStore({ demo: demo });
+			},
+			active: () => {
+				console.log("funciona hombre");
 			}
 		}
 	};
