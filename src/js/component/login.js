@@ -10,7 +10,7 @@ export class Login extends React.Component {
 			document
 				.querySelector(".loading")
 				.parentNode.removeChild(document.querySelector(".loading").parentNode.childNodes[0]);
-		}, 70000);
+		}, 5000);
 	}
 	render() {
 		return (
