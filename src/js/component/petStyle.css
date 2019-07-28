@@ -8,7 +8,7 @@
    }
    .active
    {
-      background-image:radial-gradient( #e5ffff,#b2ebf2);
+      background-image:radial-gradient( #b2ebf2,rgba(23, 197, 206, 0.747));
       border-radius: 100%;
    }
 
