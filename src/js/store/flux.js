@@ -97,8 +97,21 @@ const getState = ({ getStore, setStore }) => {
 				setStore({ demo: demo });
 			},
 			active: () => {
+				let arr = document.getElementsByTagName("refreshClass");
+				console.log(arr);
 				console.log(event.target);
-				event.target.parentNode.style = "backgroundColor: green";
+
+				if (
+					event.target == document.querySelector("#target1") ||
+					event.target == document.querySelector("#target2") ||
+					event.target == document.querySelector("#target3")
+				) {
+					console.log("la lupa");
+					event.target.parentNode.className += " active ";
+				} else if (event.target == document.querySelector(".col-sm-4")) {
+					console.log("el link");
+					event.target.className += " active ";
+				}
 			}
 		}
 	};

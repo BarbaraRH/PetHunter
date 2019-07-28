@@ -8,12 +8,10 @@
    }
    .active
    {
-        background-color: red;
+      background-image:radial-gradient( #e5ffff,#b2ebf2);
+      border-radius: 100%;
    }
- a:hover, a:active {
 
-  background-color: red;
-}
 .importantBtn
 {
     background-color: #d50000;
