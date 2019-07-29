@@ -7,11 +7,11 @@ import { Footer } from "../component/footer";
 import { Navbar } from "../component/navbar";
 import { PostList } from "../component/PostList";
 
-export class Coincidences extends React.Component {
+export class MyPosts extends React.Component {
 	render() {
 		return (
 			<div>
-				<Navbar title="COINCIDENCIAS" />
+				<Navbar title="MIS PUBLICACIONES" />
 				<PostList />
 				<Footer />
 			</div>
