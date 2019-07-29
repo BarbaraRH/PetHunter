@@ -44,14 +44,3 @@ export class Detail extends React.Component {
 Detail.propTypes = {
 	match: PropTypes.object
 };
-
-/* 
-
-	image: "https://s.libertaddigital.com/2018/06/15/1920/1080/fit/perro-sorpresa.jpg",
-					name: "Fido",
-					breed: "Mestizo",
-					size: "Grande",
-					color: "Café",
-					user: "David"
-
- */
