@@ -8,6 +8,12 @@ import { Navbar } from "../component/navbar";
 import { Footer } from "../component/footer";
 
 export class PetHunterHistory extends React.Component {
+	componentDidMount() {
+		document.querySelector(".fa-search").parentNode.className += "fas fa-search fa-2x";
+		document.querySelector(".fa-bullseye").parentNode.className = "fas fa-bullseye fa-2x";
+		document.querySelector(".fa-award").parentNode.className = " active ";
+	}
+
 	render() {
 		return (
 			<div>

@@ -64,7 +64,7 @@ export const RegisterForm = () => (
 										let pass2 = document.querySelector("#input3").value;
 										let mail = document.querySelector("#input4").value;
 
-										if (pass1 == pass2 && user != "" && mail != "") {
+										if (pass1 == pass2 && user != "" && mail != "" && mail.includes("@")) {
 											document.querySelector(".movileContainer").style.animation =
 												"next 1s forwards";
 											document.querySelector("#nextBtn").value = "Become a Pet Hunter";

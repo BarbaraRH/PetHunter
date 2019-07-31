@@ -1,6 +1,7 @@
 const getState = ({ getStore, setStore }) => {
 	return {
 		store: {
+			cssStyleIconFooter: "",
 			lostPets: [
 				{
 					image: "https://s.libertaddigital.com/2018/06/15/1920/1080/fit/perro-sorpresa.jpg",
@@ -95,23 +96,6 @@ const getState = ({ getStore, setStore }) => {
 
 				//reset the global store
 				setStore({ demo: demo });
-			},
-			active: () => {
-				let arr = document.getElementsByTagName("refreshClass");
-				console.log(arr);
-				console.log(event.target);
-
-				if (
-					event.target == document.querySelector("#target1") ||
-					event.target == document.querySelector("#target2") ||
-					event.target == document.querySelector("#target3")
-				) {
-					console.log("la lupa");
-					event.target.parentNode.className += " active ";
-				} else if (event.target == document.querySelector(".col-sm-4")) {
-					console.log("el link");
-					event.target.className += " active ";
-				}
 			}
 		}
 	};

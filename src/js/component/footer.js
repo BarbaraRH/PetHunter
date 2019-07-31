@@ -16,25 +16,16 @@ export const Footer = () => (
 				{({ store, actions }) => {
 					return (
 						<div className="w-100">
-							<Link
-								to="/LostPets"
-								className="col-sm-4 col-4 pt-3 pb-3"
-								style={{ color: "#81b9bf" }}
-								onClick={() => actions.active()}>
+							<Link to="/LostPets" className="col-sm-4 col-4 pt-4 pb-3" style={{ color: "#81b9bf" }}>
 								<i className="fas fa-search fa-2x" id="target1" />
 							</Link>
-							<Link
-								to="/FindedPets"
-								className="col-sm-4 col-4 pt-3 pb-3"
-								style={{ color: "#81b9bf" }}
-								onClick={() => actions.active()}>
+							<Link to="/FindedPets" className="col-sm-4 col-4 pt-4 pb-3" style={{ color: "#81b9bf" }}>
 								<i className="fas fa-bullseye fa-2x" id="target2" />
 							</Link>
 							<Link
 								to="/petHunterHistory"
-								className="col-sm-4 col-4 pt-3 pb-3"
-								style={{ color: "#81b9bf" }}
-								onClick={() => actions.active()}>
+								className="col-sm-4 col-4 pt-4 pb-3"
+								style={{ color: "#81b9bf" }}>
 								<i className="fas fa-award fa-2x" id="target3" />
 							</Link>
 						</div>
