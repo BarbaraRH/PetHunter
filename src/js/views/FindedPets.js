@@ -9,9 +9,9 @@ import cat1 from "../../img/cat_1.png";
 
 export class FindedPets extends React.Component {
 	componentDidMount() {
-		document.querySelector(".fa-search").parentNode.className = "fas fa-search fa-2x";
+		document.querySelector(".fa-search").parentNode.className = "col-sm-4 col-4 pt-4 pb-3";
 		document.querySelector(".fa-bullseye").parentNode.className += " active ";
-		document.querySelector(".fa-award").parentNode.className = "fas fa-award fa-2x";
+		document.querySelector(".fa-award").parentNode.className = "col-sm-4 col-4 pt-4 pb-3";
 	}
 
 	render() {
