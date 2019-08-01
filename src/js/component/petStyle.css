@@ -87,6 +87,12 @@ background-image: linear-gradient(#b2ebf2, #e5ffff);
 .indexless{
     z-index: 1;
 }
+/*AddForm CSS*/
+
+.clickedbtnAddform{
+color: #81b9bf;
+background-color:#e5ffff;
+}
 
 /*LostPets and FindedPets CSS*/
 .stikyHeader{
