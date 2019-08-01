@@ -10,7 +10,7 @@ export class AddForm extends React.Component {
 		return (
 			<div>
 				<Navbar />
-				<div clasName="container my-5">
+				<div className="container my-5">
 					<div className="row m-2">
 						<div className="col-12 text-center">
 							<i className="fas fa-paw fa-3x" />
@@ -34,7 +34,12 @@ export class AddForm extends React.Component {
 									<input type="text" className="form-control mb-2" placeholder="Raza" />
 									<div className="row" role="group" aria-label="Basic example">
 										<div className="col-4 col-md-4">
-											<button type="button" className="btn btn-block commonBtn w-60 h-100 ">
+											<button
+												type="button"
+												className="btn btn-block commonBtn w-60 h-100 "
+												onClick={function() {
+													actions.changeColorAddFormBtn;
+												}}>
 												<i className="fas fa-dog fa-2x black" />
 											</button>
 										</div>
