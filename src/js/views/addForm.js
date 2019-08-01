@@ -19,6 +19,8 @@ export class AddForm extends React.Component {
 							<p>cargar foto</p>
 						</div>
 					</div>
+
+					<Context.Consumer>{({ store, actions }) => {}}</Context.Consumer>
 					<div className="col-12 mb-5 pb-3">
 						<input type="text" className="form-control mb-2 mt-4" placeholder="Nombre mascota perdida" />
 						{/*<input type="text" className="form-control mb-2" placeholder="Lugar" /> no es necesario este dato lo arrojara la sollicitud misma*/}

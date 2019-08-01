@@ -96,6 +96,9 @@ const getState = ({ getStore, setStore }) => {
 
 				//reset the global store
 				setStore({ demo: demo });
+			},
+			changeColorAddFormBtn: () => {
+				console.log("funciona");
 			}
 		}
 	};
