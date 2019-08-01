@@ -37,20 +37,24 @@ export class AddForm extends React.Component {
 											<button
 												type="button"
 												className="btn btn-block commonBtn w-60 h-100 "
-												onClick={function() {
-													actions.changeColorAddFormBtn;
-												}}>
-												<i className="fas fa-dog fa-2x black" />
+												onClick={actions.changeColorAddFormBtn}>
+												<i className="fas fa-dog fa-2x" />
 											</button>
 										</div>
 										<div className="col-4 col-md-4">
-											<button type="button" className="btn btn-block commonBtn w-60 h-100 ">
-												<i className="fas fa-dog fa-3x black" />
+											<button
+												type="button"
+												className="btn btn-block commonBtn w-60 h-100 "
+												onClick={actions.changeColorAddFormBtn}>
+												<i className="fas fa-dog fa-3x" />
 											</button>
 										</div>
 										<div className="col-4 col-md-4">
-											<button type="button" className="btn btn-block commonBtn w-60 h-100 ">
-												<i className="fas fa-dog fa-4x black" />
+											<button
+												type="button"
+												className="btn btn-block commonBtn w-60 h-100 "
+												onClick={actions.changeColorAddFormBtn}>
+												<i className="fas fa-dog fa-4x" />
 											</button>
 										</div>
 									</div>
@@ -61,16 +65,18 @@ export class AddForm extends React.Component {
 											<button
 												type="button"
 												name=""
-												className="btn btn-block commonBtn w-60 h-100">
-												<i className="fas fa-mars fa-3x black" />
+												className="btn btn-block commonBtn w-60 h-100"
+												onClick={actions.changeColorAddFormBtn}>
+												<i className="fas fa-mars fa-3x" />
 											</button>
 										</div>
 										<div className="col-4 col-md-4">
 											<button
 												type="button"
 												name=""
-												className="btn btn-block commonBtn w-60 h-100">
-												<i className="fas fa-venus fa-3x black" />
+												className="btn btn-block commonBtn w-60 h-100"
+												onClick={actions.changeColorAddFormBtn}>
+												<i className="fas fa-venus fa-3x " />
 											</button>
 										</div>
 										<div className="col-2 col-md-2" />

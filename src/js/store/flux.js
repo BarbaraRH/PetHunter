@@ -99,6 +99,11 @@ const getState = ({ getStore, setStore }) => {
 			},
 			changeColorAddFormBtn: () => {
 				console.log("funciona");
+				if (event.target.tagName == "I") {
+					event.target.parentNode.className += " clickedbtnAddform ";
+				} else if (event.target.tagName == "BUTTON") {
+					event.target.className += " clickedbtnAddform ";
+				}
 			}
 		}
 	};
