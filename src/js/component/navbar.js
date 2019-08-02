@@ -12,6 +12,14 @@ export class Navbar extends React.Component {
 					</Link>
 					<h3 className="col-9 text-center mt-2 mb-2">{this.props.title}</h3>
 				</div>
+				<div className="row p-3 stikyBackground text-center">
+					<div className="col-12" />
+					<div className="col-12 text-center">
+						<form>
+							<input type="text" className="form-control" placeholder="Buscar" />
+						</form>
+					</div>
+				</div>
 			</nav>
 		);
 	}

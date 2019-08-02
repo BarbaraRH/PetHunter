@@ -157,7 +157,22 @@ box-shadow: 0 0 0 0 !important;
 font-family: 'Hammersmith One', sans-serif;
 text-align: center;
 }
+/* petHunterHistory CSS*/
+#Historystiky
+{
+    top: 18%;
+    position: sticky;
+    position: -webkit-sticky;
+    height: 230px;
+    background-color:white;
+    z-index:2;
+}
+.gold
+{
+    color: #B18904;
+}
 
+/**/
 
 @-webkit-keyframes next {
 0%{position: relative; left: 0; top:0;}

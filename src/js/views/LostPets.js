@@ -19,22 +19,6 @@ export class LostPets extends React.Component {
 			<div>
 				<Navbar title="BUSCADOS" />
 				<div className="container-fluid mt-4">
-					<div className="row p-3 stikyBackground text-center">
-						<div className="col-12" />
-						<div className="col-12 text-center">
-							<form>
-								<div className="form-row mb-3 px-2">
-									<div className="col-12">
-										<div className="row">
-											<div className="col-6">
-												<input type="text" className="form-control" placeholder="Buscar" />
-											</div>
-										</div>
-									</div>
-								</div>
-							</form>
-						</div>
-					</div>
 					<div className="container-fluid">
 						<div className="row justify-content-around">
 							<Context.Consumer>
@@ -74,7 +58,7 @@ export class LostPets extends React.Component {
 										<div className="col-md-10 col-10 " />
 										<Link to="/addForm" className="col-md-2 col-2 mb-5 pb-4">
 											<i
-												className="fas fa-plus-circle ml-4 pl-2"
+												className="fas fa-plus-circle ml-4 pl-2 pb-3 ml-4"
 												style={{ color: "#d50000", fontSize: "4em" }}
 											/>
 										</Link>

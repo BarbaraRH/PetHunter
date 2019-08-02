@@ -10,8 +10,8 @@ export class AddForm extends React.Component {
 		return (
 			<div>
 				<Navbar />
-				<div className="container">
-					<div className="row">
+				<div className="container pt-5">
+					<div className="row pt-5">
 						<div className="col-12 text-center mt-5">
 							<i className="fas fa-paw fa-3x pt-3" />
 						</div>
