@@ -37,7 +37,7 @@ export class AddForm extends React.Component {
 											<button
 												type="button"
 												className="btn btn-block commonBtn w-60 h-100 "
-												onClick={actions.changeColorAddFormBtn}>
+												onClick={actions.changeColorAddFormDogBtn}>
 												<i className="fas fa-dog fa-2x" />
 											</button>
 										</div>
@@ -45,7 +45,7 @@ export class AddForm extends React.Component {
 											<button
 												type="button"
 												className="btn btn-block commonBtn w-60 h-100 "
-												onClick={actions.changeColorAddFormBtn}>
+												onClick={actions.changeColorAddFormDogBtn}>
 												<i className="fas fa-dog fa-3x" />
 											</button>
 										</div>
@@ -53,7 +53,7 @@ export class AddForm extends React.Component {
 											<button
 												type="button"
 												className="btn btn-block commonBtn w-60 h-100 "
-												onClick={actions.changeColorAddFormBtn}>
+												onClick={actions.changeColorAddFormDogBtn}>
 												<i className="fas fa-dog fa-4x" />
 											</button>
 										</div>
@@ -66,7 +66,7 @@ export class AddForm extends React.Component {
 												type="button"
 												name=""
 												className="btn btn-block commonBtn w-60 h-100"
-												onClick={actions.changeColorAddFormBtn}>
+												onClick={actions.changeColorAddFormDogBtn}>
 												<i className="fas fa-mars fa-3x" />
 											</button>
 										</div>
@@ -75,7 +75,7 @@ export class AddForm extends React.Component {
 												type="button"
 												name=""
 												className="btn btn-block commonBtn w-60 h-100"
-												onClick={actions.changeColorAddFormBtn}>
+												onClick={actions.changeColorAddFormDogBtn}>
 												<i className="fas fa-venus fa-3x " />
 											</button>
 										</div>

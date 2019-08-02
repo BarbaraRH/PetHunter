@@ -97,7 +97,7 @@ const getState = ({ getStore, setStore }) => {
 				//reset the global store
 				setStore({ demo: demo });
 			},
-			changeColorAddFormBtn: () => {
+			changeColorAddFormDogBtn: () => {
 				console.log("funciona");
 				if (event.target.tagName == "I") {
 					let storeclasses = event.target.parentNode.parentNode.parentNode.getElementsByTagName("BUTTON");
@@ -110,6 +110,10 @@ const getState = ({ getStore, setStore }) => {
 				} else if (event.target.tagName == "BUTTON") {
 					let storeclasses = event.target.parentNode.parentNode.getElementsByTagName("BUTTON");
 					console.log(" mira ", storeclasses[0].className);
+					for (let i = 0; i < storeclasses.length; i++) {
+						console.log("loop funciona");
+						storeclasses[i].classList.remove("clickedbtnAddform");
+					}
 					event.target.className += " clickedbtnAddform ";
 				}
 			}
