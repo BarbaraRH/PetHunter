@@ -26,7 +26,7 @@ export const Footer = () => (
 								to="/petHunterHistory"
 								className="col-sm-4 col-4 pt-4 pb-3"
 								style={{ color: "#81b9bf" }}>
-								<i className="fas fa-award fa-2x" id="target3" />
+								<i className="fas fa-award fa-2x p-1" id="target3" />
 							</Link>
 						</div>
 					);
