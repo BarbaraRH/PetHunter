@@ -3,6 +3,7 @@ const getState = ({ getStore, setStore }) => {
 		store: {
 			example_image: "https://s.libertaddigital.com/2018/06/15/1920/1080/fit/perro-sorpresa.jpg",
 			found: [],
+			washington: [],
 			lostPets: [
 				{
 					image: "https://s.libertaddigital.com/2018/06/15/1920/1080/fit/perro-sorpresa.jpg",
@@ -83,8 +84,17 @@ const getState = ({ getStore, setStore }) => {
 				fetch("https://3000-d00f49ba-4f7e-429d-b1ab-292ca8db498c.ws-us0.gitpod.io/adverts?status=found")
 					.then(resp => resp.json())
 					.then(data => {
-						console.log(data);
 						setStore({ found: data });
+
+						return fetch("https://3000-d00f49ba-4f7e-429d-b1ab-292ca8db498c.ws-us0.gitpod.io/pets?id=2")
+							.then(resp => resp.json())
+							.then(data => {
+								store.found.map((item, i) => {
+									item.id = data[i];
+								});
+								console.log(store.found);
+							})
+							.catch(error => console.log(error));
 					})
 					.catch(error => console.log(error));
 			}

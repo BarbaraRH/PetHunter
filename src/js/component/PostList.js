@@ -26,7 +26,7 @@ export class PostList extends React.Component {
 														/>
 														<div className="col-8  p-2 mb-4 grist shadow-sm">
 															<h2 className="card-title" style={{ color: "black" }}>
-																{item.pet_id}
+																{item.id.name}
 															</h2>
 
 															<p className="card-text">
