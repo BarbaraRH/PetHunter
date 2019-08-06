@@ -48,7 +48,7 @@ export class PostList extends React.Component {
 										<div className="col-md-10 col-10 " />
 										<Link to="/addForm" className="col-md-2 col-2 mb-5 pb-4">
 											<i
-												className="fas fa-plus-circle ml-4 pl-2 pb-3 ml-4"
+												className="fas fa-plus-circle pb-3 pl-3"
 												style={{ color: "#d50000", fontSize: "4em" }}
 											/>
 										</Link>

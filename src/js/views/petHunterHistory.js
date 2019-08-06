@@ -22,21 +22,21 @@ export class PetHunterHistory extends React.Component {
 				<div className="container-fluid mt-4 pt-5">
 					<div className="container-fluid pt-5">
 						<div className="row" id="Historystiky">
-							<div className="col-4" />
-							<div className="col-4">
+							<div className="col-3" />
+							<div className="col-6">
 								<h5 className="text-center">
 									<i className="fas fa-binoculars fa-5x pt-5 gold" />
 								</h5>
 							</div>
-							<div className="col-4" />
-							<div className="row w-100 pl-5">
-								<div className="col-12 text-center">
-									<i className="far fa-star fa-2x gold" />
-									<i className="far fa-star fa-2x gold" />
-									<i className="far fa-star fa-2x gold" />
-									<i className="far fa-star fa-2x gold" />
-									<i className="far fa-star fa-2x gold" />
-								</div>
+							<div className="col-3" />
+						</div>
+						<div classesfasfasdva>
+							<div className="col-12 text-center">
+								<i className="far fa-star fa-2x gold" />
+								<i className="far fa-star fa-2x gold" />
+								<i className="far fa-star fa-2x gold" />
+								<i className="far fa-star fa-2x gold" />
+								<i className="far fa-star fa-2x gold" />
 							</div>
 						</div>
 						<div className="row justify-content-around pt-5">

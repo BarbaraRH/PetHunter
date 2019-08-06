@@ -163,7 +163,6 @@ text-align: center;
     top: 18%;
     position: sticky;
     position: -webkit-sticky;
-    height: 230px;
     background-color:white;
     z-index:2;
 }
