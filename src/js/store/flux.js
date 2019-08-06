@@ -97,6 +97,23 @@ const getState = ({ getStore, setStore }) => {
 				//reset the global store
 				setStore({ demo: demo });
 			},
+			register: event => {
+				event.preventDefault();
+				const inputs = event.target.getElementsByTagName("input");
+				fetch("https://3000-fdadc773-05e6-4438-8383-b586c0262184.ws-us0.gitpod.io/user", {
+					method: "POST",
+					body: JSON.stringify({ username: inputs.user.value, email: inputs.mail.value }),
+					headers: {
+						"Content-type": "application/json; charset=UTF-8"
+					}
+				})
+					.then(resp => resp.json())
+					.then(data => {
+						console.log(data);
+					})
+					.catch(error => console.log(error));
+				console.log(inputs.mail.value);
+			},
 			changeColorAddFormDogBtn: () => {
 				console.log("funciona");
 				if (event.target.tagName == "I") {
@@ -115,23 +132,7 @@ const getState = ({ getStore, setStore }) => {
 						storeclasses[i].classList.remove("clickedbtnAddform");
 					}
 					event.target.className += " clickedbtnAddform ";
-			},
-			register: event => {
-				event.preventDefault();
-				const inputs = event.target.getElementsByTagName("input");
-				fetch("https://3000-fdadc773-05e6-4438-8383-b586c0262184.ws-us0.gitpod.io/user", {
-					method: "POST",
-					body: JSON.stringify({ username: inputs.user.value, email: inputs.mail.value }),
-					headers: {
-						"Content-type": "application/json; charset=UTF-8"
-					}
-				})
-					.then(resp => resp.json())
-					.then(data => {
-						console.log(data);
-					})
-					.catch(error => console.log(error));
-				console.log(inputs.mail.value);
+				}
 			}
 		}
 	};

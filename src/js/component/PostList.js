@@ -8,8 +8,8 @@ export class PostList extends React.Component {
 	render() {
 		return (
 			<div>
-				<div className="container-fluid mt-5 pt-5">
-					<div className="container-fluid mt-5">
+				<div className="container-fluid mt-4">
+					<div className="container-fluid">
 						<div className="row justify-content-around">
 							<Context.Consumer>
 								{({ store, actions }) => {
@@ -48,7 +48,7 @@ export class PostList extends React.Component {
 										<div className="col-md-10 col-10 " />
 										<Link to="/addForm" className="col-md-2 col-2 mb-5 pb-4">
 											<i
-												className="fas fa-plus-circle ml-4 pl-2"
+												className="fas fa-plus-circle ml-4 pl-2 pb-3 ml-4"
 												style={{ color: "#d50000", fontSize: "4em" }}
 											/>
 										</Link>
@@ -63,3 +63,21 @@ export class PostList extends React.Component {
 		);
 	}
 }
+
+/* export class LostPets extends React.Component {
+	componentDidMount() {
+		document.querySelector(".fa-search").parentNode.className += " active ";
+		document.querySelector(".fa-bullseye").parentNode.className = "col-sm-4 col-4 pt-4 pb-3";
+		document.querySelector(".fa-award").parentNode.className = "col-sm-4 col-4 pt-4 pb-3";
+	}
+
+	render() {
+		return (
+			<div>
+				<Navbar title="BUSCADOS" />
+
+				<Footer />
+			</div>
+		);
+	}
+} */
