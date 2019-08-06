@@ -1,6 +1,7 @@
 const getState = ({ getStore, setStore }) => {
 	return {
 		store: {
+			cssStyleIconFooter: "",
 			lostPets: [
 				{
 					image: "https://s.libertaddigital.com/2018/06/15/1920/1080/fit/perro-sorpresa.jpg",
@@ -95,6 +96,25 @@ const getState = ({ getStore, setStore }) => {
 
 				//reset the global store
 				setStore({ demo: demo });
+			},
+			changeColorAddFormDogBtn: () => {
+				console.log("funciona");
+				if (event.target.tagName == "I") {
+					let storeclasses = event.target.parentNode.parentNode.parentNode.getElementsByTagName("BUTTON");
+					console.log(" mira ", storeclasses[0].className);
+					for (let i = 0; i < storeclasses.length; i++) {
+						console.log("loop funciona");
+						storeclasses[i].classList.remove("clickedbtnAddform");
+					}
+					event.target.parentNode.className += " clickedbtnAddform ";
+				} else if (event.target.tagName == "BUTTON") {
+					let storeclasses = event.target.parentNode.parentNode.getElementsByTagName("BUTTON");
+					console.log(" mira ", storeclasses[0].className);
+					for (let i = 0; i < storeclasses.length; i++) {
+						console.log("loop funciona");
+						storeclasses[i].classList.remove("clickedbtnAddform");
+					}
+					event.target.className += " clickedbtnAddform ";
 			},
 			register: event => {
 				event.preventDefault();

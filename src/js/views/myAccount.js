@@ -14,7 +14,7 @@ export class MyAccount extends React.Component {
 						<div className="col-md-12">
 							<h1 className="text-center">Mi Cuenta</h1>
 							<h1 className="text-center">
-								<i className="fas fa-user fa-5x" />
+								<i className="fas fa-user fa-4x" />
 							</h1>
 							<h3 className="text-center">Nombre Usuario</h3>
 							<h3 className="text-center">correo</h3>

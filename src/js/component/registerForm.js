@@ -73,43 +73,36 @@ export const RegisterForm = () => (
 													let pass2 = document.querySelector("#input3").value;
 													let mail = document.querySelector("#input4").value;
 
-													if (pass1 == pass2 && user != "" && mail != "") {
-														document.querySelector(".movileContainer").style.animation =
-															"next 1s forwards";
-														document.querySelector("#nextBtn").value =
-															"Become a Pet Hunter";
-														setTimeout(function() {
-															document.querySelector("#nextBtn").type = "submit";
-															document.querySelector("#input1").placeholder =
-																"Cuenta Bancaria";
-															document.querySelector("#input2").placeholder =
-																"Banco Comercial";
-															document.querySelector("#input3").placeholder =
-																"tipo de cuenta";
-															document.querySelector("#input4").placeholder =
-																"Cédula de identidad";
-															document.querySelector("#input1").name = "acount";
-															document.querySelector("#input2").name = "Bank";
-															document.querySelector("#input3").name = "acountType";
-															document.querySelector("#input4").name = "socialNumber";
-															document.querySelector("#input1").value = "";
-															document.querySelector("#input2").value = "";
-															document.querySelector("#input3").value = "";
-															document.querySelector("#input4").value = "";
-														}, 500);
-													} else {
-														document.querySelector(
-															".titleFromForms"
-														).parentNode.style.animation = "invalidForm 0.13s 2 forwards";
-														setTimeout(function() {
-															document.querySelector(
-																".titleFromForms"
-															).parentNode.style.animation = "";
-														}, 260);
-														if (invalidField == 0) {
-															var node = document.createElement("SPAN");
-															var textnode = document.createTextNode(
-																`Ops...olvidaste
+										if (pass1 == pass2 && user != "" && mail != "" && mail.includes("@")) {
+											document.querySelector(".movileContainer").style.animation =
+												"next 1s forwards";
+											document.querySelector("#nextBtn").value = "Become a Pet Hunter";
+											setTimeout(function() {
+												document.querySelector("#nextBtn").type = "submit";
+												document.querySelector("#input1").placeholder = "Cuenta Bancaria";
+												document.querySelector("#input2").placeholder = "Banco Comercial";
+												document.querySelector("#input3").placeholder = "tipo de cuenta";
+												document.querySelector("#input4").placeholder = "Cédula de identidad";
+												document.querySelector("#input1").name = "acount";
+												document.querySelector("#input2").name = "Bank";
+												document.querySelector("#input3").name = "acountType";
+												document.querySelector("#input4").name = "socialNumber";
+												document.querySelector("#input1").value = "";
+												document.querySelector("#input2").value = "";
+												document.querySelector("#input3").value = "";
+												document.querySelector("#input4").value = "";
+											}, 500);
+										} else {
+											document.querySelector(".titleFromForms").parentNode.style.animation =
+												"invalidForm 0.13s 2 forwards";
+											setTimeout(function() {
+												document.querySelector(".titleFromForms").parentNode.style.animation =
+													"";
+											}, 260);
+											if (invalidField == 0) {
+												var node = document.createElement("SPAN");
+												var textnode = document.createTextNode(
+													`Ops...olvidaste
                                                 llenar campos`
 															);
 															node.appendChild(textnode);
