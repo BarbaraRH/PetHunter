@@ -12,6 +12,11 @@ export class FindedPets extends React.Component {
 		document.querySelector(".fa-search").parentNode.className = "col-sm-4 col-4 pt-4 pb-3";
 		document.querySelector(".fa-bullseye").parentNode.className += " active ";
 		document.querySelector(".fa-award").parentNode.className = "col-sm-4 col-4 pt-4 pb-3";
+		<Context.Consumer>
+			{({ store, actions }) => {
+				actions.adverts();
+			}}
+		</Context.Consumer>;
 	}
 
 	render() {
