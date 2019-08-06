@@ -19,7 +19,11 @@ export const Footer = () => (
 							<Link to="/LostPets" className="col-sm-4 col-4 pt-4 pb-3" style={{ color: "#81b9bf" }}>
 								<i className="fas fa-search fa-2x" id="target1" />
 							</Link>
-							<Link to="/FindedPets" className="col-sm-4 col-4 pt-4 pb-3" style={{ color: "#81b9bf" }}>
+							<Link
+								to="/FindedPets"
+								className="col-sm-4 col-4 pt-4 pb-3"
+								style={{ color: "#81b9bf" }}
+								onClick={() => actions.adverts()}>
 								<i className="fas fa-bullseye fa-2x" id="target2" />
 							</Link>
 							<Link

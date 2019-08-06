@@ -8,31 +8,29 @@ export class PostList extends React.Component {
 	render() {
 		return (
 			<div>
-				<div className="container-fluid mt-4">
+				<div className="container-fluid mt-5 pt-5">
 					<div className="container-fluid">
-						<div className="row justify-content-around">
+						<div className="row">
 							<Context.Consumer>
 								{({ store, actions }) => {
-									return store.lostPets.map((item, index) => {
+									return store.found.map((item, i) => {
 										return (
-											<div className="col-12 col-lg-3 m-1" key={index}>
-												<Link to={"/LostPets/" + index}>
+											<div className="col-12 col-lg-3" key={i}>
+												<Link to={"/LostPets/" + i}>
 													<div className="row">
 														<div
 															className="col-4 img-ch mb-4 shadow-sm"
 															style={{
-																backgroundImage: "url(" + item.image + ")"
+																backgroundImage: "url(" + store.example_image + ")"
 															}}
 														/>
 														<div className="col-8  p-2 mb-4 grist shadow-sm">
 															<h2 className="card-title" style={{ color: "black" }}>
-																{item.name}
+																{item.pet_id}
 															</h2>
 
 															<p className="card-text">
-																<small className="text-muted">
-																	Se perdió con fecha -1-1-2019
-																</small>
+																<small className="text-muted">{item.created_at}</small>
 															</p>
 														</div>
 													</div>

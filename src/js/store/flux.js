@@ -1,7 +1,7 @@
 const getState = ({ getStore, setStore }) => {
 	return {
 		store: {
-			cssStyleIconFooter: "",
+			example_image: "https://s.libertaddigital.com/2018/06/15/1920/1080/fit/perro-sorpresa.jpg",
 			found: [],
 			lostPets: [
 				{
@@ -79,13 +79,12 @@ const getState = ({ getStore, setStore }) => {
 				}
 			},
 			adverts: () => {
-				console.log("funciona");
 				const store = getStore();
 				fetch("https://3000-d00f49ba-4f7e-429d-b1ab-292ca8db498c.ws-us0.gitpod.io/adverts?status=found")
 					.then(resp => resp.json())
 					.then(data => {
-						console.log("funciona");
-						setStore(store.found.push(data));
+						console.log(data);
+						setStore({ found: data });
 					})
 					.catch(error => console.log(error));
 			}
