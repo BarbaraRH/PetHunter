@@ -18,9 +18,11 @@ export class MyAccount extends React.Component {
 							</h1>
 							<h3 className="text-center">Nombre Usuario</h3>
 							<h3 className="text-center">correo</h3>
-							<h6 className="text-center">modificar perfil</h6>
+							<Link to={"/myPosts"}>
+								<h6 className="text-center">Mis Publicaciones</h6>
+							</Link>
 							<Link to={"/"}>
-								<h6 className="text-center">Cerrar sesión</h6>
+								<h6 className="text-center">Cerrar Sesión</h6>
 							</Link>
 						</div>
 					</div>

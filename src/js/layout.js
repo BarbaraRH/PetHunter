@@ -14,6 +14,7 @@ import { LostPets } from "./views/LostPets";
 import { FindedPets } from "./views/FindedPets";
 
 import { MatchAlert } from "./views/MatchAlert";
+import { MyPosts } from "./views/myPosts";
 import { Detail } from "./views/detail";
 import { MyAccount } from "./views/myAccount";
 import { PetHunterHistory } from "./views/petHunterHistory";
@@ -61,6 +62,7 @@ export class Layout extends React.Component {
 							<Route path="/ConfigurationPanel" component={ConfigurationPanel} />
 							<Route path="/post" component={Post} />
 							<Route path="/MatchAlert" component={MatchAlert} />
+							<Route path="/myPosts" component={MyPosts} />
 							<Route path="/Detail" component={Detail} />
 							<Route path="/UserContact" component={UserContact} />
 

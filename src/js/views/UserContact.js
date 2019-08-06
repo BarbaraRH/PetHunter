@@ -10,7 +10,7 @@ export class UserContact extends React.Component {
 		return (
 			<div>
 				<Navbar />
-				<div className="container my-5">
+				<div className="container my-5 pt-5">
 					<div className="row p-3">
 						<div className="col-md-12 text-center p-2">
 							<h2>Aviso de mascota perdida</h2>
