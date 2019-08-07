@@ -8,38 +8,44 @@ export class PostList extends React.Component {
 	render() {
 		return (
 			<div>
-				<div className="container-fluid mt-4">
+				<div className="container-fluid mt-5 pt-5">
 					<div className="container-fluid">
 						<div className="row justify-content-around">
 							<Context.Consumer>
 								{({ store, actions }) => {
-									return store.lostPets.map((item, index) => {
-										return (
-											<div className="col-12 col-lg-3 m-1" key={index}>
-												<Link to={"/LostPets/" + index}>
-													<div className="row">
-														<div
-															className="col-4 img-ch mb-4 shadow-sm"
-															style={{
-																backgroundImage: "url(" + item.image + ")"
-															}}
-														/>
-														<div className="col-8  p-2 mb-4 grist shadow-sm">
-															<h2 className="card-title" style={{ color: "black" }}>
-																{item.name}
-															</h2>
-
-															<p className="card-text">
-																<small className="text-muted">
-																	Se perdió con fecha -1-1-2019
-																</small>
-															</p>
-														</div>
+									if ("status" in store) {
+										return store.status.map((item, index) => {
+											if ("name" in item) {
+												return (
+													<div className="mt-5 pt-5" key={index}>
+														{item.name} <br />
+														{item.created_at}
 													</div>
-												</Link>
-											</div>
-										);
-									});
+												);
+											}
+											/*{<div className="col-12 col-lg-3 m-1" key={index}>
+														<div className="row">
+															<div
+																className="col-4 img-ch mb-4 shadow-sm"
+																style={{
+																	backgroundImage:
+																		'url("https://s.libertaddigital.com/2018/06/15/1920/1080/fit/perro-sorpresa.jpg")'
+																}}
+															/>
+															<div className="col-8  p-2 mb-4 grist shadow-sm">
+																<h2 className="card-title" style={{ color: "black" }}>
+																	{item.name}
+																</h2>
+																<p className="card-text">
+																	<small className="text-muted">
+																		{item.created_at}
+																	</small>
+																</p>
+															</div>
+														</div>
+													</div>}*/
+										});
+									}
 								}}
 							</Context.Consumer>
 							<div className="row" style={{ zIndex: 0 }}>

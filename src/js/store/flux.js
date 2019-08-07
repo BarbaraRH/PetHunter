@@ -2,7 +2,6 @@ const getState = ({ getStore, setStore }) => {
 	return {
 		store: {
 			cssStyleIconFooter: "",
-			found: [],
 			lostPets: [
 				{
 					image: "https://s.libertaddigital.com/2018/06/15/1920/1080/fit/perro-sorpresa.jpg",
@@ -78,14 +77,25 @@ const getState = ({ getStore, setStore }) => {
 					event.target.className += " clickedbtnAddform ";
 				}
 			},
-			adverts: () => {
-				console.log("funciona");
+			getAdverts: status => {
 				const store = getStore();
-				fetch("https://3000-d00f49ba-4f7e-429d-b1ab-292ca8db498c.ws-us0.gitpod.io/adverts?status=found")
+				fetch("https://3000-f08e4e85-ef62-49cf-92fb-bc73e1e92317.ws-us0.gitpod.io/adverts?status=" + status)
 					.then(resp => resp.json())
 					.then(data => {
-						console.log("funciona");
-						setStore(store.found.push(data));
+						setStore((store.status = data));
+						console.log(store);
+						return fetch("https://3000-f08e4e85-ef62-49cf-92fb-bc73e1e92317.ws-us0.gitpod.io/pets")
+							.then(resp => resp.json())
+							.then(data => {
+								for (let i in data) {
+									for (let j in store.status) {
+										if (data[i].id === store.status[j].pet_id) {
+											store.status[j]["name"] = data[i].name;
+										}
+									}
+								}
+								console.log(store);
+							});
 					})
 					.catch(error => console.log(error));
 			}

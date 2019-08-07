@@ -21,13 +21,13 @@ const injectContext = PassedComponent => {
 			});
 		}
 
-		componentDidMount() {
-			/**
-			 * EDIT THIS!
-			 * This function is the equivalent to "window.onLoad", it only run once on the entire application lifetime
-			 * you should do your ajax requests or fetch api requests here
-			 **/
-			/* fetch("https://3000-b2c4573c-c0a9-4d56-9079-9304b3a25da6.ws-us0.gitpod.io/user")
+		componentDidMount() {}
+		/**
+		 * EDIT THIS!
+		 * This function is the equivalent to "window.onLoad", it only run once on the entire application lifetime
+		 * you should do your ajax requests or fetch api requests here
+		 **/
+		/* fetch("https://3000-b2c4573c-c0a9-4d56-9079-9304b3a25da6.ws-us0.gitpod.io/user")
 				.then(resp => {
 					return resp.json(); // (returns promise) will try to parse the result as json as return a promise that you can .then for results
 				})
@@ -37,7 +37,7 @@ const injectContext = PassedComponent => {
 				.catch(error => {
 					console.log(error);
 				}); */
-			/* 	fetch("https://3000-b2c4573c-c0a9-4d56-9079-9304b3a25da6.ws-us0.gitpod.io/user", {
+		/* 	fetch("https://3000-b2c4573c-c0a9-4d56-9079-9304b3a25da6.ws-us0.gitpod.io/user", {
 				method: "POST",
 				body: JSON.stringify({ username: "nn3", email: "email3@email.com" }),
 				headers: {
@@ -49,7 +49,6 @@ const injectContext = PassedComponent => {
 					console.log(data);
 				})
 				.catch(error => console.log(error)); */
-		}
 
 		render() {
 			// the initial value for the context its not null anymore, but the current state of this component,
