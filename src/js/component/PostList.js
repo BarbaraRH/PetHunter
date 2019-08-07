@@ -10,7 +10,7 @@ export class PostList extends React.Component {
 			<div>
 				<div className="container-fluid mt-5 pt-5">
 					<div className="container-fluid">
-						<div className="row justify-content-around">
+						<div className="row">
 							<Context.Consumer>
 								{({ store, actions }) => {
 									if ("status" in store) {
