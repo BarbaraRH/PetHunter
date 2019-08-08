@@ -90,12 +90,29 @@ const getState = ({ getStore, setStore }) => {
 								for (let i in data) {
 									for (let j in store.status) {
 										if (data[i].id === store.status[j].pet_id) {
-											store.status[j]["name"] = data[i].name;
+											setStore((store.status[j]["name"] = data[i].name));
 										}
 									}
 								}
 								console.log(store);
 							});
+					})
+					.catch(error => console.log(error));
+			},
+			submitAdvert: event => {
+				console.log("funciona");
+				event.preventDefault();
+				const inputs = event.target.getElementsByTagName("input");
+				fetch("https://3000-f08e4e85-ef62-49cf-92fb-bc73e1e92317.ws-us0.gitpod.io/adverts", {
+					method: "POST",
+					body: JSON.stringify({ name: inputs.petName.value, user_id: 1, status: "found" }),
+					headers: {
+						"Content-type": "application/json; charset=UTF-8"
+					}
+				})
+					.then(resp => resp.json())
+					.then(data => {
+						console.log(data);
 					})
 					.catch(error => console.log(error));
 			}

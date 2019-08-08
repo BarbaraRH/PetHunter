@@ -17,13 +17,7 @@ export class PostList extends React.Component {
 										return store.status.map((item, index) => {
 											if ("name" in item) {
 												return (
-													<div className="mt-5 pt-5" key={index}>
-														{item.name} <br />
-														{item.created_at}
-													</div>
-												);
-											}
-											/*{<div className="col-12 col-lg-3 m-1" key={index}>
+													<div className="col-12 col-lg-3 m-1" key={index}>
 														<div className="row">
 															<div
 																className="col-4 img-ch mb-4 shadow-sm"
@@ -43,7 +37,9 @@ export class PostList extends React.Component {
 																</p>
 															</div>
 														</div>
-													</div>}*/
+													</div>
+												);
+											}
 										});
 									}
 								}}
