@@ -43,7 +43,7 @@ const getState = ({ getStore, setStore }) => {
 			register: event => {
 				event.preventDefault();
 				const inputs = event.target.getElementsByTagName("input");
-				fetch("https://3000-fdadc773-05e6-4438-8383-b586c0262184.ws-us0.gitpod.io/user", {
+				fetch("https://3000-afd93502-0d55-49ed-ab82-b717e96337ad.ws-us0.gitpod.io/user", {
 					method: "POST",
 					body: JSON.stringify({ username: inputs.user.value, email: inputs.mail.value }),
 					headers: {
@@ -79,12 +79,12 @@ const getState = ({ getStore, setStore }) => {
 			},
 			getAdverts: status => {
 				const store = getStore();
-				fetch("https://3000-f08e4e85-ef62-49cf-92fb-bc73e1e92317.ws-us0.gitpod.io/adverts?status=" + status)
+				fetch("https://3000-afd93502-0d55-49ed-ab82-b717e96337ad.ws-us0.gitpod.io/adverts?status=" + status)
 					.then(resp => resp.json())
 					.then(data => {
 						setStore((store.status = data));
 						console.log(store);
-						return fetch("https://3000-f08e4e85-ef62-49cf-92fb-bc73e1e92317.ws-us0.gitpod.io/pets")
+						return fetch("https://3000-afd93502-0d55-49ed-ab82-b717e96337ad.ws-us0.gitpod.io/pets")
 							.then(resp => resp.json())
 							.then(data => {
 								for (let i in data) {
@@ -103,7 +103,7 @@ const getState = ({ getStore, setStore }) => {
 				console.log("funciona");
 				event.preventDefault();
 				const inputs = event.target.getElementsByTagName("input");
-				fetch("https://3000-f08e4e85-ef62-49cf-92fb-bc73e1e92317.ws-us0.gitpod.io/adverts", {
+				fetch("https://3000-afd93502-0d55-49ed-ab82-b717e96337ad.ws-us0.gitpod.io/adverts", {
 					method: "POST",
 					body: JSON.stringify({ name: inputs.petName.value, user_id: 1, status: "found" }),
 					headers: {
