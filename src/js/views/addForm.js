@@ -24,7 +24,7 @@ export class AddForm extends React.Component {
 						{({ store, actions }) => {
 							return (
 								<div className="col-12 mb-5 pb-3">
-									<form onSubmit={actions.submitAdvert}>
+									<form onSubmit={() => actions.submitAdvert(event)}>
 										<input
 											type="text"
 											name="petName"

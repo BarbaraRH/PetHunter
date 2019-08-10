@@ -44,25 +44,20 @@ export class PostList extends React.Component {
 									}
 								}}
 							</Context.Consumer>
-							<Context.Consumer>
-								{({ store, actions }) => {
-									return (
-										<div className="row" style={{ zIndex: 0 }}>
-											<div className="col-md-12 col-10 fixed-bottom">
-												<div className="row">
-													<div className="col-md-10 col-10 " />
-													<Link to="/addForm" className="col-md-2 col-2 mb-5 pb-4">
-														<i
-															className="fas fa-plus-circle pb-3 pl-3"
-															style={{ color: "#d50000", fontSize: "4em" }}
-														/>
-													</Link>
-												</div>
-											</div>
-										</div>
-									);
-								}}
-							</Context.Consumer>
+
+							<div className="row" style={{ zIndex: 0 }}>
+								<div className="col-md-12 col-10 fixed-bottom">
+									<div className="row">
+										<div className="col-md-10 col-10 " />
+										<Link to="/addForm" className="col-md-2 col-2 mb-5 pb-4">
+											<i
+												className="fas fa-plus-circle pb-3 pl-3"
+												style={{ color: "#d50000", fontSize: "4em" }}
+											/>
+										</Link>
+									</div>
+								</div>
+							</div>
 						</div>
 						<div className="row mt-5" />
 					</div>

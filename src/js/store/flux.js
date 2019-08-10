@@ -81,6 +81,7 @@ const getState = ({ getStore, setStore }) => {
 			},
 			getAdverts: status => {
 				const store = getStore();
+				setStore((store.statusName = status));
 				fetch(store.apiServer + "/adverts?status=" + status)
 					.then(resp => resp.json())
 					.then(data => {
@@ -101,14 +102,14 @@ const getState = ({ getStore, setStore }) => {
 					})
 					.catch(error => console.log(error));
 			},
-			submitAdvert: (event, status) => {
+			submitAdvert: event => {
 				console.log("funciona");
 				event.preventDefault();
 				const store = getStore();
 				const inputs = event.target.getElementsByTagName("input");
 				fetch(store.apiServer + "/adverts", {
 					method: "POST",
-					body: JSON.stringify({ name: inputs.petName.value, status: status }),
+					body: JSON.stringify({ name: inputs.petName.value, status: store.statusName }),
 					headers: {
 						"Content-type": "application/json; charset=UTF-8"
 					}
