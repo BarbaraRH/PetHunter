@@ -1,7 +1,7 @@
 const getState = ({ getStore, setStore }) => {
 	return {
 		store: {
-			apiServer: "https://3000-c3b013fe-5f78-42a4-a1d5-8bd6c48e1793.ws-us0.gitpod.io",
+			apiServer: "https://3000-ea3f5462-d865-414d-8734-a04823e9f030.ws-us0.gitpod.io",
 			cssStyleIconFooter: "",
 			lostPets: [
 				{
@@ -117,6 +117,34 @@ const getState = ({ getStore, setStore }) => {
 					.then(resp => resp.json())
 					.then(data => {
 						console.log(data);
+					})
+					.catch(error => console.log(error));
+			},
+			search: (status, event) => {
+				event.preventDefault();
+				const store = getStore();
+				setStore((store.statusName = status));
+				const inputs = event.target.getElementsByTagName("input");
+				const searched = inputs.search.value;
+				fetch(store.apiServer + "/adverts?status=" + status)
+					.then(resp => resp.json())
+					.then(data => {
+						setStore((store.status = data));
+						console.log(store);
+						return fetch(store.apiServer + "/search?searched=" + searched)
+							.then(resp => resp.json())
+							.then(data => {
+								for (let i in data) {
+									for (let j in store.status) {
+										if (data[i].id === store.status[j].pet_id) {
+											setStore((store.status[j]["name"] = data[i].name));
+											setStore((store.status[j]["breed"] = data[i].breed));
+											setStore((store.status[j]["chip_num"] = data[i].chip_num));
+										}
+									}
+								}
+								console.log(store);
+							});
 					})
 					.catch(error => console.log(error));
 			}

@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+import { Context } from "../store/appContext";
 
 export class Navbar extends React.Component {
 	render() {
@@ -15,9 +16,20 @@ export class Navbar extends React.Component {
 				<div className="row p-3 stikyBackground text-center">
 					<div className="col-12" />
 					<div className="col-12 text-center">
-						<form>
-							<input type="text" className="form-control" placeholder="Buscar" />
-						</form>
+						<Context.Consumer>
+							{({ store, actions }) => {
+								return (
+									<form onSubmit={() => actions.search(store.statusName, event)}>
+										<input
+											type="text"
+											name="search"
+											className="form-control"
+											placeholder="Buscar"
+										/>
+									</form>
+								);
+							}}
+						</Context.Consumer>
 					</div>
 				</div>
 			</nav>
