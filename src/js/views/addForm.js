@@ -31,15 +31,36 @@ export class AddForm extends React.Component {
 											className="form-control mb-2 mt-4"
 											placeholder="Nombre mascota perdida"
 										/>
-										<input
-											type="submit"
-											className="btn my-4 btn-block importantBtn"
-											placeholder="Buscar"
-										/>
 
 										{/*<input type="text" className="form-control mb-2" placeholder="Lugar" /> no es necesario este dato lo arrojara la sollicitud misma*/}
 										<input type="text" className="form-control mb-2" placeholder="Número de Chip" />
-										<input type="text" className="form-control mb-2" placeholder="Raza" />
+
+										<div className="form-group">
+											<select className="form-control" id="exampleFormControlSelect1">
+												<h2>A</h2>
+												<option value="">Alano</option>
+												<option value="">Alaskan Malamute</option>
+												<option value="">American Staffordshire Terrier</option>
+												<option value="">American Water Spaniel</option>
+												<option value="">Antiguo Pastor Inglés</option>
+
+												<h2>B</h2>
+												<option value="">Basset Azul de Gaseogne</option>
+												<option value="">Basset Hound </option>
+												<option value="">Basset leonado de Bretaña</option>
+												<option value="">Beagle</option>
+												<option value="">Bearded Collie</option>
+												<option value="">Bichón Maltés</option>
+												<option value="">Bobtail</option>
+												<option value="">Border Collie</option>
+												<option value="">Boston Terrier</option>
+												<option value="">Boxer</option>
+												<option value="">Bull Terrier</option>
+												<option value="">Bulldog Americano</option>
+												<option value="">Bulldog Francés </option>
+												<option value="">Bulldog Inglés</option>
+											</select>
+										</div>
 										<div className="row" role="group" aria-label="Basic example">
 											<div className="col-4 col-md-4">
 												<button
