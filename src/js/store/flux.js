@@ -94,6 +94,8 @@ const getState = ({ getStore, setStore }) => {
 									for (let j in store.status) {
 										if (data[i].id === store.status[j].pet_id) {
 											setStore((store.status[j]["name"] = data[i].name));
+											setStore((store.status[j]["breed"] = data[i].breed));
+											setStore((store.status[j]["chip_num"] = data[i].chip_num));
 										}
 									}
 								}
@@ -109,7 +111,12 @@ const getState = ({ getStore, setStore }) => {
 				const inputs = event.target.getElementsByTagName("input");
 				fetch(store.apiServer + "/adverts", {
 					method: "POST",
-					body: JSON.stringify({ name: inputs.petName.value, status: store.statusName }),
+					body: JSON.stringify({
+						name: inputs.petName.value,
+						chip_num: inputs.chip.value,
+						breed: inputs.breed1.value,
+						status: store.statusName
+					}),
 					headers: {
 						"Content-type": "application/json; charset=UTF-8"
 					}

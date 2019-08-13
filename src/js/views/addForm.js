@@ -29,7 +29,19 @@ export class AddForm extends React.Component {
 											type="text"
 											name="petName"
 											className="form-control mb-2 mt-4"
-											placeholder="Nombre mascota perdida"
+											placeholder="Nombre mascota"
+										/>
+										<input
+											type="text"
+											name="breed1"
+											className="form-control mb-2"
+											placeholder="Raza"
+										/>
+										<input
+											type="number"
+											name="chip"
+											className="form-control mb-2"
+											placeholder="Número de Chip"
 										/>
 										<input
 											type="submit"
@@ -38,8 +50,7 @@ export class AddForm extends React.Component {
 										/>
 
 										{/*<input type="text" className="form-control mb-2" placeholder="Lugar" /> no es necesario este dato lo arrojara la sollicitud misma*/}
-										<input type="text" className="form-control mb-2" placeholder="Número de Chip" />
-										<input type="text" className="form-control mb-2" placeholder="Raza" />
+
 										<div className="row" role="group" aria-label="Basic example">
 											<div className="col-4 col-md-4">
 												<button
