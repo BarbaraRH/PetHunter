@@ -30,7 +30,19 @@ export class AddForm extends React.Component {
 											type="text"
 											name="petName"
 											className="form-control mb-2 mt-4"
-											placeholder="Nombre mascota perdida"
+											placeholder="Nombre mascota"
+										/>
+										<input
+											type="text"
+											name="breed1"
+											className="form-control mb-2"
+											placeholder="Raza"
+										/>
+										<input
+											type="number"
+											name="chip"
+											className="form-control mb-2"
+											placeholder="Número de Chip"
 										/>
 
 										{/*<input type="text" className="form-control mb-2" placeholder="Lugar" /> no es necesario este dato lo arrojara la sollicitud misma*/}
@@ -74,6 +86,25 @@ export class AddForm extends React.Component {
 												<div className="col-12 text-center">
 													<p>Tamaño</p>
 												</div>
+
+
+    {/*<div className="row" role="group" aria-label="Basic example">
+											<div className="col-4 col-md-4">
+												<button
+													type="button"
+													className="btn btn-block commonBtn w-60 h-100 "
+													onClick={actions.changeColorAddFormDogBtn}>
+													<i className="fas fa-dog fa-2x" />
+												</button>
+											</div>
+											<div className="col-4 col-md-4">
+												<button
+													type="button"
+													className="btn btn-block commonBtn w-60 h-100 "
+													onClick={actions.changeColorAddFormDogBtn}>
+													<i className="fas fa-dog fa-3x" />
+												</button>}*/
+
 											</div>
 											<div className="row" role="group" aria-label="Basic example">
 												<div className="col-4 col-md-4">

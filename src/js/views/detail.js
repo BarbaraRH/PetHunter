@@ -19,18 +19,17 @@ export class Detail extends React.Component {
 									<div className="card" style={{ width: "18rem" }}>
 										<img
 											className="card-img-top"
-											src={store.lostPets[index].image}
+											src={store.lostPets[0].image}
 											alt="Card image cap"
 										/>
 										<div className="card-body">
-											<h5 className="card-title">{store.lostPets[index].name}</h5>
+											<h5 className="card-title">{store.status[index].name}</h5>
 											<div className="card-text">
-												<p>raza: {store.lostPets[index].breed}</p>
-												<p>tamaño: {store.lostPets[index].size}</p>
-												<p>color: {store.lostPets[index].color}</p>
+												<p>raza: {store.status[index].breed}</p>
+												<p>Nº Chip: {store.status[index].chip_num}</p>
 												<span>usuario:</span>
 												<span>
-													<Link to="/UserContact"> {store.lostPets[index].user}</Link>
+													<Link to="/UserContact"> {store.lostPets[0].user}</Link>
 												</span>
 											</div>
 										</div>

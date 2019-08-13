@@ -17,7 +17,10 @@ export class PostList extends React.Component {
 										return store.status.map((item, index) => {
 											if ("name" in item) {
 												return (
-													<div className="col-12 col-lg-3" key={index}>
+													<Link
+														to={"LostPets/" + index}
+														className="col-12 col-lg-3"
+														key={index}>
 														<div className="row">
 															<div
 																className="col-4 img-ch mb-3 shadow-sm"
@@ -37,7 +40,7 @@ export class PostList extends React.Component {
 																</p>
 															</div>
 														</div>
-													</div>
+													</Link>
 												);
 											}
 										});
