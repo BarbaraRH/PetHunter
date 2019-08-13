@@ -3,6 +3,7 @@ const getState = ({ getStore, setStore }) => {
 		store: {
 			apiServer: "https://3000-ea3f5462-d865-414d-8734-a04823e9f030.ws-us0.gitpod.io",
 			cssStyleIconFooter: "",
+			selectChoice: "",
 			lostPets: [
 				{
 					image: "https://s.libertaddigital.com/2018/06/15/1920/1080/fit/perro-sorpresa.jpg",
@@ -114,7 +115,7 @@ const getState = ({ getStore, setStore }) => {
 					body: JSON.stringify({
 						name: inputs.petName.value,
 						chip_num: inputs.chip.value,
-						breed: inputs.breed1.value,
+						breed: store.selectChoice,
 						status: store.statusName
 					}),
 					headers: {
@@ -154,6 +155,10 @@ const getState = ({ getStore, setStore }) => {
 							});
 					})
 					.catch(error => console.log(error));
+			},
+			handleSelect: event => {
+				const store = getStore();
+				setStore((store.selectChoice = event.target.value));
 			}
 		}
 	};
