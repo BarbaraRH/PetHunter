@@ -4,6 +4,12 @@ const getState = ({ getStore, setStore }) => {
 			apiServer: "https://3000-ea3f5462-d865-414d-8734-a04823e9f030.ws-us0.gitpod.io",
 			cssStyleIconFooter: "",
 			selectChoice: "",
+			history: [
+				{
+					titulo: "Muchas gracias Pethunter",
+					description: "estoy muy feliz por recuperar a mi mascota"
+				}
+			],
 			lostPets: [
 				{
 					image: "https://s.libertaddigital.com/2018/06/15/1920/1080/fit/perro-sorpresa.jpg",

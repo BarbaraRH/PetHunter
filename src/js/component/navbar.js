@@ -8,15 +8,15 @@ export class Navbar extends React.Component {
 		return (
 			<nav className="fixed-top container-fluid" style={{ backgroundColor: "#b2ebf2" }}>
 				<div className="row">
-					<div className="col-md-4">
-						<Link to="/myAccount" className="col-2">
+					<div className="col-2">
+						<Link to="/myAccount" className="">
 							<i className="fas fa-exclamation-circle fa-2x mt-2 mb-2" style={{ color: "#d50000" }} />
 						</Link>
 					</div>
-					<div className="col-md-4">
+					<div className="col-8">
 						<h3 className="text-center mt-2 mb-2">{this.props.title}</h3>
 					</div>
-					<div className="col-md-4" />
+					<div className="col-4" />
 				</div>
 				<div className="row p-3 stikyBackground text-center">
 					<div className="col-12" />
