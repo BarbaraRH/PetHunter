@@ -30,7 +30,7 @@ export class PetHunterHistory extends React.Component {
 							</div>
 							<div className="col-3" />
 						</div>
-						<div classesfasfasdva>
+						<div className="mt-5">
 							<div className="col-12 text-center">
 								<i className="far fa-star fa-2x gold" />
 								<i className="far fa-star fa-2x gold" />

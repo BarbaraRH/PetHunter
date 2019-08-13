@@ -11,7 +11,8 @@ export class MyAccount extends React.Component {
 			<div className="bg">
 				<div className="container-fluid">
 					<div className="row">
-						<div className="col-md-12">
+						<div className="col-md-4" />
+						<div className="col-md-4 mt-5 p-2 border border-secondary  rounded">
 							<h1 className="text-center">Mi Cuenta</h1>
 							<h1 className="text-center">
 								<i className="fas fa-user fa-4x" />
@@ -25,6 +26,7 @@ export class MyAccount extends React.Component {
 								<h6 className="text-center">Cerrar Sesión</h6>
 							</Link>
 						</div>
+						<div className="col-md-4" />
 					</div>
 				</div>
 				<div className="container-fluid">
