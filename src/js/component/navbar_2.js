@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { Context } from "../store/appContext";
 
-export class Navbar extends React.Component {
+export class Navbar_2 extends React.Component {
 	render() {
 		return (
 			<nav className="fixed-top container-fluid" style={{ backgroundColor: "#b2ebf2" }}>
@@ -21,20 +21,12 @@ export class Navbar extends React.Component {
 				<div className="row p-3 stikyBackground text-center">
 					<div className="col-12" />
 					<div className="col-12 text-center">
-						<Context.Consumer>
-							{({ store, actions }) => {
-								return (
-									<form onSubmit={() => actions.search(store.statusName, event)}>
-										<input
-											type="text"
-											name="search"
-											className="form-control"
-											placeholder="Buscar"
-										/>
-									</form>
-								);
-							}}
-						</Context.Consumer>
+						<button
+							type="button"
+							className="btn  btn-block"
+							style={{ backgroundColor: "#d50000", color: "white" }}>
+							Publica tu Historia
+						</button>
 					</div>
 				</div>
 			</nav>
@@ -42,6 +34,6 @@ export class Navbar extends React.Component {
 	}
 }
 
-Navbar.propTypes = {
+Navbar_2.propTypes = {
 	title: PropTypes.string
 };

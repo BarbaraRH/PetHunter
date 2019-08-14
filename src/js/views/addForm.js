@@ -68,49 +68,16 @@ export class AddForm extends React.Component {
 										<div className="row">
 											<div className="col-12 text-center">
 												<p>Tamaño</p>
-											</div>
-
-											{/*<div className="row" role="group" aria-label="Basic example">
-											<div className="col-4 col-md-4">
-												<button
-													type="button"
-													className="btn btn-block commonBtn w-60 h-100 "
-													onClick={actions.changeColorAddFormDogBtn}>
-													<i className="fas fa-dog fa-2x" />
-												</button>
-											</div>
-											<div className="col-4 col-md-4">
-												<button
-													type="button"
-													className="btn btn-block commonBtn w-60 h-100 "
-													onClick={actions.changeColorAddFormDogBtn}>
-													<i className="fas fa-dog fa-3x" />
-												</button>*/}
-										</div>
-										<div className="row" role="group" aria-label="Basic example">
-											<div className="col-4 col-md-4">
-												<button
-													type="button"
-													className="btn btn-block commonBtn w-60 h-100 "
-													onClick={actions.changeColorAddFormDogBtn}>
-													<i className="fas fa-dog fa-2x" />
-												</button>
-											</div>
-											<div className="col-4 col-md-4">
-												<button
-													type="button"
-													className="btn btn-block commonBtn w-60 h-100 "
-													onClick={actions.changeColorAddFormDogBtn}>
-													<i className="fas fa-dog fa-3x" />
-												</button>
-											</div>
-											<div className="col-4 col-md-4">
-												<button
-													type="button"
-													className="btn btn-block commonBtn w-60 h-100 "
-													onClick={actions.changeColorAddFormDogBtn}>
-													<i className="fas fa-dog fa-4x" />
-												</button>
+												<select
+													name="size"
+													value={store.selectChoice}
+													className="form-control"
+													onChange={() => actions.handleSelect(event)}>
+													<option value="">Selecciona el tamaño</option>
+													<option value="Chico">Chico</option>
+													<option value="Mediano">Mediano</option>
+													<option value="Grande">Grande</option>
+												</select>
 											</div>
 										</div>
 									</div>
@@ -122,27 +89,19 @@ export class AddForm extends React.Component {
 												<p>Género</p>
 											</div>
 										</div>
-										<div className="row mt-2" role="group" aria-label="Basic example">
-											<div className="col-2 col-md-2" />
-											<div className="col-4 col-md-4">
-												<button
-													type="button"
-													name=""
-													className="btn btn-block commonBtn w-60 h-100"
-													onClick={actions.changeColorAddFormDogBtn}>
-													<i className="fas fa-mars fa-3x" />
-												</button>
+
+										<div className="row">
+											<div className="col-12 text-center">
+												<select
+													name="genero"
+													value={store.selectChoice}
+													className="form-control"
+													onChange={() => actions.handleSelect(event)}>
+													<option value="">Selecciona el genero</option>
+													<option value="macho">macho</option>
+													<option value="hembra">hembra</option>
+												</select>
 											</div>
-											<div className="col-4 col-md-4">
-												<button
-													type="button"
-													name=""
-													className="btn btn-block commonBtn w-60 h-100"
-													onClick={actions.changeColorAddFormDogBtn}>
-													<i className="fas fa-venus fa-3x " />
-												</button>
-											</div>
-											<div className="col-2 col-md-2" />
 										</div>
 									</div>
 									<div className="form-group border border-secondary p-4 rounded">
