@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 
 import "../../styles/demo.scss";
-import { Navbar } from "../component/navbar";
+import { Navbar_2 } from "../component/navbar_2";
 import { Footer } from "../component/footer";
 
 export class PetHunterHistory extends React.Component {
@@ -17,55 +17,35 @@ export class PetHunterHistory extends React.Component {
 	render() {
 		return (
 			<div>
-				<Navbar title="Historias de Exito" />
+				<Navbar_2 title="HISTORIAS DE EXITO" />
 
 				<div className="container-fluid mt-4 pt-5">
 					<div className="container-fluid pt-5">
-						<div className="row" id="Historystiky">
-							<div className="col-3" />
-							<div className="col-6">
-								<h5 className="text-center">
-									<i className="fas fa-binoculars fa-5x pt-5 gold" />
-								</h5>
-							</div>
-							<div className="col-3" />
-						</div>
-						<div className="mt-5">
-							<div className="col-12 text-center">
-								<i className="far fa-star fa-2x gold" />
-								<i className="far fa-star fa-2x gold" />
-								<i className="far fa-star fa-2x gold" />
-								<i className="far fa-star fa-2x gold" />
-								<i className="far fa-star fa-2x gold" />
-							</div>
-						</div>
 						<div className="row justify-content-around pt-5">
 							<Context.Consumer>
 								{({ store, actions }) => {
-									return store.lostPets.map((item, index) => {
+									return store.history.map((item, index) => {
 										return (
 											<div className="col-12 col-lg-3 m-1" key={index}>
-												<Link to={"/LostPets/" + index}>
-													<div className="row">
-														<div
-															className="col-4 img-ch mb-4 shadow-sm"
-															style={{
-																backgroundImage: "url(" + item.image + ")"
-															}}
-														/>
-														<div className="col-8  p-2 mb-4 grist shadow-sm">
-															<h2 className="card-title" style={{ color: "black" }}>
-																{item.name}
-															</h2>
-
-															<p className="card-text">
-																<small className="text-muted">
-																	Se perdió con fecha -1-1-2019
-																</small>
-															</p>
-														</div>
+												<div className="row">
+													<div
+														className="col-4 img-ch mb-4 shadow-sm"
+														style={{
+															backgroundImage:
+																'url("https://www.todoperros.com/wp-content/uploads/2015/09/perro-amo.jpg")'
+														}}
+													/>
+													<div className="col-8  p-2 mb-4 grist shadow-sm">
+														<h4 className="card-title" style={{ color: "black" }}>
+															{item.user}
+														</h4>
+														<h5 className="card-text font-italic ml-3">
+															&quot;
+															{item.description}
+															... &quot;
+														</h5>
 													</div>
-												</Link>
+												</div>
 											</div>
 										);
 									});

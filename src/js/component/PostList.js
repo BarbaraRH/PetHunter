@@ -23,7 +23,7 @@ export class PostList extends React.Component {
 														key={index}>
 														<div className="row">
 															<div
-																className="col-4 img-ch mb-3 shadow-sm"
+																className="col-4 p-2 mb-4 img-ch shadow-sm"
 																style={{
 																	backgroundImage:
 																		'url("https://s.libertaddigital.com/2018/06/15/1920/1080/fit/perro-sorpresa.jpg")'

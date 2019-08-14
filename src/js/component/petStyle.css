@@ -299,3 +299,23 @@ a{
 .rojoa{
     background-color: red;
 }
+.foto-c{
+    width: 50%;
+    height:50%
+}
+.fotocontact1{
+position:relative;
+  height:50%;
+  width:50%;
+  top: 0;
+  left :20px;
+  z-index: -1;
+}
+.fotocontact2{
+position:relative;
+  height:50%;
+  width:50%;
+  top: 30px;
+  left :-20px;
+  z-index: 1;
+}

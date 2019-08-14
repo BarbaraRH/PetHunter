@@ -16,7 +16,7 @@ export class Detail extends React.Component {
 							{({ store, actions }) => {
 								let index = this.props.match.params.theid;
 								return (
-									<div className="card" style={{ width: "18rem" }}>
+									<div className="card shadow" style={{ width: "18rem" }}>
 										<img
 											className="card-img-top"
 											src={store.lostPets[0].image}

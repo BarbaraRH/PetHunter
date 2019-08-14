@@ -10,27 +10,40 @@ export class UserContact extends React.Component {
 		return (
 			<div>
 				<Navbar />
-				<div className="container my-5 pt-5">
-					<div className="row p-3">
-						<div className="col-md-12 text-center p-2">
-							<h2>Aviso de mascota perdida</h2>
+				<div className="container my-5 pt-5 mb-5 pb-5">
+					<div className="row mt-5">
+						<div className="col-md-12  text-center">
+							<h3>Contacto</h3>
 						</div>
 					</div>
-					<div className="row ">
-						<div className="col-md-12 text-center p-3">
-							<i className="fas fa-user fa-3x m-2" />
-							<i className="fas fa-arrows-alt-h fa-3x m-2" />
-							<i className="fas fa-paw fa-3x m-2" />
-						</div>
-					</div>
-					<div className="row">
-						<div className="col-md-12 text-center">
-							<h4>Nombre de Usuario:</h4>
-							<h4 className="fondo-destacado rounded-pill">Usuario Juan</h4>
-							<h4>Correo de Usuario:</h4>
-							<h4 className="fondo-destacado rounded-pill">Usuario@gmail.com</h4>
-							<h4>Teléfono de Usuario:</h4>
-							<h4 className="fondo-destacado rounded-pill">555-555555</h4>
+					<div clasName="row">
+						<div clasName="col-12">
+							<div clasName="row ">
+								<img
+									src="https://sistemas.com/termino/wp-content/uploads/Usuario-Icono.jpg"
+									className="fotocontact1 rounded border border-info shadow-sm"
+									alt="..."
+								/>
+								<img
+									src="https://www.fundacion-affinity.org/sites/default/files/el-gato-necesita-tener-acceso-al-exterior.jpg"
+									className="fotocontact2 rounded border border-info shadow-sm"
+									alt="..."
+								/>
+							</div>
+							<div className="card w-100 shadow mt-5">
+								<div className="card-body">
+									<h5 className="card-title">Nombre de usuario:</h5>
+									<p className="card-text">Claudio</p>
+								</div>
+								<ul className="list-group list-group-flush">
+									<li className="list-group-item">Email: claudio@gmail.com</li>
+									<li className="list-group-item">Tel: 555-555-555</li>
+									<div className="card-body">
+										<h5 className="card-title">Encontro/busca a:</h5>
+										<p className="card-text">Cachetes</p>
+									</div>
+								</ul>
+							</div>
 						</div>
 					</div>
 				</div>

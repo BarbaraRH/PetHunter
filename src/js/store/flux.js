@@ -1,11 +1,12 @@
 const getState = ({ getStore, setStore }) => {
 	return {
 		store: {
-			apiServer: "https://3000-ea3f5462-d865-414d-8734-a04823e9f030.ws-us0.gitpod.io",
+			apiServer: "https://3000-d93b9ea9-4db4-4f69-8e41-f4cca8b5a84c.ws-us0.gitpod.io",
 			cssStyleIconFooter: "",
 			selectChoice: "",
 			history: [
 				{
+					user: "Carol",
 					titulo: "Muchas gracias Pethunter",
 					description: "estoy muy feliz por recuperar a mi mascota"
 				}
