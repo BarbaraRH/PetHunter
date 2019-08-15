@@ -12,7 +12,7 @@ export class MyAccount extends React.Component {
 				<div className="container-fluid">
 					<div className="row">
 						<div className="col-md-4" />
-						<div className="col-md-4 mt-5 p-2 border border-secondary  rounded">
+						<div className="col-md-4 mt-5 p-2 border-secondary  rounded">
 							<h1 className="text-center">Mi Cuenta</h1>
 							<h1 className="text-center">
 								<i className="fas fa-user fa-4x" />
