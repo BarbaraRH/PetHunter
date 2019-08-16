@@ -17,7 +17,7 @@ export const Loading = () => (
 						</div>
 					</div>
 					<div className="row float-rigth">
-						<div className="col-12" style={{ top: "400px" }}>
+						<div className="col-12" style={{ top: "300px" }}>
 							<img className="img-fluid d-block mx-auto pl-5" src={logo2} />
 						</div>
 					</div>
