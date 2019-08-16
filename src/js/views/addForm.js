@@ -64,7 +64,7 @@ export class AddForm extends React.Component {
 										/>
 									</form>
 
-									<div className="form-group border border-secondary p-4 rounded">
+									<div className="form-group border-secondary p-4 rounded">
 										<div className="row">
 											<div className="col-12 text-center">
 												<p>Tamaño</p>
@@ -83,7 +83,7 @@ export class AddForm extends React.Component {
 									</div>
 									{/*<input type="text" className="form-control mb-2" placeholder="Color" /> Esto esta demas s hay foto*/}
 
-									<div className="form-group border border-secondary p-4 rounded">
+									<div className="form-group border-secondary p-4 rounded">
 										<div className="row ">
 											<div className="col-12 text-center">
 												<p>Género</p>
@@ -104,7 +104,7 @@ export class AddForm extends React.Component {
 											</div>
 										</div>
 									</div>
-									<div className="form-group border border-secondary p-4 rounded">
+									<div className="form-group border-secondary p-4 rounded">
 										<p className="text-center mb-3">Lugar de extravío</p>
 										<select className="form-control mb-2">
 											<option value="">Elije tu Ciudad</option>
