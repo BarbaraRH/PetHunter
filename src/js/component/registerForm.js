@@ -68,6 +68,8 @@ export const RegisterForm = () => (
 											document.querySelector(".movileContainer").style.animation =
 												"next 1s forwards";
 											document.querySelector("#nextBtn").value = "Become a Pet Hunter";
+											let advise = document.querySelector("#advise");
+											advise.parentNode.removeChild(advise);
 											setTimeout(function() {
 												document.querySelector("#nextBtn").type = "submit";
 												document.querySelector("#input1").placeholder = "Cuenta Bancaria";
@@ -99,6 +101,7 @@ export const RegisterForm = () => (
 												node.appendChild(textnode);
 												node.style =
 													"background-color: #fff176; border-radius: 25px; padding: 5px;";
+												node.id = "advise";
 												document.querySelector(".movileContainer").appendChild(node);
 												invalidField = 1;
 												return invalidField;
