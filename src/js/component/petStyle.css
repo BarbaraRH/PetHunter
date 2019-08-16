@@ -218,10 +218,10 @@ text-align: center;
 
 @-webkit-keyframes invalidForm {
 
-    0%{}
-    50%{}
-    100%{}
-
+    0%{position:relative; left:0px}
+    25%{left:-10px}
+    50%{left:10px}
+    100%{position:relative;left:0px}
 }
 
 @keyframes invalidForm {

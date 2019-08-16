@@ -18,6 +18,7 @@ export const RegisterForm = () => (
 							Por favor, <br /> cuéntanos sobre ti!
 						</h3>
 						<form className="text-center" action="/">
+							{/* AQUI SLUCIONA EL PROBLEMA*/}
 							<div className="col-12 movileContainer">
 								<div className="input-group form-group">
 									<div className="input-group-prepend" />
@@ -64,6 +65,17 @@ export const RegisterForm = () => (
 										let pass2 = document.querySelector("#input3").value;
 										let mail = document.querySelector("#input4").value;
 
+										if (
+											document.querySelector("#nextBtn").value == "Inicia la búsqueda" &&
+											document.querySelector("#input1").value != "" &&
+											document.querySelector("#input2").value != "" &&
+											document.querySelector("#input3").value != "" &&
+											document.querySelector("#input4").value != ""
+										) {
+											document.querySelector(".titleFromForms").parentNode.style.animation = "";
+											document.querySelector("#nextBtn").type = "submit";
+										}
+
 										if (pass1 == pass2 && user != "" && mail != "" && mail.includes("@")) {
 											document.querySelector(".movileContainer").style.animation =
 												"next 1s forwards";
@@ -73,7 +85,6 @@ export const RegisterForm = () => (
 												advise.parentNode.removeChild(advise);
 											}
 											setTimeout(function() {
-												document.querySelector("#nextBtn").type = "submit";
 												document.querySelector("#input1").placeholder = "Cuenta Bancaria";
 												document.querySelector("#input2").placeholder = "Banco Comercial";
 												document.querySelector("#input3").placeholder = "tipo de cuenta";
@@ -86,6 +97,7 @@ export const RegisterForm = () => (
 												document.querySelector("#input2").value = "";
 												document.querySelector("#input3").value = "";
 												document.querySelector("#input4").value = "";
+												invalidField = 0;
 											}, 500);
 										} else {
 											document.querySelector(".titleFromForms").parentNode.style.animation =
@@ -114,7 +126,7 @@ export const RegisterForm = () => (
 									className="btn importantBtn w-100"
 									id="nextBtn"
 								/>
-								<Link to={true ? "/RegisterForm" : "/"}>
+								<Link to={"/"}>
 									<input type="button" value="Back" className="btn btn-block commonBtn mt-4 mb-4" />
 								</Link>
 							</div>
