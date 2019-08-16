@@ -72,6 +72,7 @@ export const RegisterForm = () => (
 											document.querySelector("#input3").value != "" &&
 											document.querySelector("#input4").value != ""
 										) {
+											invalidField == 1;
 											document.querySelector(".titleFromForms").parentNode.style.animation = "";
 											document.querySelector("#nextBtn").type = "submit";
 										}
