@@ -100,12 +100,20 @@ export const RegisterForm = () => (
 												invalidField = 0;
 											}, 500);
 										} else {
-											document.querySelector(".titleFromForms").parentNode.style.animation =
-												"invalidForm 0.13s 2 forwards";
+											if (
+												document.querySelector("#input1").value == "" &&
+												document.querySelector("#input2").value == "" &&
+												document.querySelector("#input3").value == "" &&
+												document.querySelector("#input4").value == ""
+											) {
+												document.querySelector(".titleFromForms").parentNode.style.animation =
+													"invalidForm 0.13s 2 forwards";
+											}
 											setTimeout(function() {
 												document.querySelector(".titleFromForms").parentNode.style.animation =
 													"";
 											}, 260);
+
 											if (invalidField == 0) {
 												var node = document.createElement("SPAN");
 												var textnode = document.createTextNode(
