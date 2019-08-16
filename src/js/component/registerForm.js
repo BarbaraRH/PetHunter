@@ -67,9 +67,11 @@ export const RegisterForm = () => (
 										if (pass1 == pass2 && user != "" && mail != "" && mail.includes("@")) {
 											document.querySelector(".movileContainer").style.animation =
 												"next 1s forwards";
-											document.querySelector("#nextBtn").value = "Become a Pet Hunter";
+											document.querySelector("#nextBtn").value = "Inicia la búsqueda";
 											let advise = document.querySelector("#advise");
-											advise.parentNode.removeChild(advise);
+											if (advise != null) {
+												advise.parentNode.removeChild(advise);
+											}
 											setTimeout(function() {
 												document.querySelector("#nextBtn").type = "submit";
 												document.querySelector("#input1").placeholder = "Cuenta Bancaria";
@@ -108,11 +110,11 @@ export const RegisterForm = () => (
 											}
 										}
 									}}
-									value="Next"
+									value="Siguiente"
 									className="btn importantBtn w-100"
 									id="nextBtn"
 								/>
-								<Link to={"/"}>
+								<Link to={true ? "/RegisterForm" : "/"}>
 									<input type="button" value="Back" className="btn btn-block commonBtn mt-4 mb-4" />
 								</Link>
 							</div>
