@@ -10,8 +10,8 @@ export class UserContact extends React.Component {
 		return (
 			<div>
 				<Navbar_3 />
-				<div className="container my-5 pt-1 mb-5 pb-5 " style={{ width: "18rem" }}>
-					<div className="card w-100 shadow mt-5 text-center">
+				<div className="container pt-5 mt-2 mb-5 pb-5" style={{ width: "22rem" }}>
+					<div className="shadow text-center fondo-micuenta">
 						<div className="row mt-5">
 							<div className="col-md-12  text-center mb-2">
 								<h3>Contacto</h3>
@@ -21,24 +21,24 @@ export class UserContact extends React.Component {
 							<div className="col-12 d-block d-sm-block d-md-none mb-5">
 								<img
 									src="https://sistemas.com/termino/wp-content/uploads/Usuario-Icono.jpg"
-									className="fotocontact1 rounded border border-info shadow-sm"
+									className="fotocontact1 rounded border border-info shadow-sm bajo"
 									alt="..."
 								/>
 								<img
 									src="https://www.fundacion-affinity.org/sites/default/files/el-gato-necesita-tener-acceso-al-exterior.jpg"
-									className="fotocontact2 rounded border border-info shadow-sm"
+									className="fotocontact2 rounded border border-info shadow-sm sobre"
 									alt="..."
 								/>
 							</div>
-							<div className="col-6 justify-content-center d-none d-sm-none d-md-block mb-5">
+							<div className="col-8 justify-content-center d-none d-sm-none d-md-block mb-5">
 								<img
 									src="https://sistemas.com/termino/wp-content/uploads/Usuario-Icono.jpg"
-									className="fotocontact1 rounded border border-info shadow-sm"
+									className="fotocontact1 rounded border border-info shadow-sm bajo"
 									alt="..."
 								/>
 								<img
 									src="https://www.fundacion-affinity.org/sites/default/files/el-gato-necesita-tener-acceso-al-exterior.jpg"
-									className="fotocontact2 rounded border border-info shadow-sm"
+									className="fotocontact2 rounded border border-info shadow-sm sobre"
 									alt="..."
 								/>
 							</div>

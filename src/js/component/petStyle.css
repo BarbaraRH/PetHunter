@@ -1,6 +1,7 @@
 /*Global CSS classes*/
 p,h1,h2,h3,h4,h5,h6{
     margin: 0;
+    color: black
 }
 .bg{
     width: 100%;
@@ -311,7 +312,7 @@ position:relative;
   height:100%;
   width:50%;
   top: 0;
-  left :20px;
+  left :10px;
   z-index: -1;
 }
 .fotocontact2{
@@ -319,7 +320,7 @@ position:relative;
   height:100%;
   width:50%;
   top: 30px;
-  left :-20px;
+  left :-10px;
   z-index: 1;
 }
 .fotocontact{
@@ -328,4 +329,10 @@ position:relative;
 }
 .fondo-micuenta{
     background-color: #F1F1F1;
+}
+.sobre{
+    z-index: 2
+}
+.bajo{
+    z-index: 1
 }
