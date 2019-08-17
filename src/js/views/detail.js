@@ -16,7 +16,7 @@ export class Detail extends React.Component {
 							{({ store, actions }) => {
 								let index = this.props.match.params.theid;
 								return (
-									<div className="card shadow" style={{ width: "18rem" }}>
+									<div className=" mt-5 shadow rounded fondo-micuenta" style={{ width: "18rem" }}>
 										<h1 className="card-title text-center mb-4">{store.status[index].name}</h1>
 										<img
 											className="card-img-top"
@@ -54,10 +54,16 @@ export class Detail extends React.Component {
 													{" " + "Alameda" + " con " + "Bandera"}
 												</p>
 												<span>
-													<strong className="font-weight-bolder">usuario:</strong>
+													<strong className="font-weight-bolder">
+														usuario: {" " + store.lostPets[0].user}
+													</strong>
 												</span>
 												<span>
-													<Link to="/UserContact"> {store.lostPets[0].user}</Link>
+													<Link to="/UserContact">
+														<button type="button" className="btn btn-danger btn-block">
+															Contactar a {" " + store.lostPets[0].user}
+														</button>
+													</Link>
 												</span>
 											</div>
 										</div>
