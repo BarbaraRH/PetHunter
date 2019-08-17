@@ -30,13 +30,29 @@ export class PostList extends React.Component {
 																}}
 															/>
 															<div className="col-8  p-2 mb-4 grist shadow-sm">
-																<h2 className="card-title" style={{ color: "black" }}>
-																	{item.name}
-																</h2>
-																<p className="card-text">
-																	<small className="text-muted">
-																		{item.created_at}
-																	</small>
+																<p>
+																	<strong
+																		className="font-weight-bolder"
+																		style={{ color: "black" }}>
+																		Nombre:
+																	</strong>
+																	{" " + item.name}
+																</p>
+																<p>
+																	<strong
+																		className="font-weight-bolder"
+																		style={{ color: "black" }}>
+																		Fecha:
+																	</strong>
+																	{" " + item.created_at}
+																</p>
+																<p>
+																	<strong
+																		className="font-weight-bolder"
+																		style={{ color: "black" }}>
+																		Comuna:
+																	</strong>
+																	{" " + "Santiago"}
 																</p>
 															</div>
 														</div>
