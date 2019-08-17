@@ -51,7 +51,7 @@ export class UserContact extends React.Component {
 							<li className="list-group-item">Email: claudio@gmail.com</li>
 							<li className="list-group-item">Tel: 555-555-555</li>
 							<div className="card-body">
-								<h5 className="card-title">Encontro/busca a:</h5>
+								<h5 className="card-title">Busca a:</h5>
 								<p className="card-text">Cachetes</p>
 							</div>
 						</ul>

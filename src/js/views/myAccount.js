@@ -23,7 +23,7 @@ export class MyAccount extends React.Component {
 									<h5 className="card-title">Carolina Proaño</h5>
 									<p className="card-text">carol01@gmail.com</p>
 									<Link to={"/"}>
-										<p className="card-tex mb-1 badge badge-info">editar mis datos</p>
+										<p className="card-tex mb-1 badge badge-info">Editar mis datos</p>
 									</Link>
 								</div>
 								<div className="p-2">
@@ -34,7 +34,7 @@ export class MyAccount extends React.Component {
 									</Link>
 									<Link to={"/"}>
 										<button type="button" className="btn btn-danger btn-block mb-3">
-											cerrar sesión
+											Cerrar Sesión
 										</button>
 									</Link>
 								</div>
