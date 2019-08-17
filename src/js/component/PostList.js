@@ -21,7 +21,7 @@ export class PostList extends React.Component {
 														to={"LostPets/" + index}
 														className="col-12 col-lg-3"
 														key={index}>
-														<div className="row">
+														<div className="row p-2">
 															<div
 																className="col-4 p-2 mb-4 img-ch shadow-sm"
 																style={{

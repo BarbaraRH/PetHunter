@@ -11,9 +11,9 @@ export class MyAccount extends React.Component {
 			<div className="bg">
 				<div className="container-fluid">
 					<div className="row justify-content-center">
-						<div className="col-12 col-md-4">
-							<h1 className="text-center">Mi Cuenta</h1>
-							<div className="text-center  rounded shadow fondo-micuenta">
+						<div className="" style={{ width: "18rem" }}>
+							<div className="text-center  rounded shadow fondo-micuenta mt-4">
+								<h1 className="text-center">Mi Cuenta</h1>
 								<img
 									src="https://ponss.blogs.uv.es/files/2013/05/Foto-carnet-Estefan%C3%ADa-Mestre.jpg"
 									className=" fotocontact rounded mt-3 shadow"
@@ -23,25 +23,21 @@ export class MyAccount extends React.Component {
 									<h5 className="card-title">Carolina Proaño</h5>
 									<p className="card-text">carol01@gmail.com</p>
 									<Link to={"/"}>
-										<p className="card-tex mb-1">editar mis datos</p>
+										<p className="card-tex mb-1 badge badge-info">Editar mis datos</p>
 									</Link>
 								</div>
-								<ul className="list-group list-group-flush">
-									<li className="list-group-item">
-										<Link to={"/myPosts"}>
-											<button type="button" className="btn btn-danger btn-block">
-												Mis Publicaciones
-											</button>
-										</Link>
-									</li>
-									<li className="list-group-item">
-										<Link to={"/"}>
-											<button type="button" className="btn btn-danger btn-block">
-												cerrar sesión
-											</button>
-										</Link>
-									</li>
-								</ul>
+								<div className="p-2">
+									<Link to={"/myPosts"}>
+										<button type="button" className="btn btn-danger btn-block mb-3">
+											Mis Publicaciones
+										</button>
+									</Link>
+									<Link to={"/"}>
+										<button type="button" className="btn btn-danger btn-block mb-3">
+											Cerrar Sesión
+										</button>
+									</Link>
+								</div>
 							</div>
 						</div>
 					</div>
