@@ -2,14 +2,14 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
-import { Navbar } from "../component/navbar";
+import { Navbar_3 } from "../component/navbar_3";
 import { Footer } from "../component/footer";
 
 export class AddForm extends React.Component {
 	render() {
 		return (
 			<div>
-				<Navbar />
+				<Navbar_3 />
 				<div className="container pt-5 pb-5">
 					<div className="row pt-5">
 						<div className="col-12 text-center mt-5">

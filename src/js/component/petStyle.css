@@ -1,4 +1,7 @@
 /*Global CSS classes*/
+p,h1,h2,h3,h4,h5,h6{
+    margin: 0;
+}
 .bg{
     width: 100%;
     height: 100%;
@@ -305,7 +308,7 @@ a{
 }
 .fotocontact1{
 position:relative;
-  height:50%;
+  height:100%;
   width:50%;
   top: 0;
   left :20px;
@@ -313,9 +316,16 @@ position:relative;
 }
 .fotocontact2{
 position:relative;
-  height:50%;
+  height:100%;
   width:50%;
   top: 30px;
   left :-20px;
   z-index: 1;
+}
+.fotocontact{
+    width: 50%;
+    height: 50%;
+}
+.fondo-micuenta{
+    background-color: #F1F1F1;
 }

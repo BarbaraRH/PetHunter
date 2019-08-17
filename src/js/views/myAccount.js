@@ -10,23 +10,40 @@ export class MyAccount extends React.Component {
 		return (
 			<div className="bg">
 				<div className="container-fluid">
-					<div className="row">
-						<div className="col-md-4" />
-						<div className="col-md-4 mt-5 p-2 border-secondary  rounded">
+					<div className="row justify-content-center">
+						<div className="col-12 col-md-4">
 							<h1 className="text-center">Mi Cuenta</h1>
-							<h1 className="text-center">
-								<i className="fas fa-user fa-4x" />
-							</h1>
-							<h3 className="text-center">Nombre Usuario</h3>
-							<h3 className="text-center">correo</h3>
-							<Link to={"/myPosts"}>
-								<h6 className="text-center">Mis Publicaciones</h6>
-							</Link>
-							<Link to={"/"}>
-								<h6 className="text-center">Cerrar Sesión</h6>
-							</Link>
+							<div className="text-center  rounded shadow fondo-micuenta">
+								<img
+									src="https://ponss.blogs.uv.es/files/2013/05/Foto-carnet-Estefan%C3%ADa-Mestre.jpg"
+									className=" fotocontact rounded mt-3 shadow"
+									alt="..."
+								/>
+								<div className="card-body">
+									<h5 className="card-title">Carolina Proaño</h5>
+									<p className="card-text">carol01@gmail.com</p>
+									<Link to={"/"}>
+										<p className="card-tex mb-1">editar mis datos</p>
+									</Link>
+								</div>
+								<ul className="list-group list-group-flush">
+									<li className="list-group-item">
+										<Link to={"/myPosts"}>
+											<button type="button" className="btn btn-danger btn-block">
+												Mis Publicaciones
+											</button>
+										</Link>
+									</li>
+									<li className="list-group-item">
+										<Link to={"/"}>
+											<button type="button" className="btn btn-danger btn-block">
+												cerrar sesión
+											</button>
+										</Link>
+									</li>
+								</ul>
+							</div>
 						</div>
-						<div className="col-md-4" />
 					</div>
 				</div>
 				<div className="container-fluid">
