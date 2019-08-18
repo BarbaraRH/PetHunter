@@ -68,14 +68,13 @@ export const RegisterForm = props => (
 												onClick={function() {
 													if (
 														/*SI EN EL SEGUNDO LOTE DE CAMPOS ESTA TODO BIEN, SE HACE EL SUBMIT*/
-														document.querySelector("#nextBtn").value ==
-															"Inicia la búsqueda" &&
+														document.querySelector("#input2").placeholder ==
+															"Banco Comercial" &&
 														document.querySelector("#input1").value != "" &&
 														document.querySelector("#input2").value != "" &&
 														document.querySelector("#input3").value != "" &&
 														document.querySelector("#input4").value != ""
 													) {
-														console.log("siii");
 														let bankAccount = document.querySelector("#input1").value;
 														let bank = document.querySelector("#input2").value;
 														let typeAccount = document.querySelector("#input3").value;
@@ -96,6 +95,9 @@ export const RegisterForm = props => (
 														document.querySelector(
 															".titleFromForms"
 														).parentNode.style.animation = "";
+
+														actions.register();
+
 														document.querySelector("#nextBtn").type = "submit";
 													}
 
@@ -106,7 +108,8 @@ export const RegisterForm = props => (
 
 													if (
 														/*DE INMEDIATO SE AMACENAN EN EL STOR LOS PRIMEROS CAMPOS*/
-														document.querySelector("#nextBtn").value != "Inicia la búsqueda"
+														document.querySelector("#input2").placeholder !=
+														"Banco Comercial"
 													) {
 														actions.saveRegisterFormFields("userStorage", user);
 														actions.saveRegisterFormFields("passStorage", pass1);

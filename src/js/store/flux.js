@@ -59,16 +59,13 @@ const getState = ({ getStore, setStore }) => {
 				setStore({ demo: demo });
 			},
 			register: event => {
-				console.log("funciona");
-				event.preventDefault();
 				const store = getStore();
-				const inputs = event.target.getElementsByTagName("input");
 				fetch(store.apiServer + "/users", {
 					method: "POST",
 					body: JSON.stringify({
-						username: inputs.user.value,
-						email: inputs.mail.value,
-						password: inputs.password2.value
+						username: store.userStorage,
+						email: store.mailStorage,
+						password: store.passStorage
 					}),
 					headers: {
 						"Content-type": "application/json; charset=UTF-8"
@@ -79,7 +76,6 @@ const getState = ({ getStore, setStore }) => {
 						console.log(data);
 					})
 					.catch(error => console.log(error));
-				console.log(inputs.mail.value);
 			},
 			changeColorAddFormDogBtn: () => {
 				console.log("funciona");
