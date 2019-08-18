@@ -52,12 +52,17 @@ const getState = ({ getStore, setStore }) => {
 				setStore({ demo: demo });
 			},
 			register: event => {
+				console.log("funciona");
 				event.preventDefault();
 				const store = getStore();
 				const inputs = event.target.getElementsByTagName("input");
-				fetch(store.apiServer + "/user", {
+				fetch(store.apiServer + "/users", {
 					method: "POST",
-					body: JSON.stringify({ username: inputs.user.value, email: inputs.mail.value }),
+					body: JSON.stringify({
+						username: inputs.user.value,
+						email: inputs.mail.value,
+						password: inputs.password2.value
+					}),
 					headers: {
 						"Content-type": "application/json; charset=UTF-8"
 					}
