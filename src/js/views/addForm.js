@@ -47,7 +47,7 @@ export class AddForm extends React.Component {
 												name="breed1"
 												value={store.selectChoice}
 												className="form-control"
-												onChange={() => actions.handleSelect(event)}>
+												onChange={() => actions.handleSelect(event, "breed")}>
 												<option value="">Selecciona la Raza</option>
 												<option value="">A</option>
 												<option value="Alano">Alano</option>
@@ -57,6 +57,82 @@ export class AddForm extends React.Component {
 												</option>
 											</select>
 										</div>
+										<div className="form-group border-secondary p-4 rounded">
+											<div className="row">
+												<div className="col-12 text-center">
+													<p>Tamaño</p>
+													<select
+														name="size"
+														value={store.selectChoice}
+														className="form-control"
+														onChange={() => actions.handleSelect(event, "size")}>
+														<option value="">Selecciona el tamaño</option>
+														<option value="Chico">Chico</option>
+														<option value="Mediano">Mediano</option>
+														<option value="Grande">Grande</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div className="form-group border-secondary p-4 rounded">
+											<div className="row ">
+												<div className="col-12 text-center">
+													<p>Género</p>
+												</div>
+											</div>
+
+											<div className="row">
+												<div className="col-12 text-center">
+													<select
+														name="gender"
+														value={store.selectChoice}
+														className="form-control"
+														onChange={() => actions.handleSelect(event, "gender")}>
+														<option value="">Selecciona el genero</option>
+														<option value="macho">macho</option>
+														<option value="hembra">hembra</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div className="form-group border-secondary p-4 rounded">
+											<p className="text-center mb-3">Lugar de extravío</p>
+											<select
+												className="form-control mb-2"
+												name="city"
+												value={store.city}
+												onChange={() => actions.handleSelect(event, "city")}>
+												<option value="">Elije tu Ciudad</option>
+												<option value="Santiago">Santiago</option>
+												<option value="Rancagua">Rancagua</option>
+												<option value="Valparaiso">Valparaiso</option>
+												<option value="Viña del Mar">Viña del Mar</option>
+											</select>
+											<select
+												className="form-control mb-2"
+												name="district"
+												value={store.district}
+												onChange={() => actions.handleSelect(event, "district")}>
+												<option value="">Elije tu comuna</option>
+												<option value="Santiago Centro">Santiago Centro</option>
+												<option value="Ñuñoa">Ñuñoa</option>
+												<option value="Providencia">Providencia</option>
+												<option value="Peñalolén">Peñalolén</option>
+											</select>
+											<p className="text-center mt-4 mb-3">Selecciona cruce de calles</p>
+											<input
+												type="text"
+												name="street1"
+												className="form-control mb-2"
+												placeholder="calle 1"
+											/>
+											<input
+												type="text"
+												name="street2"
+												className="form-control mb-2"
+												placeholder="calle 2"
+											/>
+										</div>
 										<input
 											type="submit"
 											className="btn my-4 btn-block importantBtn"
@@ -64,66 +140,8 @@ export class AddForm extends React.Component {
 										/>
 									</form>
 
-									<div className="form-group border-secondary p-4 rounded">
-										<div className="row">
-											<div className="col-12 text-center">
-												<p>Tamaño</p>
-												<select
-													name="size"
-													value={store.selectChoice}
-													className="form-control"
-													onChange={() => actions.handleSelect(event)}>
-													<option value="">Selecciona el tamaño</option>
-													<option value="Chico">Chico</option>
-													<option value="Mediano">Mediano</option>
-													<option value="Grande">Grande</option>
-												</select>
-											</div>
-										</div>
-									</div>
 									{/*<input type="text" className="form-control mb-2" placeholder="Color" /> Esto esta demas s hay foto*/}
 
-									<div className="form-group border-secondary p-4 rounded">
-										<div className="row ">
-											<div className="col-12 text-center">
-												<p>Género</p>
-											</div>
-										</div>
-
-										<div className="row">
-											<div className="col-12 text-center">
-												<select
-													name="genero"
-													value={store.selectChoice}
-													className="form-control"
-													onChange={() => actions.handleSelect(event)}>
-													<option value="">Selecciona el genero</option>
-													<option value="macho">macho</option>
-													<option value="hembra">hembra</option>
-												</select>
-											</div>
-										</div>
-									</div>
-									<div className="form-group border-secondary p-4 rounded">
-										<p className="text-center mb-3">Lugar de extravío</p>
-										<select className="form-control mb-2">
-											<option value="">Elije tu Ciudad</option>
-											<option value="">Santiago</option>
-											<option value="">Rancagua</option>
-											<option value="">Valparaiso</option>
-											<option value="">Viña del Mar</option>
-										</select>
-										<select className="form-control mb-2">
-											<option value="">Elije tu comuna</option>
-											<option value="">Santiago Centro</option>
-											<option value="">Ñuñoa</option>
-											<option value="">Providencia</option>
-											<option value="">Peñalolén</option>
-										</select>
-										<p className="text-center mt-4 mb-3">Selecciona cruce de calles</p>
-										<input type="text" className="form-control mb-2" placeholder="calle 1" />
-										<input type="text" className="form-control mb-2" placeholder="calle 2" />
-									</div>
 									<Link to="/Coincidences" className="text-center">
 										<input
 											type="submit"

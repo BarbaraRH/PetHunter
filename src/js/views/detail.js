@@ -34,24 +34,27 @@ export class Detail extends React.Component {
 													{store.status[index].chip_num}
 												</p>
 												<p>
-													<strong className="font-weight-bolder">Tamaño:</strong>
-													{" " + "Chico"}
+													<strong className="font-weight-bolder">Tamaño:</strong>{" "}
+													{store.status[index].size}
 												</p>
 												<p>
-													<strong className="font-weight-bolder">Genero:</strong>
-													{" " + "Macho"}
+													<strong className="font-weight-bolder">Genero:</strong>{" "}
+													{store.status[index].gender}
 												</p>
 												<p>
-													<strong className="font-weight-bolder">Ciudad:</strong>
-													{" " + "Santiago"}
+													<strong className="font-weight-bolder">Ciudad:</strong>{" "}
+													{store.status[index].city}
 												</p>
 												<p>
-													<strong className="font-weight-bolder">Comuna:</strong>
-													{" " + "Santiago Centro"}
+													<strong className="font-weight-bolder">Comuna:</strong>{" "}
+													{store.status[index].district}
 												</p>
 												<p>
 													<strong className="font-weight-bolder">Cruce de calles:</strong>
-													{" " + "Alameda" + " con " + "Bandera"}
+													{" " +
+														store.status[index].street1 +
+														" con " +
+														store.status[index].street2}
 												</p>
 												<span>
 													<strong className="font-weight-bolder">

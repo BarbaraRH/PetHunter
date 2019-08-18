@@ -1,9 +1,11 @@
 const getState = ({ getStore, setStore }) => {
 	return {
 		store: {
-			apiServer: "https://3000-d2606bc8-ff93-4feb-b159-7b7a74b25c2c.ws-us0.gitpod.io",
+			apiServer: "https://3000-ea3f5462-d865-414d-8734-a04823e9f030.ws-us0.gitpod.io",
 			cssStyleIconFooter: "",
 			selectChoice: "",
+			city: "",
+			district: "",
 			history: [
 				{
 					user: "Carol",
@@ -104,6 +106,8 @@ const getState = ({ getStore, setStore }) => {
 											setStore((store.status[j]["name"] = data[i].name));
 											setStore((store.status[j]["breed"] = data[i].breed));
 											setStore((store.status[j]["chip_num"] = data[i].chip_num));
+											setStore((store.status[j]["size"] = data[i].size));
+											setStore((store.status[j]["gender"] = data[i].gender));
 										}
 									}
 								}
@@ -122,8 +126,14 @@ const getState = ({ getStore, setStore }) => {
 					body: JSON.stringify({
 						name: inputs.petName.value,
 						chip_num: inputs.chip.value,
-						breed: store.selectChoice,
-						status: store.statusName
+						breed: store.breed,
+						size: store.size,
+						gender: store.gender,
+						status: store.statusName,
+						city: store.city,
+						district: store.district,
+						street1: inputs.street1.value,
+						street2: inputs.street2.value
 					}),
 					headers: {
 						"Content-type": "application/json; charset=UTF-8"
@@ -163,9 +173,9 @@ const getState = ({ getStore, setStore }) => {
 					})
 					.catch(error => console.log(error));
 			},
-			handleSelect: event => {
+			handleSelect: (event, attribute) => {
 				const store = getStore();
-				setStore((store.selectChoice = event.target.value));
+				setStore((store[attribute] = event.target.value));
 			}
 		}
 	};

@@ -52,7 +52,7 @@ export class PostList extends React.Component {
 																		style={{ color: "black" }}>
 																		Comuna:
 																	</strong>
-																	{" " + "Santiago"}
+																	{" " + item.district}
 																</p>
 															</div>
 														</div>
