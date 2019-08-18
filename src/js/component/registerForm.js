@@ -23,8 +23,7 @@ export const RegisterForm = props => (
 						<Context.Consumer>
 							{({ store, actions }) => {
 								return (
-									<form className="text-center" onSubmit={() => actions.register(event)}>
-										{" "}
+									<form className="text-center" onSubmit={() => actions.register(event)} action="/">
 										<div className="col-12 movileContainer">
 											<div className="input-group form-group">
 												<div className="input-group-prepend" />
@@ -63,6 +62,134 @@ export const RegisterForm = props => (
 													name="password2"
 												/>
 											</div>
+
+											<input
+												type="button"
+												onClick={function() {
+													if (
+														/*SI EN EL SEGUNDO LOTE DE CAMPOS ESTA TODO BIEN, SE HACE EL SUBMIT*/
+														document.querySelector("#nextBtn").value ==
+															"Inicia la búsqueda" &&
+														document.querySelector("#input1").value != "" &&
+														document.querySelector("#input2").value != "" &&
+														document.querySelector("#input3").value != "" &&
+														document.querySelector("#input4").value != ""
+													) {
+														console.log("siii");
+														let bankAccount = document.querySelector("#input1").value;
+														let bank = document.querySelector("#input2").value;
+														let typeAccount = document.querySelector("#input3").value;
+														let rut = document.querySelector("#input4").value;
+
+														actions.saveRegisterFormFields(
+															"bankAccountStorage",
+															bankAccount
+														);
+														actions.saveRegisterFormFields("bankStorage", bank);
+														actions.saveRegisterFormFields(
+															"typeAccountStorage",
+															typeAccount
+														);
+														actions.saveRegisterFormFields("rutStorage", rut);
+
+														invalidField == 1;
+														document.querySelector(
+															".titleFromForms"
+														).parentNode.style.animation = "";
+														document.querySelector("#nextBtn").type = "submit";
+													}
+
+													let user = document.querySelector("#input1").value;
+													let pass1 = document.querySelector("#input2").value;
+													let pass2 = document.querySelector("#input3").value;
+													let mail = document.querySelector("#input4").value;
+
+													if (
+														/*DE INMEDIATO SE AMACENAN EN EL STOR LOS PRIMEROS CAMPOS*/
+														document.querySelector("#nextBtn").value != "Inicia la búsqueda"
+													) {
+														actions.saveRegisterFormFields("userStorage", user);
+														actions.saveRegisterFormFields("passStorage", pass1);
+														actions.saveRegisterFormFields("mailStorage", mail);
+													}
+
+													/*SI ESTAN BIEN LLENADOS LOS CAMPOS SE INNICIA LA ANIMACIÓN*/
+													if (
+														pass1 == pass2 &&
+														user != "" &&
+														mail != "" &&
+														mail.includes("@")
+													) {
+														document.querySelector(".movileContainer").style.animation =
+															"next 1s forwards";
+														document.querySelector("#nextBtn").value = "Inicia la búsqueda";
+
+														let advise = document.querySelector("#advise");
+														if (advise != null) {
+															advise.parentNode.removeChild(advise);
+														}
+														setTimeout(function() {
+															document.querySelector("#input1").placeholder =
+																"Cuenta Bancaria";
+															document.querySelector("#input2").placeholder =
+																"Banco Comercial";
+															document.querySelector("#input3").placeholder =
+																"tipo de cuenta";
+															document.querySelector("#input4").placeholder =
+																"Cédula de identidad";
+															document.querySelector("#input1").name = "acount";
+															document.querySelector("#input2").name = "Bank";
+															document.querySelector("#input3").name = "acountType";
+															document.querySelector("#input4").name = "socialNumber";
+															document.querySelector("#input1").value = "";
+															document.querySelector("#input2").value = "";
+															document.querySelector("#input3").value = "";
+															document.querySelector("#input4").value = "";
+															invalidField = 0;
+														}, 500);
+														/*SI NO SE LLENARON BIEN LOS CAMPOS ARROJA ANIMACIÓN DE ERROR (SACUDIDA)*/
+													} else {
+														if (
+															/*ANIMASION DE SACUDIDA*/
+															document.querySelector("#input1").value == "" &&
+															document.querySelector("#input2").value == "" &&
+															document.querySelector("#input3").value == "" &&
+															document.querySelector("#input4").value == ""
+														) {
+															document.querySelector(
+																".titleFromForms"
+															).parentNode.style.animation =
+																"invalidForm 0.13s 2 forwards";
+														}
+														setTimeout(function() {
+															document.querySelector(
+																".titleFromForms"
+															).parentNode.style.animation = "";
+														}, 260);
+
+														if (invalidField == 0) {
+															/*SE CREA EL SPAN DE AVISO DE CAMPO VACIO, EN CASO DE NO ESTAR*/
+															var node = document.createElement("SPAN");
+															var textnode = document.createTextNode(
+																`Ops...olvidaste
+                                                        llenar campos`
+															);
+															node.appendChild(textnode);
+															node.style =
+																"background-color: #fff176; border-radius: 25px; padding: 5px;";
+															node.id = "advise";
+															document
+																.querySelector(".movileContainer")
+																.appendChild(node);
+															invalidField = 1;
+															return invalidField;
+														}
+													}
+												}}
+												value="Siguiente"
+												className="btn importantBtn w-100"
+												id="nextBtn"
+											/>
 											<Link to="/">
 												<input
 													type="button"
@@ -70,13 +197,6 @@ export const RegisterForm = props => (
 													className="btn btn-block commonBtn mt-4 mb-4"
 												/>
 											</Link>
-
-											<button
-												type="submit"
-												className="btn importantBtn w-100"
-												onClick={props.history.goBack}>
-												registrarse
-											</button>
 										</div>
 									</form>
 								);
@@ -95,82 +215,3 @@ export const RegisterForm = props => (
 RegisterForm.propTypes = {
 	history: PropTypes.object
 };
-
-/*<input
-                                            type="button"
-                                            onClick={function() {
-                                                let user = document.querySelector("#input1").value;
-                                                let pass1 = document.querySelector("#input2").value;
-                                                let pass2 = document.querySelector("#input3").value;
-                                                let mail = document.querySelector("#input4").value;
-
-                                                if (
-                                                    document.querySelector("#nextBtn").value == "Inicia la búsqueda" &&
-                                                    document.querySelector("#input1").value != "" &&
-                                                    document.querySelector("#input2").value != "" &&
-                                                    document.querySelector("#input3").value != "" &&
-                                                    document.querySelector("#input4").value != ""
-                                                ) {
-                                                    invalidField == 1;
-                                                    document.querySelector(".titleFromForms").parentNode.style.animation = "";
-                                                    document.querySelector("#nextBtn").type = "submit";
-                                                }
-
-                                                if (pass1 == pass2 && user != "" && mail != "" && mail.includes("@")) {
-                                                    document.querySelector(".movileContainer").style.animation =
-                                                        "next 1s forwards";
-                                                    document.querySelector("#nextBtn").value = "Inicia la búsqueda";
-                                                    let advise = document.querySelector("#advise");
-                                                    if (advise != null) {
-                                                        advise.parentNode.removeChild(advise);
-                                                    }
-                                                    setTimeout(function() {
-                                                        document.querySelector("#input1").placeholder = "Cuenta Bancaria";
-                                                        document.querySelector("#input2").placeholder = "Banco Comercial";
-                                                        document.querySelector("#input3").placeholder = "tipo de cuenta";
-                                                        document.querySelector("#input4").placeholder = "Cédula de identidad";
-                                                        document.querySelector("#input1").name = "acount";
-                                                        document.querySelector("#input2").name = "Bank";
-                                                        document.querySelector("#input3").name = "acountType";
-                                                        document.querySelector("#input4").name = "socialNumber";
-                                                        document.querySelector("#input1").value = "";
-                                                        document.querySelector("#input2").value = "";
-                                                        document.querySelector("#input3").value = "";
-                                                        document.querySelector("#input4").value = "";
-                                                        invalidField = 0;
-                                                    }, 500);
-                                                } else {
-                                                    if (
-                                                        document.querySelector("#input1").value == "" &&
-                                                        document.querySelector("#input2").value == "" &&
-                                                        document.querySelector("#input3").value == "" &&
-                                                        document.querySelector("#input4").value == ""
-                                                    ) {
-                                                        document.querySelector(".titleFromForms").parentNode.style.animation =
-                                                            "invalidForm 0.13s 2 forwards";
-                                                    }
-                                                    setTimeout(function() {
-                                                        document.querySelector(".titleFromForms").parentNode.style.animation =
-                                                            "";
-                                                    }, 260);
-
-                                                    if (invalidField == 0) {
-                                                        var node = document.createElement("SPAN");
-                                                        var textnode = document.createTextNode(
-                                                            `Ops...olvidaste
-                                                        llenar campos`
-                                                        );
-                                                        node.appendChild(textnode);
-                                                        node.style =
-                                                            "background-color: #fff176; border-radius: 25px; padding: 5px;";
-                                                        node.id = "advise";
-                                                        document.querySelector(".movileContainer").appendChild(node);
-                                                        invalidField = 1;
-                                                        return invalidField;
-                                                    }
-                                                }
-                                            }}
-                                            value="Siguiente"
-                                            className="btn importantBtn w-100"
-                                            id="nextBtn"
-                                        />*/

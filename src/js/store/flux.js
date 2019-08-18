@@ -1,11 +1,18 @@
 const getState = ({ getStore, setStore }) => {
 	return {
 		store: {
-			apiServer: "https://3000-fcf62da6-3306-46e8-9799-a1f864e04382.ws-us0.gitpod.io",
+			apiServer: "https://3000-d792b663-f236-4194-9795-a474dfeb70ae.ws-us0.gitpod.io/",
 			cssStyleIconFooter: "",
 			selectChoice: "",
 			city: "",
 			district: "",
+			userStorage: "",
+			passStorage: "",
+			mailStorage: "",
+			bankStorage: "",
+			bankAccountStorage: "",
+			rutStorage: "",
+			typeAccountStorage: "",
 			history: [
 				{
 					user: "Carol",
@@ -181,6 +188,11 @@ const getState = ({ getStore, setStore }) => {
 			handleSelect: (event, attribute) => {
 				const store = getStore();
 				setStore((store[attribute] = event.target.value));
+			},
+			saveRegisterFormFields: (atr, val) => {
+				const store = getStore();
+				setStore((store[atr] = val));
+				console.log("ha sido guardado en el store." + atr + " : " + store[atr]);
 			}
 		}
 	};
