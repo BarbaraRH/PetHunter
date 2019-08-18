@@ -45,7 +45,7 @@ export class AddForm extends React.Component {
 										<div className="form-group">
 											<select
 												name="breed1"
-												value={store.selectChoice}
+												value={store.breed}
 												className="form-control"
 												onChange={() => actions.handleSelect(event, "breed")}>
 												<option value="">Selecciona la Raza</option>
@@ -63,7 +63,7 @@ export class AddForm extends React.Component {
 													<p>Tamaño</p>
 													<select
 														name="size"
-														value={store.selectChoice}
+														value={store.size}
 														className="form-control"
 														onChange={() => actions.handleSelect(event, "size")}>
 														<option value="">Selecciona el tamaño</option>
@@ -85,7 +85,7 @@ export class AddForm extends React.Component {
 												<div className="col-12 text-center">
 													<select
 														name="gender"
-														value={store.selectChoice}
+														value={store.gender}
 														className="form-control"
 														onChange={() => actions.handleSelect(event, "gender")}>
 														<option value="">Selecciona el genero</option>
@@ -139,16 +139,6 @@ export class AddForm extends React.Component {
 											placeholder="Buscar"
 										/>
 									</form>
-
-									{/*<input type="text" className="form-control mb-2" placeholder="Color" /> Esto esta demas s hay foto*/}
-
-									<Link to="/Coincidences" className="text-center">
-										<input
-											type="submit"
-											className="btn my-4 btn-block importantBtn"
-											placeholder="Buscar"
-										/>
-									</Link>
 								</div>
 							);
 						}}
