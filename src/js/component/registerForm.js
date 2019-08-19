@@ -91,7 +91,7 @@ export const RegisterForm = props => (
 														);
 														actions.saveRegisterFormFields("rutStorage", rut);
 
-														invalidField == 1;
+														invalidField = 1;
 														document.querySelector(
 															".titleFromForms"
 														).parentNode.style.animation = "";
@@ -107,7 +107,7 @@ export const RegisterForm = props => (
 													let mail = document.querySelector("#input4").value;
 
 													if (
-														/*DE INMEDIATO SE AMACENAN EN EL STOR LOS PRIMEROS CAMPOS*/
+														/*DE INMEDIATO SE AMACENAN EN EL STORE LOS PRIMEROS CAMPOS*/
 														document.querySelector("#input2").placeholder !=
 														"Banco Comercial"
 													) {
@@ -116,7 +116,7 @@ export const RegisterForm = props => (
 														actions.saveRegisterFormFields("mailStorage", mail);
 													}
 
-													/*SI ESTAN BIEN LLENADOS LOS CAMPOS SE INNICIA LA ANIMACIÓN*/
+													/*SI ESTAN BIEN LLENADOS LOS CAMPOS SE INICIA LA ANIMACIÓN*/
 													if (
 														pass1 == pass2 &&
 														user != "" &&
@@ -142,13 +142,15 @@ export const RegisterForm = props => (
 																"Cédula de identidad";
 															document.querySelector("#input1").name = "acount";
 															document.querySelector("#input2").name = "Bank";
+															document.querySelector("#input2").type = "text";
+															document.querySelector("#input3").type = "text";
 															document.querySelector("#input3").name = "acountType";
 															document.querySelector("#input4").name = "socialNumber";
 															document.querySelector("#input1").value = "";
 															document.querySelector("#input2").value = "";
 															document.querySelector("#input3").value = "";
 															document.querySelector("#input4").value = "";
-															invalidField = 0;
+															invalidField = 1;
 														}, 500);
 														/*SI NO SE LLENARON BIEN LOS CAMPOS ARROJA ANIMACIÓN DE ERROR (SACUDIDA)*/
 													} else {
@@ -163,6 +165,11 @@ export const RegisterForm = props => (
 																".titleFromForms"
 															).parentNode.style.animation =
 																"invalidForm 0.13s 2 forwards";
+															invalidField = 0; /*aca*/
+															let advise = document.querySelector("#advise");
+															if (advise != null) {
+																advise.parentNode.removeChild(advise);
+															}
 														}
 														setTimeout(function() {
 															document.querySelector(

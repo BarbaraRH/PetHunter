@@ -1,7 +1,7 @@
 const getState = ({ getStore, setStore }) => {
 	return {
 		store: {
-			apiServer: "https://3000-d792b663-f236-4194-9795-a474dfeb70ae.ws-us0.gitpod.io/",
+			apiServer: "https://3000-d792b663-f236-4194-9795-a474dfeb70ae.ws-us0.gitpod.io",
 			cssStyleIconFooter: "",
 			selectChoice: "",
 			city: "",
