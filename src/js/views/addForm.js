@@ -9,8 +9,9 @@ export class AddForm extends React.Component {
 	render() {
 		return (
 			<div>
-				<Navbar_3 />
 				<div className="container pt-5 pb-5">
+					<Navbar_3 />
+
 					<div className="row pt-5">
 						<div className="col-12 text-center mt-5">
 							<h2 className="mb-3">Datos de mascota perdida</h2>
@@ -25,6 +26,10 @@ export class AddForm extends React.Component {
 						{({ store, actions }) => {
 							return (
 								<div className="col-12 mb-5 pb-3">
+									<form name="upload" onSubmit={() => actions.submitFile(event)}>
+										<input type="file" name="file" />
+										<button type="submit">Upload</button>
+									</form>
 									<form onSubmit={() => actions.submitAdvert(event)}>
 										<input
 											type="text"
