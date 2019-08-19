@@ -141,7 +141,8 @@ const getState = ({ getStore, setStore }) => {
 						city: store.city,
 						district: store.district,
 						street1: inputs.street1.value,
-						street2: inputs.street2.value
+						street2: inputs.street2.value,
+						photo_url: store.apiServer + "/image/" + store.photoId
 					}),
 					headers: {
 						"Content-type": "application/json; charset=UTF-8"
@@ -204,7 +205,7 @@ const getState = ({ getStore, setStore }) => {
 				})
 					.then(resp => resp.json())
 					.then(data => {
-						console.log(data);
+						setStore((store.photoId = data.id));
 					})
 					.catch(error => console.log(error));
 			}

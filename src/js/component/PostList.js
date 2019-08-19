@@ -25,8 +25,7 @@ export class PostList extends React.Component {
 															<div
 																className="col-4 p-2 mb-4 img-ch shadow-sm"
 																style={{
-																	backgroundImage:
-																		'url("https://s.libertaddigital.com/2018/06/15/1920/1080/fit/perro-sorpresa.jpg")'
+																	backgroundImage: "url(" + item.photo_url + ")"
 																}}
 															/>
 															<div className="col-8  p-2 mb-4 grist shadow-sm">
