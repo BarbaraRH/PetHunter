@@ -1,7 +1,7 @@
 const getState = ({ getStore, setStore }) => {
 	return {
 		store: {
-			apiServer: "https://3000-d792b663-f236-4194-9795-a474dfeb70ae.ws-us0.gitpod.io",
+			apiServer: "https://3000-d609fce2-6fb7-4bd2-8d66-7edbc228308f.ws-us0.gitpod.io",
 			cssStyleIconFooter: "",
 			selectChoice: "",
 			city: "",
@@ -141,7 +141,8 @@ const getState = ({ getStore, setStore }) => {
 						city: store.city,
 						district: store.district,
 						street1: inputs.street1.value,
-						street2: inputs.street2.value
+						street2: inputs.street2.value,
+						photo_url: store.apiServer + "/image/" + store.photoId
 					}),
 					headers: {
 						"Content-type": "application/json; charset=UTF-8"
@@ -189,6 +190,24 @@ const getState = ({ getStore, setStore }) => {
 				const store = getStore();
 				setStore((store[atr] = val));
 				console.log("ha sido guardado en el store." + atr + " : " + store[atr]);
+			},
+			submitFile: event => {
+				event.preventDefault();
+				const form = event.target;
+				const f = form.file.files[0];
+				const data = new FormData();
+				data.append("file", f);
+				console.log(data);
+				const store = getStore();
+				fetch(store.apiServer + "/upload", {
+					method: "POST",
+					body: data
+				})
+					.then(resp => resp.json())
+					.then(data => {
+						setStore((store.photoId = data.id));
+					})
+					.catch(error => console.log(error));
 			}
 		}
 	};

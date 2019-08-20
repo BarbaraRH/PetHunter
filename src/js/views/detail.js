@@ -20,7 +20,7 @@ export class Detail extends React.Component {
 										<h1 className="card-title text-center mb-4">{store.status[index].name}</h1>
 										<img
 											className="card-img-top"
-											src={store.lostPets[0].image}
+											src={store.status[index].photo_url}
 											alt="Card image cap"
 										/>
 										<div className="card-body">
