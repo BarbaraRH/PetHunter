@@ -9,24 +9,36 @@ export class AddForm extends React.Component {
 	render() {
 		return (
 			<div>
-				<Navbar_3 />
 				<div className="container pt-5 pb-5">
+					<Navbar_3 />
+
 					<div className="row pt-5">
 						<div className="col-12 text-center mt-5">
 							<h2 className="mb-3">Datos de mascota perdida</h2>
-							<i className="fas fa-paw fa-3x pt-3" />
-						</div>
-						<div className="col-12 text-center">
-							<p>cargar foto</p>
+							<label htmlFor="file-input">
+								<div className="btn btn-outline-info">
+									<i className="fas fa-paw fa-3x pt-3" />
+									<h4>Click cargar foto</h4>
+								</div>
+							</label>
 						</div>
 					</div>
 
 					<Context.Consumer>
 						{({ store, actions }) => {
 							return (
-								<div className="col-12 mb-5 pb-3">
-									<form onSubmit={() => actions.submitAdvert(event)}>
-										<div className="form-group grist p-4 rounded">
+								<div className="row">
+									<div className="col-12 mb-5 pb-3 text-center">
+										<form name="upload" onSubmit={() => actions.submitAdvert(event)}>
+											<input
+												onClick={function() {
+													console.log("esto es");
+												}}
+												id="file-input"
+												type="file"
+												className="btn btn-info"
+												name="file"
+											/>
 											<input
 												type="text"
 												name="petName"
@@ -210,18 +222,25 @@ export class AddForm extends React.Component {
 													<p>Género</p>
 												</div>
 											</div>
+											<div className="form-group border-secondary p-4 rounded">
+												<div className="row ">
+													<div className="col-12 text-center">
+														<p>Género</p>
+													</div>
+												</div>
 
-											<div className="row">
-												<div className="col-12 text-center">
-													<select
-														name="gender"
-														value={store.gender}
-														className="form-control"
-														onChange={() => actions.handleSelect(event, "gender")}>
-														<option value="">Selecciona el genero</option>
-														<option value="macho">macho</option>
-														<option value="hembra">hembra</option>
-													</select>
+												<div className="row">
+													<div className="col-12 text-center">
+														<select
+															name="gender"
+															value={store.gender}
+															className="form-control"
+															onChange={() => actions.handleSelect(event, "gender")}>
+															<option value="">Selecciona el genero</option>
+															<option value="macho">macho</option>
+															<option value="hembra">hembra</option>
+														</select>
+													</div>
 												</div>
 											</div>
 										</div>
@@ -285,18 +304,12 @@ export class AddForm extends React.Component {
 												placeholder="calle 1"
 											/>
 											<input
-												type="text"
-												name="street2"
-												className="form-control mb-2"
-												placeholder="calle 2"
+												type="submit"
+												className="btn my-4 btn-block importantBtn"
+												placeholder="Buscar"
 											/>
-										</div>
-										<input
-											type="submit"
-											className="btn my-4 btn-block importantBtn"
-											placeholder="Buscar"
-										/>
-									</form>
+										</form>
+									</div>
 								</div>
 							);
 						}}
