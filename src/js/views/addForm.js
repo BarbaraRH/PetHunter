@@ -198,37 +198,29 @@ export class AddForm extends React.Component {
 													<option value="Yorkshire Terrier">Yorkshire Terrier</option>
 												</select>
 											</div>
-										</div>
-										<div className="form-group grist p-4 rounded">
-											<div className="row">
-												<div className="col-12 text-center">
-													<p>Tamaño</p>
-													<select
-														name="size"
-														value={store.size}
-														className="form-control"
-														onChange={() => actions.handleSelect(event, "size")}>
-														<option value="">Selecciona el tamaño</option>
-														<option value="Chico">Chico</option>
-														<option value="Mediano">Mediano</option>
-														<option value="Grande">Grande</option>
-													</select>
+											<div className="form-group grist p-4 rounded">
+												<div className="row">
+													<div className="col-12 text-center">
+														<p>Tamaño</p>
+														<select
+															name="size"
+															value={store.size}
+															className="form-control"
+															onChange={() => actions.handleSelect(event, "size")}>
+															<option value="">Selecciona el tamaño</option>
+															<option value="Chico">Chico</option>
+															<option value="Mediano">Mediano</option>
+															<option value="Grande">Grande</option>
+														</select>
+													</div>
 												</div>
 											</div>
-										</div>
-										<div className="form-group grist p-4 rounded">
-											<div className="row ">
-												<div className="col-12 text-center">
-													<p>Género</p>
-												</div>
-											</div>
-											<div className="form-group border-secondary p-4 rounded">
+											<div className="form-group grist p-4 rounded">
 												<div className="row ">
 													<div className="col-12 text-center">
 														<p>Género</p>
 													</div>
 												</div>
-
 												<div className="row">
 													<div className="col-12 text-center">
 														<select
@@ -243,71 +235,78 @@ export class AddForm extends React.Component {
 													</div>
 												</div>
 											</div>
-										</div>
-										<div className="form-group grist p-4 rounded">
-											<p className="text-center mb-3">Lugar de extravío</p>
-											<select
-												className="form-control mb-2"
-												name="city"
-												value={store.city}
-												onChange={() => actions.handleSelect(event, "city")}>
-												<option value="">Elije tu Ciudad</option>
-												<option value="Santiago">Santiago</option>
-											</select>
-											<select
-												className="form-control mb-2"
-												name="district"
-												value={store.district}
-												onChange={() => actions.handleSelect(event, "district")}>
-												<option value="">Elije tu comuna</option>
-												<option value="Cerrillos">Cerrillos</option>
-												<option value="Cerro Navia">Cerro Navia</option>
-												<option value="Conchalí">Conchalí</option>
-												<option value="El Bosque">El Bosque</option>
-												<option value="Estación Central">Estación Central</option>
-												<option value="Huechuraba">Huechuraba</option>
-												<option value="Independencia">Independencia</option>
-												<option value="La Cisterna">La Cisterna</option>
-												<option value="La Florida">La Florida</option>
-												<option value="La Granja">La Granja</option>
-												<option value="La Pintana">La Pintana</option>
-												<option value="La Reina">La Reina</option>
-												<option value="Las Condes">Las Condes</option>
-												<option value="Lo Barnechea">Lo Barnechea</option>
-												<option value="Lo Espejo">Lo Espejo</option>
-												<option value="Lo Prado">Lo Prado</option>
-												<option value="Macul">Macul</option>
-												<option value="Maipú">Maipú</option>
-												<option value="Ñuñoa">Ñuñoa</option>
-												<option value="Padre Hurtado">Padre Hurtado</option>
-												<option value="Pedro Aguirre Cerda">Pedro Aguirre Cerda</option>
-												<option value="Peñalolén">Peñalolén</option>
-												<option value="Providencia">Providencia</option>
-												<option value="Pudahuel">Pudahuel</option>
-												<option value="Puente Alto">Puente Alto</option>
-												<option value="Quilicura">Quilicura</option>
-												<option value="Quinta Normal">Quinta Normal</option>
-												<option value="Recoleta">Recoleta</option>
-												<option value="Renca">Renca</option>
-												<option value="San Bernardo">San Bernardo</option>
-												<option value="San Joaquín">San Joaquín</option>
-												<option value="San Miguel">San Miguel</option>
-												<option value="San Ramón">San Ramón</option>
-												<option value="Santiago">Santiago</option>
-												<option value="Vitacura">Vitacura</option>
-											</select>
-											<p className="text-center mt-4 mb-3">Selecciona cruce de calles</p>
-											<input
-												type="text"
-												name="street1"
-												className="form-control mb-2"
-												placeholder="calle 1"
-											/>
-											<input
-												type="submit"
-												className="btn my-4 btn-block importantBtn"
-												placeholder="Buscar"
-											/>
+
+											<div className="form-group grist p-4 rounded">
+												<p className="text-center mb-3">Lugar de extravío</p>
+												<select
+													className="form-control mb-2"
+													name="city"
+													value={store.city}
+													onChange={() => actions.handleSelect(event, "city")}>
+													<option value="">Elije tu Ciudad</option>
+													<option value="Santiago">Santiago</option>
+												</select>
+												<select
+													className="form-control mb-2"
+													name="district"
+													value={store.district}
+													onChange={() => actions.handleSelect(event, "district")}>
+													<option value="">Elije tu comuna</option>
+													<option value="Cerrillos">Cerrillos</option>
+													<option value="Cerro Navia">Cerro Navia</option>
+													<option value="Conchalí">Conchalí</option>
+													<option value="El Bosque">El Bosque</option>
+													<option value="Estación Central">Estación Central</option>
+													<option value="Huechuraba">Huechuraba</option>
+													<option value="Independencia">Independencia</option>
+													<option value="La Cisterna">La Cisterna</option>
+													<option value="La Florida">La Florida</option>
+													<option value="La Granja">La Granja</option>
+													<option value="La Pintana">La Pintana</option>
+													<option value="La Reina">La Reina</option>
+													<option value="Las Condes">Las Condes</option>
+													<option value="Lo Barnechea">Lo Barnechea</option>
+													<option value="Lo Espejo">Lo Espejo</option>
+													<option value="Lo Prado">Lo Prado</option>
+													<option value="Macul">Macul</option>
+													<option value="Maipú">Maipú</option>
+													<option value="Ñuñoa">Ñuñoa</option>
+													<option value="Padre Hurtado">Padre Hurtado</option>
+													<option value="Pedro Aguirre Cerda">Pedro Aguirre Cerda</option>
+													<option value="Peñalolén">Peñalolén</option>
+													<option value="Providencia">Providencia</option>
+													<option value="Pudahuel">Pudahuel</option>
+													<option value="Puente Alto">Puente Alto</option>
+													<option value="Quilicura">Quilicura</option>
+													<option value="Quinta Normal">Quinta Normal</option>
+													<option value="Recoleta">Recoleta</option>
+													<option value="Renca">Renca</option>
+													<option value="San Bernardo">San Bernardo</option>
+													<option value="San Joaquín">San Joaquín</option>
+													<option value="San Miguel">San Miguel</option>
+													<option value="San Ramón">San Ramón</option>
+													<option value="Santiago">Santiago</option>
+													<option value="Vitacura">Vitacura</option>
+												</select>
+												<p className="text-center mt-4 mb-3">Selecciona cruce de calles</p>
+												<input
+													type="text"
+													name="street1"
+													className="form-control mb-2"
+													placeholder="calle 1"
+												/>
+												<input
+													type="text"
+													name="street2"
+													className="form-control mb-2"
+													placeholder="calle 2"
+												/>
+												<input
+													type="submit"
+													className="btn my-4 btn-block importantBtn"
+													placeholder="Buscar"
+												/>
+											</div>
 										</form>
 									</div>
 								</div>
