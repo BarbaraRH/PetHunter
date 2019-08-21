@@ -336,3 +336,7 @@ position:relative;
 .bajo{
     z-index: 1
 }
+.fotol{
+    width: 50px;
+    height: 50px;
+}

@@ -15,12 +15,6 @@ export class AddForm extends React.Component {
 					<div className="row pt-5">
 						<div className="col-12 text-center mt-5">
 							<h2 className="mb-3">Datos de mascota perdida</h2>
-							<label htmlFor="file-input">
-								<div className="btn btn-outline-info">
-									<i className="fas fa-paw fa-3x pt-3" />
-									<h4>Click cargar foto</h4>
-								</div>
-							</label>
 						</div>
 					</div>
 
@@ -30,15 +24,18 @@ export class AddForm extends React.Component {
 								<div className="row">
 									<div className="col-12 mb-5 pb-3 text-center">
 										<form name="upload" onSubmit={() => actions.submitAdvert(event)}>
-											<input
-												onClick={function() {
-													console.log("esto es");
-												}}
-												id="file-input"
-												type="file"
-												className="btn btn-info"
-												name="file"
-											/>
+											<div className="border p-2">
+												<h4 className="mb-2">Cargar foto</h4>
+												<input
+													onClick={function() {
+														console.log("esto es");
+													}}
+													id="file-input"
+													type="file"
+													className="btn btn-info"
+													name="file"
+												/>
+											</div>
 											<input
 												type="text"
 												name="petName"
@@ -128,6 +125,7 @@ export class AddForm extends React.Component {
 													<option value="Gran Danés">Gran Danés</option>
 													<option value="">H</option>
 													<option value="Husky Siberiano">Husky Siberiano</option>
+													<option value="Harrier">Harrier</option>
 													<option value="">L</option>
 													<option value="Laika de Siberia Occidental">
 														Laika de Siberia Occidental
@@ -194,6 +192,8 @@ export class AddForm extends React.Component {
 													<option value="Terrier Negro Ruso">Terrier Negro Ruso</option>
 													<option value="Terrier Norfolk">Terrier Norfolk</option>
 													<option value="Terrier Norwich">Terrier Norwich</option>
+													<option value="">w</option>
+													<option value="Whippet">Whippet</option>
 													<option value="">Y</option>
 													<option value="Yorkshire Terrier">Yorkshire Terrier</option>
 												</select>

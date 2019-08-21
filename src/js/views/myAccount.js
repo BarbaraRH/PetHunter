@@ -15,13 +15,13 @@ export class MyAccount extends React.Component {
 							<div className="text-center  rounded shadow fondo-micuenta mt-4">
 								<h1 className="text-center">Mi Cuenta</h1>
 								<img
-									src="https://ponss.blogs.uv.es/files/2013/05/Foto-carnet-Estefan%C3%ADa-Mestre.jpg"
+									src="http://trabajoweb.cl/pet/david.jpg"
 									className=" fotocontact rounded mt-3 shadow"
 									alt="..."
 								/>
 								<div className="card-body">
-									<h5 className="card-title">Carolina Proaño</h5>
-									<p className="card-text">carol01@gmail.com</p>
+									<h5 className="card-title">David Proaño</h5>
+									<p className="card-text">david@gmail.com</p>
 									<Link to={"/"}>
 										<p className="card-tex mb-1 badge badge-info">Editar mis datos</p>
 									</Link>

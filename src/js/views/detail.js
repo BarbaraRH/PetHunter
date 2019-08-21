@@ -58,7 +58,7 @@ export class Detail extends React.Component {
 												</p>
 												<span>
 													<strong className="font-weight-bolder">
-														usuario: {" " + store.lostPets[0].user}
+														Es buscad@ por: {" " + store.lostPets[0].user}
 													</strong>
 												</span>
 												<span>
