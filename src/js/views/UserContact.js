@@ -25,7 +25,7 @@ export class UserContact extends React.Component {
 									alt="..."
 								/>
 								<img
-									src="http://trabajoweb.cl/pet/otto.jpg"
+									src="http://trabajoweb.cl/pet/perro-s.jpg"
 									className="fotocontact2 rounded border border-info shadow-sm sobre"
 									alt="..."
 								/>
@@ -52,7 +52,7 @@ export class UserContact extends React.Component {
 							<li className="list-group-item">Tel: 555-555-555</li>
 							<div className="card-body">
 								<h5 className="card-title">Busca a:</h5>
-								<p className="card-text">Otto</p>
+								<p className="card-text">Desconocido</p>
 							</div>
 						</ul>
 					</div>

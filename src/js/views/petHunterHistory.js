@@ -31,8 +31,7 @@ export class PetHunterHistory extends React.Component {
 													<div
 														className="col-4 img-ch mb-4 shadow-sm"
 														style={{
-															backgroundImage:
-																'url("https://www.todoperros.com/wp-content/uploads/2015/09/perro-amo.jpg")'
+															backgroundImage: "url(" + item.url + ")"
 														}}
 													/>
 													<div className="col-8  p-2 mb-4 grist shadow-sm">

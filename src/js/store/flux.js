@@ -15,7 +15,46 @@ const getState = ({ getStore, setStore }) => {
 			typeAccountStorage: "",
 			history: [
 				{
+					url: "http://trabajoweb.cl/pet/david.jpg",
+					user: "David",
+					titulo: "Muchas gracias Pethunter",
+					description: "Hola gracias Barbara por encontrar la mascota, gracias también a pethunter..."
+				},
+
+				{
+					url: "https://www.todoperros.com/wp-content/uploads/2015/09/perro-amo.jpg",
 					user: "Carol",
+					titulo: "Muchas gracias Pethunter",
+					description: "estoy muy feliz por recuperar a mi mascota"
+				},
+				{
+					user: "José",
+					url: "https://cflvdg.avoz.es/default/2017/02/15/00121487172426028845209/Foto/GN4P36F3_162525.jpg",
+					titulo: "Súper, me salvaron!!",
+					description: "Que rico, gracias por su ayuda"
+				},
+				{
+					user: "Sandra",
+					url: "https://www.fundacion-affinity.org/sites/default/files/mi-perro-y-yo.jpg",
+					titulo: "Una alegría, gracias",
+					description: "Gracias a Miguel por tu ayuda"
+				},
+				{
+					user: "Juan",
+					url: "https://rincondeltibet.com/blog/wp-content/uploads/2015/07/perro.jpg",
+					titulo: "Lo encontré!!",
+					description: "Que felicidad mas grande, al fin de vuelta"
+				},
+				{
+					user: "Ramón",
+					url: "https://m.eldiario.es/consumoclaro/perros/Foto-Jordi-Sabate_EDIIMA20160823_0340_4.jpg",
+					titulo: "Gracias",
+					description: "Súper, Saludos"
+				},
+				{
+					user: "Paulina",
+					url:
+						"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPYVpg2nWq09sAVsu0bsIwpqSqPOX8fnOPnJeh1_4H6pS2yhdurw",
 					titulo: "Muchas gracias Pethunter",
 					description: "estoy muy feliz por recuperar a mi mascota"
 				}

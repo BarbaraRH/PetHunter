@@ -25,12 +25,14 @@ export class Navbar_2 extends React.Component {
 				<div className="row p-3 stikyBackground text-center">
 					<div className="col-12" />
 					<div className="col-12 text-center">
-						<button
-							type="button"
-							className="btn  btn-block"
-							style={{ backgroundColor: "#d50000", color: "white" }}>
-							Publica tu Historia
-						</button>
+						<Link to="/detailhistory">
+							<button
+								type="button"
+								className="btn  btn-block"
+								style={{ backgroundColor: "#d50000", color: "white" }}>
+								Publica tu Historia
+							</button>
+						</Link>
 					</div>
 				</div>
 			</nav>

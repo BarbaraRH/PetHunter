@@ -10,7 +10,11 @@ export class Navbar_3 extends React.Component {
 				<div className="row">
 					<div className="col-2">
 						<Link to="/myAccount" className="">
-							<i className="fas fa-exclamation-circle fa-2x mt-2 mb-2" style={{ color: "#d50000" }} />
+							<img
+								src="http://trabajoweb.cl/pet/david.jpg"
+								className="rounded-circle fotol mt-2 mb-2"
+								alt="..."
+							/>
 						</Link>
 					</div>
 					<div className="col-8" />
